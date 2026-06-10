@@ -1,0 +1,42 @@
+# TODO.6 — VLM Scene Extraction + OCR Node
+
+## Objective
+
+Implement `src/vlm_extract.py` — use a vision-language model to extract scene descriptions and OCR from sampled frames.
+
+## Tasks
+
+1. Implement `run(frames: list[SampledFrame], config: JobConfig) -> list[VisualEvent]`:
+   - Load VLM (default: Qwen3-VL-4B-Instruct via Transformers)
+   - For each frame (or batch of nearby frames), prompt the model to output structured JSON:
+     - scene description
+     - people present
+     - actions observed
+     - objects visible
+     - visible text (OCR) with bounding boxes and confidence
+     - term candidates relevant to the topic
+   - Parse JSON output, validate against VisualEvent schema
+   - Group frames within the same time window into a single VisualEvent
+2. Design the VLM prompt template (structured JSON output, topic-aware)
+3. Write `tests/test_vlm_extract.py`:
+   - Mock model inference
+   - Test JSON parsing and validation
+   - Test frame grouping logic
+   - Test error handling for malformed model output
+
+## Acceptance Criteria
+
+- Each VisualEvent has all required fields populated
+- Frames within 2s of each other merged into one event
+- Malformed model output handled gracefully (logged, not crashed)
+- Tests pass without GPU or model weights
+
+## Dependencies
+
+- TODO.1, TODO.5
+
+## Notes
+
+- Phase 1 uses a single VLM for both scene description and OCR
+- Phase 2 will add PaddleOCR-VL as a separate dedicated OCR node
+- VLM prompt should instruct the model to output JSON only, no free-form text

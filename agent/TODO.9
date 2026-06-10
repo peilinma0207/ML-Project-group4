@@ -1,0 +1,48 @@
+# TODO.9 — Export Node + CLI Integration
+
+## Objective
+
+Implement `src/export.py` and finalize `src/cli.py` — export repaired script to JSON and Markdown, wire up the full CLI pipeline.
+
+## Tasks
+
+### export.py
+
+1. Implement `run(segments: list[RepairedSegment], config: JobConfig) -> ExportResult`:
+   - Export JSON: structured array of RepairedSegment
+   - Export Markdown: human-readable script with timestamps, speaker labels, and review flags
+   - Save to `{output_dir}/{job_id}/script.json` and `script.md`
+   - Return paths to exported files
+
+### cli.py
+
+2. Finalize CLI entry point:
+   - Parse args: --video, --topic, --output-dir, --whisper-model, --vlm-model, --text-model, --glossary
+   - Chain all modules in order:
+     audio_extract → audio_preprocess → asr_transcribe → frame_sample → vlm_extract → rag_retrieve → evidence_merge → script_repair → export
+   - Print summary: segment count, flagged for review count, output paths
+   - Handle errors at each step with clear messages
+
+### Tests
+
+3. Write `tests/test_export.py`:
+   - Test JSON export format
+   - Test Markdown export format
+   - Test timestamp formatting (HH:MM:SS.mmm)
+   - Test empty segment list
+
+## Acceptance Criteria
+
+- JSON export is valid and matches RepairedSegment schema
+- Markdown export is human-readable with clear formatting
+- CLI runs end-to-end (with mocked model calls in tests)
+- Error at any step produces a clear message, not a stack trace
+
+## Dependencies
+
+- All previous TODOs (TODO.1 through TODO.8)
+
+## Notes
+
+- This is the final TODO for Phase 1
+- After this, the pipeline should work end-to-end on a single video

@@ -1,0 +1,48 @@
+# TODO.7 — Mock RAG Retrieval Node
+
+## Objective
+
+Implement `src/rag_retrieve.py` — mock RAG term lookup using a local JSON glossary file.
+
+## Tasks
+
+1. Implement `run(segments: list[ASRSegment], visual_events: list[VisualEvent], config: JobConfig) -> list[RAGHit]`:
+   - Load glossary from `data/glossary.json`
+   - For each low-confidence ASR word and each VLM term candidate:
+     - Fuzzy-match against glossary terms and aliases
+     - Check common_mishearings list
+   - Return matching RAGHit entries with scores
+2. Implement glossary schema in `data/glossary.json`:
+   ```json
+   [
+     {
+       "term": "Hybrid Search",
+       "aliases": ["hybrid retrieval"],
+       "common_mishearings": ["high bread search"],
+       "source": "glossary_v1"
+     }
+   ]
+   ```
+3. Write `tests/test_rag_retrieve.py`:
+   - Test exact term match
+   - Test alias match
+   - Test mishearing match
+   - Test fuzzy matching threshold
+   - Test empty glossary
+   - Test no matches found
+
+## Acceptance Criteria
+
+- Correct terms found via exact, alias, and mishearing match
+- Fuzzy match catches close misspellings
+- Empty/missing glossary handled without error
+- Tests pass
+
+## Dependencies
+
+- TODO.1, TODO.4, TODO.6
+
+## Notes
+
+- Phase 1 uses simple string matching + fuzzy match (e.g., difflib or rapidfuzz)
+- Phase 2+ will replace this with a real vector store

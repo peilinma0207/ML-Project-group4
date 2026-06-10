@@ -1,0 +1,45 @@
+# TODO.1 — Project Environment Setup
+
+## Objective
+
+Set up the project directory structure, Python environment via uv, and core dependencies for CUDA (NVIDIA GPU).
+
+## Tasks
+
+1. Create directory structure: `src/`, `tests/`, `data/`
+2. Create `src/__init__.py`
+3. Update `pyproject.toml`:
+   - Set project description
+   - Set Python version requirement (>=3.11, <=3.14 — WhisperX compat)
+   - Add core dependencies:
+     - `pydantic` — schema definitions
+     - `whisperx` — ASR with word timestamps and diarization
+     - `torch` + `torchaudio` — CUDA builds
+     - `transformers` — VLM inference
+     - `accelerate` — model loading
+     - `pytest` — testing
+   - Add optional/dev dependencies group
+4. Create `src/schema.py` with all Pydantic models from spec.md
+5. Create `tests/conftest.py` with shared fixtures
+6. Create `data/glossary.json` with a sample mock glossary (5-10 terms)
+7. Create stub `src/cli.py` with argument parsing
+8. Run `uv sync` to verify environment resolves
+9. Run `pytest` to verify test infrastructure works
+10. Write `tests/test_schema.py` — verify all models instantiate and serialize
+
+## Acceptance Criteria
+
+- `uv sync` completes without errors
+- `uv run pytest` passes with test_schema.py
+- All Pydantic models round-trip through JSON
+- Directory structure matches spec.md
+
+## Dependencies
+
+None — this is the first TODO.
+
+## Notes
+
+- Check WhisperX Python version compatibility before pinning
+- ffmpeg is a system dependency, not a pip package — document in README or CLAUDE.md
+- torch CUDA index URL may need to be configured in pyproject.toml or uv settings

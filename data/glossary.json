@@ -1,0 +1,50 @@
+[
+  {
+    "term": "Hybrid Search",
+    "aliases": ["hybrid retrieval", "混合检索"],
+    "common_mishearings": ["high bread search", "hybrid source"],
+    "source": "glossary_v1"
+  },
+  {
+    "term": "Vector Database",
+    "aliases": ["vector db", "vector store", "向量数据库"],
+    "common_mishearings": ["vector data base", "vector database"],
+    "source": "glossary_v1"
+  },
+  {
+    "term": "Retrieval-Augmented Generation",
+    "aliases": ["RAG", "检索增强生成"],
+    "common_mishearings": ["rag system", "rack generation"],
+    "source": "glossary_v1"
+  },
+  {
+    "term": "Embedding",
+    "aliases": ["embeddings", "嵌入", "向量嵌入"],
+    "common_mishearings": ["in bedding", "embedding"],
+    "source": "glossary_v1"
+  },
+  {
+    "term": "Transformer",
+    "aliases": ["transformer model", "transformers"],
+    "common_mishearings": ["transfer model", "trans former"],
+    "source": "glossary_v1"
+  },
+  {
+    "term": "Fine-tuning",
+    "aliases": ["fine tuning", "微调"],
+    "common_mishearings": ["find tuning", "fine-tunning"],
+    "source": "glossary_v1"
+  },
+  {
+    "term": "Tokenizer",
+    "aliases": ["tokenizer", "分词器"],
+    "common_mishearings": ["token izer", "tokenizer"],
+    "source": "glossary_v1"
+  },
+  {
+    "term": "Attention Mechanism",
+    "aliases": ["self-attention", "multi-head attention", "注意力机制"],
+    "common_mishearings": ["a tension mechanism", "attention mech"],
+    "source": "glossary_v1"
+  }
+]

@@ -1,0 +1,37 @@
+# TODO.4 — ASR Transcription Node
+
+## Objective
+
+Implement `src/asr_transcribe.py` — WhisperX transcription with word-level timestamps, confidence, and speaker diarization.
+
+## Tasks
+
+1. Implement `run(audio: AudioMeta, config: JobConfig) -> list[ASRSegment]`:
+   - Load WhisperX model (configurable size: tiny/base/small/medium/large)
+   - Transcribe audio
+   - Align words to get word-level timestamps
+   - Run speaker diarization (optional, controlled by config)
+   - Flag low-confidence words (threshold configurable, default 0.6)
+   - Flag segments with quality issues: low_confidence, possible_term_error, long_silence
+2. Map WhisperX output to `ASRSegment` schema
+3. Write `tests/test_asr_transcribe.py`:
+   - Mock WhisperX model and alignment
+   - Test segment generation from mock output
+   - Test low-confidence flagging logic
+   - Test speaker label assignment
+
+## Acceptance Criteria
+
+- Produces list of ASRSegment with word-level timestamps
+- Low-confidence words flagged correctly
+- Speaker IDs assigned when diarization enabled
+- Tests pass without GPU or WhisperX model
+
+## Dependencies
+
+- TODO.1, TODO.2, TODO.3
+
+## Notes
+
+- WhisperX requires a HuggingFace token for pyannote speaker diarization
+- Model size should be configurable to allow fast testing with tiny model

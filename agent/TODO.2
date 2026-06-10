@@ -1,0 +1,29 @@
+# TODO.2 — Audio Extraction Node
+
+## Objective
+
+Implement `src/audio_extract.py` — extract mono audio from video using ffmpeg.
+
+## Tasks
+
+1. Implement `run(config: JobConfig) -> AudioMeta`:
+   - Call ffmpeg to extract audio from `config.video_uri`
+   - Output: 16kHz mono WAV
+   - Save to `{output_dir}/{job_id}/audio.wav`
+   - Probe duration, sample_rate, channels from output
+2. Handle errors: missing video file, ffmpeg not installed, corrupt video
+3. Write `tests/test_audio_extract.py`:
+   - Mock subprocess calls
+   - Test successful extraction
+   - Test missing file error
+   - Test ffmpeg failure error
+
+## Acceptance Criteria
+
+- Given a valid video path, produces a mono WAV at 16kHz
+- AudioMeta output contains correct duration, sample_rate, channels
+- All tests pass without ffmpeg installed (mocked)
+
+## Dependencies
+
+- TODO.1 (schema.py, project setup)

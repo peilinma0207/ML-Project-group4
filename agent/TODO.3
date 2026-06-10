@@ -1,0 +1,27 @@
+# TODO.3 — Audio Preprocessing Node
+
+## Objective
+
+Implement `src/audio_preprocess.py` — normalize loudness, apply high-pass filter, and optionally denoise.
+
+## Tasks
+
+1. Implement `run(audio: AudioMeta, config: JobConfig) -> AudioMeta`:
+   - Apply loudness normalization (ffmpeg `loudnorm` filter)
+   - Apply high-pass filter at 80Hz to reduce rumble
+   - Save processed audio to `{output_dir}/{job_id}/audio_processed.wav`
+   - Return updated AudioMeta with new path
+2. Write `tests/test_audio_preprocess.py`:
+   - Mock subprocess calls
+   - Verify correct ffmpeg filter chain
+   - Test passthrough when no processing needed
+
+## Acceptance Criteria
+
+- Processed audio file path is updated in output AudioMeta
+- ffmpeg filter chain is correct
+- Tests pass without ffmpeg
+
+## Dependencies
+
+- TODO.1, TODO.2

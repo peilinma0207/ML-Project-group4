@@ -1,0 +1,31 @@
+# TODO.5 — Frame Sampling Node
+
+## Objective
+
+Implement `src/frame_sample.py` — extract keyframes from video using three strategies.
+
+## Tasks
+
+1. Implement `run(config: JobConfig, segments: list[ASRSegment]) -> list[SampledFrame]`:
+   - Strategy 1: Fixed interval sampling (every N seconds, default 3s)
+   - Strategy 2: Scene-change detection (ffmpeg `select='gt(scene,0.3)'`)
+   - Strategy 3: Low-confidence ASR region sampling (denser frames around flagged segments)
+   - Deduplicate frames that are too close in time (within 0.5s)
+   - Save frames to `{output_dir}/{job_id}/frames/`
+   - Each SampledFrame records: frame_path, timestamp, sample_reason
+2. Write `tests/test_frame_sample.py`:
+   - Mock ffmpeg subprocess
+   - Test each sampling strategy independently
+   - Test deduplication logic
+   - Test frame naming convention
+
+## Acceptance Criteria
+
+- Frames saved with sequential naming: `frame_000001.jpg`, etc.
+- Each frame has timestamp and reason recorded
+- Near-duplicate timestamps deduplicated
+- Tests pass without ffmpeg
+
+## Dependencies
+
+- TODO.1, TODO.4 (needs ASR segments for low-confidence sampling)

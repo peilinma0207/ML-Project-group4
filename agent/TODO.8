@@ -1,0 +1,48 @@
+# TODO.8 — Evidence Merge + Script Repair Node
+
+## Objective
+
+Implement `src/evidence_merge.py` and `src/script_repair.py` — merge all evidence per segment, then use an 8B text model to produce the repaired script.
+
+## Tasks
+
+### evidence_merge.py
+
+1. Implement `run(segments, visual_events, rag_hits) -> list[MergedEvidence]`:
+   - For each ASR segment, find overlapping visual events by time range
+   - Match RAG hits to segments (by word overlap or term candidate overlap)
+   - Produce one MergedEvidence per segment
+
+### script_repair.py
+
+2. Implement `run(evidence: list[MergedEvidence], config: JobConfig) -> list[RepairedSegment]`:
+   - For each MergedEvidence, build a structured prompt:
+     - Include ASR text with confidence per word
+     - Include visual context (scene, visible text, term candidates)
+     - Include RAG matches (correct terms, aliases)
+     - Instruct model to output JSON with repaired text, evidence sources, confidence
+   - Call text model (Qwen3-8B via Ollama/vLLM)
+   - Parse and validate output against RepairedSegment schema
+   - Preserve original timestamps — model must not alter time ranges
+3. Design the repair prompt template
+4. Write `tests/test_evidence_merge.py`:
+   - Test time-range overlap matching
+   - Test segments with no visual/RAG evidence
+   - Test multiple visual events per segment
+5. Write `tests/test_script_repair.py`:
+   - Mock model inference
+   - Test prompt construction
+   - Test output parsing
+   - Test timestamp preservation enforcement
+
+## Acceptance Criteria
+
+- Every ASR segment gets a MergedEvidence entry (even if no visual/RAG evidence)
+- Repaired segments preserve original start/end timestamps
+- Evidence sources tracked per segment
+- Low-confidence repairs flagged with review_required=true
+- Tests pass without GPU or model
+
+## Dependencies
+
+- TODO.1, TODO.4, TODO.6, TODO.7
