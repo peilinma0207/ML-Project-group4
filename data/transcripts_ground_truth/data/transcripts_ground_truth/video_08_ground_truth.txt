@@ -1,0 +1,11 @@
+00:00
+Ubuntu reminds us we ought to be developing technologies like AI for the benefit of all of humanity and our ecology. Across Africa, we have exciting examples of embracing the wisdom of ubuntu to inform data governance, AI product design and community building. I call it ubuntech.
+
+00:22
+(Laughter)
+
+00:24
+AI development today treats data as if it's an abundant natural resource, and we hear this in sayings like, “data is the new oil.” But already the limits of this paradigm are being realized, as researchers have been sounding the alarm that high-quality data to train AI models is drying up.
+
+00:41
+Through ubuntu, we conceptualize data differently, and we appreciate that it represents lives, cultures and communities, so that data governance for us is about the meaningful participation, informed consent, self-determination and community ownership of data sets from which language, nature-based knowledge and Indigenous wisdom are derived.

@@ -1,0 +1,11 @@
+00:04
+We're living in a time of great anxiety. Anxiety over the environment, over the competence and legitimacy of authority, of whether society can treat people fairly and of what sort of future awaits us all. AI has inherited a large share of this anxiety.
+
+00:24
+In a short time, AI has gone from recognizing photos of cats to generating high-quality essays and paintings and music. Along with these amazing capabilities have come many worries. I like to be a cheerleader for AI, not a critic. I think that, like electricity, AI will advance nearly every human endeavor. But I'm sympathetic to the people that find this technology unsettling. Humor me for a minute. I'd like to step into the shoes of the critics, because I think they make some thoughtful points, and I want everyone to understand these points.
+
+00:59
+Today's largest AI models have learned to mimic human capabilities by analyzing huge amounts of text and images on the internet. But the internet reflects not just humanity's best qualities, but also some of its worst, including our prejudices, our hatreds, our misconceptions. AI learns to mimic these negative qualities, too. So will AI amplify humanity's worst impulses?
+
+01:25
+But the anxiety doesn't end there. Who will be able to make a living when AI can do our jobs faster and cheaper than any of us? Will AI put many people out of work? But maybe it gets even worse. What if AI takes over and kills off humanity? I mean, this is terrible.

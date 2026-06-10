@@ -1,0 +1,10 @@
+00:00
+KC: There's no veto. And they’re like, “What? Are you serious? What if there's a bad note?" But I think the point was if it’s the tech company’s opinion, why is anyone going to trust it? It needs to be the people's opinion. And so we stuck to that principle. Everyone got behind it. And we have no way of changing the status of a note. Which is wonderful.
+
+00:22
+AT: OK, it is wonderful. And so what happens to the post after it gets noted?
+
+00:28
+JB: So what we’re looking at on the left is a typical, representative post. This is actually a real post. And we're looking at how many people have seen it over time. So the y-axis there is views and the x-axis is the time since post creation. And you can just see this thing’s going super viral at the start, all the way up, until it gets noted. So that's the green dot with the yellow dotted line there. Basically after that point it totally flattens out [and] gets almost no more views. And the kind of crazy thing about this is it's actually not getting down-ranked by our For You algorithm. This is actually just because of what we call “organic user behavior,” where basically people are realizing now that the post is incorrect because the note's on it. So they're just liking it less and reposting it less. I think this is really cool.
+
+01:15
