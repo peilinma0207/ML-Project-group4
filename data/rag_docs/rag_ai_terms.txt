@@ -1,0 +1,23 @@
+Artificial Intelligence: The field of building computer systems that can perform tasks requiring human intelligence.
+
+Machine Learning: A branch of artificial intelligence where systems learn patterns from data instead of being explicitly programmed for every rule.
+
+Deep Learning: A machine learning method based on neural networks with many layers. It is often used for speech recognition, image recognition, language processing, and generative AI.
+
+Neural Network: A model inspired by the human brain, used to learn patterns from data.
+
+AI Agent: A system that can perceive information, make decisions, and take actions toward a goal. AI agents are often used for coding, automation, planning, and tool use.
+
+Large Language Model: A model trained on large amounts of text to understand and generate language.
+
+Supervised Learning: A machine learning method where a model learns from labeled examples.
+
+Reinforcement Learning: A learning method where an agent learns by receiving rewards or feedback from the environment.
+
+Self-supervised Learning: A learning method where a model learns useful representations from data without needing manually labeled examples.
+
+Misinformation: False or misleading information that spreads online.
+
+Community Notes: A crowdsourced fact-checking system that adds context to potentially misleading online posts.
+
+Chinese Room: A thought experiment proposed by philosopher John Searle. It asks whether a computer that manipulates symbols can truly understand language.

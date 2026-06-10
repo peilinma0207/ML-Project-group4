@@ -1,0 +1,16 @@
+Andrew Ng is a computer scientist and machine learning educator known for his work in artificial intelligence, deep learning, and online education. He co-founded Coursera and has taught machine learning to a large global audience.
+
+Eric Schmidt is a technology executive and former CEO of Google. He often discusses artificial intelligence, technological change, and the social impact of AI.
+
+Jeremy Howard is a data scientist and entrepreneur known for his work in deep learning, AI education, and practical machine learning.
+
+D. Scott Phoenix discusses human-AI interaction and the possibility of humans merging with artificial intelligence technologies.
+
+Peter Steinberger is a software developer and entrepreneur. In the TED talk used in this dataset, he discusses OpenClaw and AI coding agents.
+
+Keith Coleman and Jay Baxter are associated with Community Notes, a crowdsourced system designed to add context to online information and reduce misinformation.
+
+Briana Brownell explains how artificial intelligence systems learn, including supervised learning and reinforcement learning.
+
+Charles Wallace and Dan Kwartler discuss the Chinese Room thought experiment and whether AI systems truly understand language.
+

@@ -1,0 +1,11 @@
+This dataset contains TED and TED-Ed video clips related to artificial intelligence, machine learning, deep learning, AI agents, misinformation, and AI understanding.
+
+Each sample includes:
+- one selected video segment
+- one extracted audio file
+- one ground truth transcript
+- metadata describing the source, speaker, topic, and selected time range
+
+The RAG documents provide background knowledge for transcript repair. They are intended to help the agent recognize technical terms, speaker names, AI-related concepts, and topic-specific expressions.
+
+The dataset source is TED and TED-Ed, not YouTube. The collected videos are centered around artificial intelligence and machine learning topics.

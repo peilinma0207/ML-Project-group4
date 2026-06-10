@@ -1,0 +1,29 @@
+video_01: The AI revolution is underhyped
+This video discusses the rapid development of artificial intelligence and why AI may be more important than many people currently believe.
+
+video_02: How AI could empower any business
+Andrew Ng explains how AI can help businesses beyond large technology companies and how smaller organizations can use data-driven decision making.
+
+video_03: How does artificial intelligence learn?
+This TED-Ed video explains different ways AI systems learn, including supervised learning, reinforcement learning, and feedback-based improvement.
+
+video_04: AI isn't the problem -- it's the solution
+Andrew Ng argues that AI should be seen as a tool for solving problems rather than only as a source of risk.
+
+video_05: The wonderful and terrifying implications of computers that can learn
+Jeremy Howard discusses deep learning and how computers can learn to perform complex tasks such as image recognition.
+
+video_06: Why humans should merge with AI
+This talk discusses the relationship between humans and artificial intelligence and explores the idea of deeper human-AI integration.
+
+video_07: How I created OpenClaw, the breakthrough AI agent
+Peter Steinberger explains the creation of an AI coding agent and the impact of AI agents on software development.
+
+video_08: How Community Notes reduce viral misinformation
+This discussion explains how Community Notes can help reduce misinformation, including AI-generated misinformation, through crowdsourced context.
+
+video_09: How I created OpenClaw, the breakthrough AI agent
+This segment focuses on the speaker's experience building an AI coding agent and how AI coding tools changed his work.
+
+video_10: Scientists still don't know the answer to this infamous question
+This TED-Ed video introduces John Searle's Chinese Room thought experiment and asks whether AI systems truly understand language.
