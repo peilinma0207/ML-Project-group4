@@ -1,8 +1,0 @@
-00:04
-Bilawal Sidhu: Eric Schmidt, thank you for joining us. Let's go back. You said the arrival of non-human intelligence is a very big deal. And this photo, taken in 2016, feels like one of those quiet moments where the Earth shifted beneath us, but not everyone noticed. What did you see back then that the rest of us might have missed?
-
-00:25
-Eric Schmidt: In 2016, we didn't understand what was now going to happen, but we understood that these algorithms were new and powerful. What happened in this particular set of games was in roughly the second game, there was a new move invented by AI in a game that had been around for 2,500 years that no one had ever seen.
-
-00:47
-Technically, the way this occurred was that the system of AlphaGo was essentially organized to always maintain a greater than 50 percent chance of winning. And so it calculated correctly this move
