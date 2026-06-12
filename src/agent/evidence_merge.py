@@ -1,6 +1,6 @@
 from __future__ import annotations
 
-from src.schema import ASRSegment, MergedEvidence, RAGHit, VisualEvent
+from .schema import ASRSegment, MergedEvidence, RAGHit, VisualEvent
 
 
 def run(

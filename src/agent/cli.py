@@ -5,7 +5,7 @@ import logging
 import sys
 import uuid
 
-from src.schema import JobConfig
+from .schema import JobConfig
 
 logger = logging.getLogger(__name__)
 
@@ -42,9 +42,9 @@ def main(argv: list[str] | None = None) -> None:
         enable_diarization=args.diarize,
     )
 
-    from src import audio_extract, audio_preprocess, asr_transcribe
-    from src import frame_sample, vlm_extract, rag_retrieve
-    from src import evidence_merge, script_repair, export
+    from . import audio_extract, audio_preprocess, asr_transcribe
+    from . import frame_sample, vlm_extract, rag_retrieve
+    from . import evidence_merge, script_repair, export
 
     logger.info("Starting pipeline for video: %s", config.video_uri)
 

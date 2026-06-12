@@ -3,13 +3,13 @@ from unittest.mock import MagicMock, patch, PropertyMock
 
 import pytest
 
-from src.vlm_extract import (
+from src.agent.vlm_extract import (
     run,
     _extract_single_frame,
     _merge_nearby_events,
     _parse_json_output,
 )
-from src.schema import JobConfig, OCRHit, SampledFrame, VisualEvent
+from src.agent.schema import JobConfig, OCRHit, SampledFrame, VisualEvent
 
 
 @pytest.fixture
@@ -50,8 +50,8 @@ MOCK_VLM_JSON = {
 
 
 class TestVLMExtract:
-    @patch("src.vlm_extract._load_model")
-    @patch("src.vlm_extract._extract_single_frame")
+    @patch("src.agent.vlm_extract._load_model")
+    @patch("src.agent.vlm_extract._extract_single_frame")
     def test_run_success(self, mock_extract, mock_load, frames, config):
         mock_load.return_value = (MagicMock(), MagicMock())
         mock_extract.side_effect = [
@@ -75,14 +75,14 @@ class TestVLMExtract:
         assert len(result) == 2  # first two merged (gap <= 2.0)
         assert all(isinstance(e, VisualEvent) for e in result)
 
-    @patch("src.vlm_extract._load_model")
-    @patch("src.vlm_extract._extract_single_frame", return_value=None)
+    @patch("src.agent.vlm_extract._load_model")
+    @patch("src.agent.vlm_extract._extract_single_frame", return_value=None)
     def test_run_all_failed(self, mock_extract, mock_load, frames, config):
         mock_load.return_value = (MagicMock(), MagicMock())
         result = run(frames, config)
         assert result == []
 
-    @patch("src.vlm_extract._load_model")
+    @patch("src.agent.vlm_extract._load_model")
     def test_missing_frame_skipped(self, mock_load, config):
         mock_load.return_value = (MagicMock(), MagicMock())
         frames = [SampledFrame(frame_path="/nonexistent.jpg", timestamp=0.0, sample_reason="interval")]

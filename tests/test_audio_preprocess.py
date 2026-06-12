@@ -4,8 +4,8 @@ from unittest.mock import MagicMock, patch
 
 import pytest
 
-from src.audio_preprocess import run, _build_filter_chain
-from src.schema import AudioMeta, JobConfig
+from src.agent.audio_preprocess import run, _build_filter_chain
+from src.agent.schema import AudioMeta, JobConfig
 
 
 @pytest.fixture
@@ -30,7 +30,7 @@ def audio_meta(tmp_path):
 
 
 class TestAudioPreprocess:
-    @patch("src.audio_preprocess.subprocess.run")
+    @patch("src.agent.audio_preprocess.subprocess.run")
     def test_success(self, mock_run, audio_meta, config):
         mock_run.return_value = MagicMock(returncode=0)
         result = run(audio_meta, config)
@@ -41,7 +41,7 @@ class TestAudioPreprocess:
         assert result.channels == 1
         assert result.duration == 60.0
 
-    @patch("src.audio_preprocess.subprocess.run")
+    @patch("src.agent.audio_preprocess.subprocess.run")
     def test_ffmpeg_filter_chain(self, mock_run, audio_meta, config):
         mock_run.return_value = MagicMock(returncode=0)
         run(audio_meta, config)
@@ -53,7 +53,7 @@ class TestAudioPreprocess:
         assert "highpass=f=80" in filter_str
         assert "loudnorm" in filter_str
 
-    @patch("src.audio_preprocess.subprocess.run")
+    @patch("src.agent.audio_preprocess.subprocess.run")
     def test_preserves_sample_rate(self, mock_run, audio_meta, config):
         mock_run.return_value = MagicMock(returncode=0)
         audio_meta.sample_rate = 44100
@@ -69,13 +69,13 @@ class TestAudioPreprocess:
         with pytest.raises(FileNotFoundError, match="Audio file not found"):
             run(audio, config)
 
-    @patch("src.audio_preprocess.subprocess.run")
+    @patch("src.agent.audio_preprocess.subprocess.run")
     def test_ffmpeg_failure(self, mock_run, audio_meta, config):
         mock_run.side_effect = subprocess.CalledProcessError(1, "ffmpeg")
         with pytest.raises(subprocess.CalledProcessError):
             run(audio_meta, config)
 
-    @patch("src.audio_preprocess.subprocess.run")
+    @patch("src.agent.audio_preprocess.subprocess.run")
     def test_output_dir_created(self, mock_run, audio_meta, config):
         mock_run.return_value = MagicMock(returncode=0)
         output_dir = Path(config.output_dir) / config.job_id

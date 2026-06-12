@@ -5,7 +5,7 @@ from pathlib import Path
 
 import whisperx
 
-from src.schema import ASRSegment, AudioMeta, JobConfig, WordTimestamp
+from .schema import ASRSegment, AudioMeta, JobConfig, WordTimestamp
 
 logger = logging.getLogger(__name__)
 

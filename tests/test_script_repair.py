@@ -3,14 +3,14 @@ from unittest.mock import MagicMock, patch
 
 import pytest
 
-from src.script_repair import (
+from src.agent.script_repair import (
     run,
     _build_prompt,
     _parse_repair_output,
     _build_evidence_source,
     _repair_segment,
 )
-from src.schema import (
+from src.agent.schema import (
     ASRSegment,
     EvidenceSource,
     MergedEvidence,
@@ -24,7 +24,7 @@ from src.schema import (
 
 @pytest.fixture
 def config():
-    from src.schema import JobConfig
+    from src.agent.schema import JobConfig
     return JobConfig(
         job_id="test_001",
         video_uri="dummy.mp4",
@@ -84,7 +84,7 @@ MOCK_REPAIR_JSON = {
 
 
 class TestScriptRepair:
-    @patch("src.script_repair._load_model")
+    @patch("src.agent.script_repair._load_model")
     def test_success(self, mock_load, merged_evidence, config):
         mock_model = MagicMock()
         mock_tokenizer = MagicMock()
@@ -103,7 +103,7 @@ class TestScriptRepair:
         assert result[0].end == 10.0
         assert result[0].speaker == "SPEAKER_01"
 
-    @patch("src.script_repair._load_model")
+    @patch("src.agent.script_repair._load_model")
     def test_preserves_timestamps(self, mock_load, merged_evidence, config):
         mock_model = MagicMock()
         mock_tokenizer = MagicMock()
@@ -117,7 +117,7 @@ class TestScriptRepair:
         assert result[0].start == merged_evidence.asr.start
         assert result[0].end == merged_evidence.asr.end
 
-    @patch("src.script_repair._load_model")
+    @patch("src.agent.script_repair._load_model")
     def test_model_failure_falls_back(self, mock_load, merged_evidence, config):
         mock_model = MagicMock()
         mock_tokenizer = MagicMock()

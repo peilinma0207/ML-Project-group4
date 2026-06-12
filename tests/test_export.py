@@ -3,8 +3,8 @@ from pathlib import Path
 
 import pytest
 
-from src.export import run, _format_timestamp
-from src.schema import (
+from src.agent.export import run, _format_timestamp
+from src.agent.schema import (
     EvidenceSource,
     ExportResult,
     JobConfig,

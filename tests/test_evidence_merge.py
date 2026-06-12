@@ -1,7 +1,7 @@
 import pytest
 
-from src.evidence_merge import run, _find_overlapping_events, _find_matching_rag
-from src.schema import (
+from src.agent.evidence_merge import run, _find_overlapping_events, _find_matching_rag
+from src.agent.schema import (
     ASRSegment,
     MergedEvidence,
     OCRHit,

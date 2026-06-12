@@ -6,7 +6,7 @@ from pathlib import Path
 
 from rapidfuzz import fuzz
 
-from src.schema import ASRSegment, RAGHit, VisualEvent
+from .schema import ASRSegment, RAGHit, VisualEvent
 
 logger = logging.getLogger(__name__)
 

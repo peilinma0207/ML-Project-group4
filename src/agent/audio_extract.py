@@ -4,7 +4,7 @@ import json
 import subprocess
 from pathlib import Path
 
-from src.schema import AudioMeta, JobConfig
+from .schema import AudioMeta, JobConfig
 
 
 def run(config: JobConfig) -> AudioMeta:

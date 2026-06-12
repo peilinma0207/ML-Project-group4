@@ -3,7 +3,7 @@ from __future__ import annotations
 import subprocess
 from pathlib import Path
 
-from src.schema import AudioMeta, JobConfig
+from .schema import AudioMeta, JobConfig
 
 
 def run(audio: AudioMeta, config: JobConfig) -> AudioMeta:

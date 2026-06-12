@@ -1,6 +1,6 @@
 import json
 
-from src.schema import (
+from src.agent.schema import (
     ASRSegment,
     AudioMeta,
     EvidenceSource,

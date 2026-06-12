@@ -5,7 +5,7 @@ from unittest.mock import MagicMock, patch
 
 import pytest
 
-from src.frame_sample import (
+from src.agent.frame_sample import (
     run,
     _deduplicate,
     _interval_sample,
@@ -13,7 +13,7 @@ from src.frame_sample import (
     _renumber,
     _scene_change_sample,
 )
-from src.schema import ASRSegment, JobConfig, SampledFrame, WordTimestamp
+from src.agent.schema import ASRSegment, JobConfig, SampledFrame, WordTimestamp
 
 
 @pytest.fixture
@@ -49,10 +49,10 @@ def segments():
 
 
 class TestFrameSampleRun:
-    @patch("src.frame_sample._low_confidence_sample", return_value=[])
-    @patch("src.frame_sample._scene_change_sample", return_value=[])
-    @patch("src.frame_sample._interval_sample")
-    @patch("src.frame_sample._probe_duration", return_value=10.0)
+    @patch("src.agent.frame_sample._low_confidence_sample", return_value=[])
+    @patch("src.agent.frame_sample._scene_change_sample", return_value=[])
+    @patch("src.agent.frame_sample._interval_sample")
+    @patch("src.agent.frame_sample._probe_duration", return_value=10.0)
     def test_success(self, mock_dur, mock_interval, mock_scene, mock_low, config, segments):
         mock_interval.return_value = [
             SampledFrame(frame_path="f1.jpg", timestamp=0.0, sample_reason="interval"),
@@ -73,7 +73,7 @@ class TestFrameSampleRun:
 
 
 class TestIntervalSample:
-    @patch("src.frame_sample.subprocess.run")
+    @patch("src.agent.frame_sample.subprocess.run")
     def test_generates_frames_at_interval(self, mock_run):
         mock_run.return_value = MagicMock(returncode=0)
         video = Path("test.mp4")
@@ -85,14 +85,14 @@ class TestIntervalSample:
         assert result[2].timestamp == 6.0
         assert all(f.sample_reason == "interval" for f in result)
 
-    @patch("src.frame_sample.subprocess.run")
+    @patch("src.agent.frame_sample.subprocess.run")
     def test_zero_duration(self, mock_run):
         result = _interval_sample(Path("v.mp4"), Path("f"), 0.0, 3.0)
         assert result == []
 
 
 class TestSceneChangeSample:
-    @patch("src.frame_sample.subprocess.run")
+    @patch("src.agent.frame_sample.subprocess.run")
     def test_with_scene_changes(self, mock_run):
         probe_result = MagicMock(
             returncode=0,
@@ -112,7 +112,7 @@ class TestSceneChangeSample:
         assert result[1].timestamp == 8.1
         assert all(f.sample_reason == "scene_change" for f in result)
 
-    @patch("src.frame_sample.subprocess.run")
+    @patch("src.agent.frame_sample.subprocess.run")
     def test_no_scene_changes(self, mock_run):
         mock_run.return_value = MagicMock(
             returncode=0,
@@ -121,7 +121,7 @@ class TestSceneChangeSample:
         result = _scene_change_sample(Path("v.mp4"), Path("frames"))
         assert result == []
 
-    @patch("src.frame_sample.subprocess.run")
+    @patch("src.agent.frame_sample.subprocess.run")
     def test_probe_failure(self, mock_run):
         mock_run.return_value = MagicMock(returncode=1, stdout="")
         result = _scene_change_sample(Path("v.mp4"), Path("frames"))
@@ -129,7 +129,7 @@ class TestSceneChangeSample:
 
 
 class TestLowConfidenceSample:
-    @patch("src.frame_sample.subprocess.run")
+    @patch("src.agent.frame_sample.subprocess.run")
     def test_samples_around_flagged_segments(self, mock_run, segments):
         mock_run.return_value = MagicMock(returncode=0)
         result = _low_confidence_sample(Path("v.mp4"), Path("frames"), segments)
@@ -139,7 +139,7 @@ class TestLowConfidenceSample:
         assert min(timestamps) >= 3.5
         assert max(timestamps) <= 12.0
 
-    @patch("src.frame_sample.subprocess.run")
+    @patch("src.agent.frame_sample.subprocess.run")
     def test_no_flagged_segments(self, mock_run):
         segments = [
             ASRSegment(segment_id="s1", start=0.0, end=5.0, text="ok", quality_flags=[])

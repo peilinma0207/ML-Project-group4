@@ -3,7 +3,7 @@ from __future__ import annotations
 import json
 import logging
 
-from src.schema import (
+from .schema import (
     EvidenceSource,
     JobConfig,
     MergedEvidence,

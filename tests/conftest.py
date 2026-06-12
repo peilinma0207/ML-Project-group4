@@ -4,7 +4,7 @@ from pathlib import Path
 
 @pytest.fixture
 def sample_job_config():
-    from src.schema import JobConfig
+    from src.agent.schema import JobConfig
     return JobConfig(
         job_id="test_001",
         video_uri="test_video.mp4",
@@ -15,7 +15,7 @@ def sample_job_config():
 
 @pytest.fixture
 def sample_audio_meta():
-    from src.schema import AudioMeta
+    from src.agent.schema import AudioMeta
     return AudioMeta(
         audio_uri="test_output/test_001/audio.wav",
         sample_rate=16000,
@@ -26,7 +26,7 @@ def sample_audio_meta():
 
 @pytest.fixture
 def sample_asr_segments():
-    from src.schema import ASRSegment, WordTimestamp
+    from src.agent.schema import ASRSegment, WordTimestamp
     return [
         ASRSegment(
             segment_id="seg_0001",

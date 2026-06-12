@@ -3,8 +3,8 @@ from unittest.mock import MagicMock, patch
 
 import pytest
 
-from src.asr_transcribe import run, _build_asr_segments, _detect_device
-from src.schema import ASRSegment, AudioMeta, JobConfig
+from src.agent.asr_transcribe import run, _build_asr_segments, _detect_device
+from src.agent.schema import ASRSegment, AudioMeta, JobConfig
 
 
 @pytest.fixture
@@ -66,8 +66,8 @@ MOCK_ALIGNED_RESULT = {
 
 
 class TestASRTranscribe:
-    @patch("src.asr_transcribe._detect_device", return_value="cpu")
-    @patch("src.asr_transcribe.whisperx")
+    @patch("src.agent.asr_transcribe._detect_device", return_value="cpu")
+    @patch("src.agent.asr_transcribe.whisperx")
     def test_success(self, mock_wx, mock_device, audio_meta, config):
         mock_model = MagicMock()
         mock_model.transcribe.return_value = MOCK_RAW_RESULT
@@ -83,8 +83,8 @@ class TestASRTranscribe:
         assert result[0].text == "hello world"
         assert result[1].text == "hybrid search"
 
-    @patch("src.asr_transcribe._detect_device", return_value="cpu")
-    @patch("src.asr_transcribe.whisperx")
+    @patch("src.agent.asr_transcribe._detect_device", return_value="cpu")
+    @patch("src.agent.asr_transcribe.whisperx")
     def test_word_timestamps(self, mock_wx, mock_device, audio_meta, config):
         mock_model = MagicMock()
         mock_model.transcribe.return_value = MOCK_RAW_RESULT
@@ -99,8 +99,8 @@ class TestASRTranscribe:
         assert result[0].words[0].word == "hello"
         assert result[0].words[0].confidence == 0.95
 
-    @patch("src.asr_transcribe._detect_device", return_value="cpu")
-    @patch("src.asr_transcribe.whisperx")
+    @patch("src.agent.asr_transcribe._detect_device", return_value="cpu")
+    @patch("src.agent.asr_transcribe.whisperx")
     def test_low_confidence_flagging(self, mock_wx, mock_device, audio_meta, config):
         mock_model = MagicMock()
         mock_model.transcribe.return_value = MOCK_RAW_RESULT
@@ -114,8 +114,8 @@ class TestASRTranscribe:
         assert "low_confidence" not in result[0].quality_flags
         assert "low_confidence" in result[1].quality_flags
 
-    @patch("src.asr_transcribe._detect_device", return_value="cpu")
-    @patch("src.asr_transcribe.whisperx")
+    @patch("src.agent.asr_transcribe._detect_device", return_value="cpu")
+    @patch("src.agent.asr_transcribe.whisperx")
     def test_segment_ids(self, mock_wx, mock_device, audio_meta, config):
         mock_model = MagicMock()
         mock_model.transcribe.return_value = MOCK_RAW_RESULT

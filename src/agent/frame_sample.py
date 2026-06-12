@@ -4,7 +4,7 @@ import json
 import subprocess
 from pathlib import Path
 
-from src.schema import ASRSegment, JobConfig, SampledFrame
+from .schema import ASRSegment, JobConfig, SampledFrame
 
 
 def run(config: JobConfig, segments: list[ASRSegment]) -> list[SampledFrame]:

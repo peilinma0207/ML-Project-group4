@@ -3,7 +3,7 @@ from __future__ import annotations
 import json
 from pathlib import Path
 
-from src.schema import ExportResult, JobConfig, RepairedSegment
+from .schema import ExportResult, JobConfig, RepairedSegment
 
 
 def run(

@@ -2,8 +2,8 @@ import json
 
 import pytest
 
-from src.rag_retrieve import run, _load_glossary, _match_entry
-from src.schema import ASRSegment, OCRHit, RAGHit, VisualEvent, WordTimestamp
+from src.agent.rag_retrieve import run, _load_glossary, _match_entry
+from src.agent.schema import ASRSegment, OCRHit, RAGHit, VisualEvent, WordTimestamp
 
 
 @pytest.fixture

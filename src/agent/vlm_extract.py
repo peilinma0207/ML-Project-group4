@@ -4,7 +4,7 @@ import json
 import logging
 from pathlib import Path
 
-from src.schema import JobConfig, OCRHit, SampledFrame, VisualEvent
+from .schema import JobConfig, OCRHit, SampledFrame, VisualEvent
 
 logger = logging.getLogger(__name__)
 

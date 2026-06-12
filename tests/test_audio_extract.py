@@ -5,8 +5,8 @@ from unittest.mock import MagicMock, patch
 
 import pytest
 
-from src.audio_extract import run, _probe_duration
-from src.schema import AudioMeta, JobConfig
+from src.agent.audio_extract import run, _probe_duration
+from src.agent.schema import AudioMeta, JobConfig
 
 
 @pytest.fixture
@@ -21,8 +21,8 @@ def config(tmp_path):
 
 
 class TestAudioExtract:
-    @patch("src.audio_extract._probe_duration", return_value=60.5)
-    @patch("src.audio_extract.subprocess.run")
+    @patch("src.agent.audio_extract._probe_duration", return_value=60.5)
+    @patch("src.agent.audio_extract.subprocess.run")
     def test_success(self, mock_run, mock_probe, config):
         mock_run.return_value = MagicMock(returncode=0)
 
@@ -34,10 +34,10 @@ class TestAudioExtract:
         assert result.duration == 60.5
         assert result.audio_uri.endswith("audio.wav")
 
-    @patch("src.audio_extract.subprocess.run")
+    @patch("src.agent.audio_extract.subprocess.run")
     def test_ffmpeg_args(self, mock_run, config):
         mock_run.return_value = MagicMock(returncode=0)
-        with patch("src.audio_extract._probe_duration", return_value=10.0):
+        with patch("src.agent.audio_extract._probe_duration", return_value=10.0):
             run(config)
 
         call_args = mock_run.call_args_list[0]
@@ -60,7 +60,7 @@ class TestAudioExtract:
         with pytest.raises(FileNotFoundError, match="Video file not found"):
             run(config)
 
-    @patch("src.audio_extract.subprocess.run")
+    @patch("src.agent.audio_extract.subprocess.run")
     def test_ffmpeg_failure(self, mock_run, config):
         mock_run.side_effect = subprocess.CalledProcessError(1, "ffmpeg")
         with pytest.raises(subprocess.CalledProcessError):
@@ -69,15 +69,15 @@ class TestAudioExtract:
     def test_output_dir_created(self, config):
         output_dir = Path(config.output_dir) / config.job_id
         assert not output_dir.exists()
-        with patch("src.audio_extract.subprocess.run") as mock_run, \
-             patch("src.audio_extract._probe_duration", return_value=5.0):
+        with patch("src.agent.audio_extract.subprocess.run") as mock_run, \
+             patch("src.agent.audio_extract._probe_duration", return_value=5.0):
             mock_run.return_value = MagicMock(returncode=0)
             run(config)
         assert output_dir.exists()
 
 
 class TestProbeDuration:
-    @patch("src.audio_extract.subprocess.run")
+    @patch("src.agent.audio_extract.subprocess.run")
     def test_parse_duration(self, mock_run):
         mock_run.return_value = MagicMock(
             stdout=json.dumps({"format": {"duration": "123.456"}}),
@@ -86,7 +86,7 @@ class TestProbeDuration:
         result = _probe_duration(Path("test.wav"))
         assert result == 123.456
 
-    @patch("src.audio_extract.subprocess.run")
+    @patch("src.agent.audio_extract.subprocess.run")
     def test_ffprobe_failure(self, mock_run):
         mock_run.side_effect = subprocess.CalledProcessError(1, "ffprobe")
         with pytest.raises(subprocess.CalledProcessError):
