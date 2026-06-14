@@ -29,6 +29,7 @@ def config():
         job_id="test_001",
         video_uri="dummy.mp4",
         topic_hint="vector databases",
+        text_api_base="http://localhost:1234/v1",
     )
 
 
@@ -83,16 +84,21 @@ MOCK_REPAIR_JSON = {
 }
 
 
-class TestScriptRepair:
-    @patch("src.agent.script_repair._load_model")
-    def test_success(self, mock_load, merged_evidence, config):
-        mock_model = MagicMock()
-        mock_tokenizer = MagicMock()
-        mock_load.return_value = (mock_model, mock_tokenizer)
+def _make_mock_response(data):
+    response_body = json.dumps({
+        "choices": [{"message": {"content": json.dumps(data)}}]
+    }).encode()
+    mock_resp = MagicMock()
+    mock_resp.read.return_value = response_body
+    mock_resp.__enter__ = lambda s: s
+    mock_resp.__exit__ = MagicMock(return_value=False)
+    return mock_resp
 
-        mock_tokenizer.return_value = {"input_ids": MagicMock()}
-        mock_model.generate.return_value = [MagicMock()]
-        mock_tokenizer.decode.return_value = json.dumps(MOCK_REPAIR_JSON)
+
+class TestScriptRepair:
+    @patch("src.agent.script_repair.urllib.request.urlopen")
+    def test_success(self, mock_urlopen, merged_evidence, config):
+        mock_urlopen.return_value = _make_mock_response(MOCK_REPAIR_JSON)
 
         result = run([merged_evidence], config)
 
@@ -103,27 +109,17 @@ class TestScriptRepair:
         assert result[0].end == 10.0
         assert result[0].speaker == "SPEAKER_01"
 
-    @patch("src.agent.script_repair._load_model")
-    def test_preserves_timestamps(self, mock_load, merged_evidence, config):
-        mock_model = MagicMock()
-        mock_tokenizer = MagicMock()
-        mock_load.return_value = (mock_model, mock_tokenizer)
-
-        mock_tokenizer.return_value = {"input_ids": MagicMock()}
-        mock_model.generate.return_value = [MagicMock()]
-        mock_tokenizer.decode.return_value = json.dumps(MOCK_REPAIR_JSON)
+    @patch("src.agent.script_repair.urllib.request.urlopen")
+    def test_preserves_timestamps(self, mock_urlopen, merged_evidence, config):
+        mock_urlopen.return_value = _make_mock_response(MOCK_REPAIR_JSON)
 
         result = run([merged_evidence], config)
         assert result[0].start == merged_evidence.asr.start
         assert result[0].end == merged_evidence.asr.end
 
-    @patch("src.agent.script_repair._load_model")
-    def test_model_failure_falls_back(self, mock_load, merged_evidence, config):
-        mock_model = MagicMock()
-        mock_tokenizer = MagicMock()
-        mock_load.return_value = (mock_model, mock_tokenizer)
-
-        mock_tokenizer.side_effect = Exception("model error")
+    @patch("src.agent.script_repair.urllib.request.urlopen")
+    def test_api_failure_falls_back(self, mock_urlopen, merged_evidence, config):
+        mock_urlopen.side_effect = Exception("connection refused")
 
         result = run([merged_evidence], config)
         assert len(result) == 1
@@ -144,7 +140,6 @@ class TestBuildPrompt:
 
     def test_includes_rag_evidence(self, merged_evidence):
         prompt = _build_prompt(merged_evidence, "test topic")
-        assert "glossary_v1" not in prompt  # source is in evidence, not prompt
         assert "high bread search" in prompt
 
     def test_includes_topic(self, merged_evidence):

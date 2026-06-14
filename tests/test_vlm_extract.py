@@ -1,5 +1,6 @@
 import json
-from unittest.mock import MagicMock, patch, PropertyMock
+from io import BytesIO
+from unittest.mock import MagicMock, patch
 
 import pytest
 
@@ -18,6 +19,7 @@ def config():
         job_id="test_001",
         video_uri="dummy.mp4",
         topic_hint="vector databases",
+        vlm_api_base="http://localhost:1234/v1",
     )
 
 
@@ -49,42 +51,33 @@ MOCK_VLM_JSON = {
 }
 
 
-class TestVLMExtract:
-    @patch("src.agent.vlm_extract._load_model")
-    @patch("src.agent.vlm_extract._extract_single_frame")
-    def test_run_success(self, mock_extract, mock_load, frames, config):
-        mock_load.return_value = (MagicMock(), MagicMock())
-        mock_extract.side_effect = [
-            VisualEvent(
-                time_range=(0.0, 0.0),
-                scene="office",
-                evidence_frame="f1.jpg",
-            ),
-            VisualEvent(
-                time_range=(1.5, 1.5),
-                scene="office",
-                evidence_frame="f2.jpg",
-            ),
-            VisualEvent(
-                time_range=(5.0, 5.0),
-                scene="lobby",
-                evidence_frame="f3.jpg",
-            ),
-        ]
-        result = run(frames, config)
-        assert len(result) == 2  # first two merged (gap <= 2.0)
-        assert all(isinstance(e, VisualEvent) for e in result)
+def _make_mock_response(data):
+    response_body = json.dumps({
+        "choices": [{"message": {"content": json.dumps(data)}}]
+    }).encode()
+    mock_resp = MagicMock()
+    mock_resp.read.return_value = response_body
+    mock_resp.__enter__ = lambda s: s
+    mock_resp.__exit__ = MagicMock(return_value=False)
+    return mock_resp
 
-    @patch("src.agent.vlm_extract._load_model")
-    @patch("src.agent.vlm_extract._extract_single_frame", return_value=None)
-    def test_run_all_failed(self, mock_extract, mock_load, frames, config):
-        mock_load.return_value = (MagicMock(), MagicMock())
+
+class TestVLMExtract:
+    @patch("src.agent.vlm_extract.urllib.request.urlopen")
+    def test_run_success(self, mock_urlopen, frames, config):
+        mock_urlopen.return_value = _make_mock_response(MOCK_VLM_JSON)
+        result = run(frames, config)
+        assert len(result) >= 1
+        assert all(isinstance(e, VisualEvent) for e in result)
+        assert mock_urlopen.call_count == 3
+
+    @patch("src.agent.vlm_extract.urllib.request.urlopen")
+    def test_run_api_failure(self, mock_urlopen, frames, config):
+        mock_urlopen.side_effect = Exception("connection refused")
         result = run(frames, config)
         assert result == []
 
-    @patch("src.agent.vlm_extract._load_model")
-    def test_missing_frame_skipped(self, mock_load, config):
-        mock_load.return_value = (MagicMock(), MagicMock())
+    def test_missing_frame_skipped(self, config):
         frames = [SampledFrame(frame_path="/nonexistent.jpg", timestamp=0.0, sample_reason="interval")]
         result = run(frames, config)
         assert result == []

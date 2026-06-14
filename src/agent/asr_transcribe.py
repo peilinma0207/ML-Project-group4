@@ -3,6 +3,38 @@ from __future__ import annotations
 import logging
 from pathlib import Path
 
+import torch.serialization
+
+def _register_pyannote_safe_globals():
+    _original_torch_load = torch.load
+
+    def _patched_torch_load(*args, **kwargs):
+        kwargs["weights_only"] = False
+        return _original_torch_load(*args, **kwargs)
+
+    torch.load = _patched_torch_load
+
+    try:
+        from speechbrain.utils import importutils
+        import os
+        _original_ensure = importutils.LazyModule.ensure_module
+
+        def _patched_ensure(self, stacklevel):
+            import inspect as _inspect, sys as _sys
+            try:
+                frame = _inspect.getframeinfo(_sys._getframe(stacklevel + 1))
+            except (AttributeError, ValueError):
+                frame = None
+            if frame is not None and os.path.basename(frame.filename) == "inspect.py":
+                raise AttributeError()
+            return _original_ensure(self, stacklevel)
+
+        importutils.LazyModule.ensure_module = _patched_ensure
+    except ImportError:
+        pass
+
+_register_pyannote_safe_globals()
+
 import whisperx
 
 from .schema import ASRSegment, AudioMeta, JobConfig, WordTimestamp

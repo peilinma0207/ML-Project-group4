@@ -20,7 +20,7 @@ def run(config: JobConfig, segments: list[ASRSegment]) -> list[SampledFrame]:
     frames: list[SampledFrame] = []
     frames.extend(_interval_sample(video, frames_dir, duration, config.frame_interval))
     frames.extend(_scene_change_sample(video, frames_dir))
-    frames.extend(_low_confidence_sample(video, frames_dir, segments))
+    frames.extend(_low_confidence_sample(video, frames_dir, segments, duration))
 
     frames = _deduplicate(frames, min_gap=0.5)
     frames = _renumber(frames, frames_dir)
@@ -127,6 +127,7 @@ def _low_confidence_sample(
     video: Path,
     frames_dir: Path,
     segments: list[ASRSegment],
+    duration: float,
 ) -> list[SampledFrame]:
     frames = []
     for seg in segments:
@@ -134,7 +135,7 @@ def _low_confidence_sample(
             continue
 
         start = max(0.0, seg.start - 2.0)
-        end = seg.end + 2.0
+        end = min(duration - 0.1, seg.end + 2.0)
         step = 1.0
         t = start
         while t <= end:
@@ -178,6 +179,9 @@ def _renumber(frames: list[SampledFrame], frames_dir: Path) -> list[SampledFrame
     for i, frame in enumerate(frames):
         new_name = f"frame_{i + 1:06d}.jpg"
         new_path = frames_dir / new_name
+        old_path = Path(frame.frame_path)
+        if old_path.exists() and old_path != new_path:
+            old_path.rename(new_path)
         result.append(SampledFrame(
             frame_path=str(new_path),
             timestamp=frame.timestamp,

@@ -7,8 +7,6 @@ requires-python = ">=3.10, <3.14"
 dependencies = [
     "pydantic>=2.0",
     "whisperx>=3.3.0",
-    "transformers>=4.48.0",
-    "accelerate>=1.0.0",
     "rapidfuzz>=3.0.0",
 ]
 
@@ -24,6 +22,17 @@ build-backend = "hatchling.build"
 
 [tool.hatch.build.targets.wheel]
 packages = ["src"]
+
+[tool.uv]
+
+[[tool.uv.index]]
+name = "pytorch-cu128"
+url = "https://download.pytorch.org/whl/cu128"
+
+[tool.uv.sources]
+torch = { index = "pytorch-cu128" }
+torchaudio = { index = "pytorch-cu128" }
+torchvision = { index = "pytorch-cu128" }
 
 [tool.pytest.ini_options]
 testpaths = ["tests"]

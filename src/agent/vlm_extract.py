@@ -1,7 +1,9 @@
 from __future__ import annotations
 
+import base64
 import json
 import logging
+import urllib.request
 from pathlib import Path
 
 from .schema import JobConfig, OCRHit, SampledFrame, VisualEvent
@@ -22,8 +24,6 @@ Output ONLY valid JSON, no other text."""
 
 
 def run(frames: list[SampledFrame], config: JobConfig) -> list[VisualEvent]:
-    model, processor = _load_model(config.vlm_model)
-
     raw_events: list[VisualEvent] = []
     for frame in frames:
         frame_path = Path(frame.frame_path)
@@ -31,49 +31,31 @@ def run(frames: list[SampledFrame], config: JobConfig) -> list[VisualEvent]:
             logger.warning("Frame not found: %s", frame_path)
             continue
 
-        event = _extract_single_frame(model, processor, frame, config.topic_hint)
+        event = _extract_single_frame(frame, config)
         if event is not None:
             raw_events.append(event)
 
     return _merge_nearby_events(raw_events, max_gap=2.0)
 
 
-def _load_model(model_name: str):
-    from transformers import AutoProcessor, AutoModelForImageTextToText
-
-    processor = AutoProcessor.from_pretrained(model_name)
-    model = AutoModelForImageTextToText.from_pretrained(
-        model_name,
-        device_map="auto",
-        torch_dtype="auto",
-    )
-    return model, processor
-
-
 def _extract_single_frame(
-    model,
-    processor,
     frame: SampledFrame,
-    topic_hint: str,
+    config: JobConfig,
 ) -> VisualEvent | None:
-    from PIL import Image
-
-    prompt = VLM_PROMPT_TEMPLATE.format(topic=topic_hint)
+    prompt = VLM_PROMPT_TEMPLATE.format(topic=config.topic_hint)
 
     try:
-        image = Image.open(frame.frame_path)
+        image_data = Path(frame.frame_path).read_bytes()
+        image_b64 = base64.b64encode(image_data).decode()
     except Exception:
-        logger.warning("Failed to open frame: %s", frame.frame_path)
+        logger.warning("Failed to read frame: %s", frame.frame_path)
         return None
 
     try:
-        inputs = processor(text=prompt, images=image, return_tensors="pt")
-        inputs = {k: v.to(model.device) for k, v in inputs.items()}
-        outputs = model.generate(**inputs, max_new_tokens=512)
-        text = processor.decode(outputs[0], skip_special_tokens=True)
+        text = _call_vlm_api(config.vlm_api_base, config.vlm_model, prompt, image_b64)
         data = _parse_json_output(text)
     except Exception:
-        logger.warning("VLM inference failed for frame: %s", frame.frame_path)
+        logger.warning("VLM API call failed for frame: %s", frame.frame_path)
         return None
 
     if data is None:
@@ -99,6 +81,35 @@ def _extract_single_frame(
         confidence=0.5,
         evidence_frame=frame.frame_path,
     )
+
+
+def _call_vlm_api(api_base: str, model_name: str, prompt: str, image_b64: str) -> str:
+    url = f"{api_base.rstrip('/')}/chat/completions"
+    payload = json.dumps({
+        "model": model_name,
+        "messages": [
+            {
+                "role": "user",
+                "content": [
+                    {"type": "text", "text": prompt},
+                    {
+                        "type": "image_url",
+                        "image_url": {"url": f"data:image/jpeg;base64,{image_b64}"},
+                    },
+                ],
+            }
+        ],
+        "max_tokens": 512,
+        "temperature": 0.1,
+    }).encode()
+    req = urllib.request.Request(
+        url,
+        data=payload,
+        headers={"Content-Type": "application/json"},
+    )
+    with urllib.request.urlopen(req, timeout=120) as resp:
+        data = json.loads(resp.read())
+    return data["choices"][0]["message"]["content"]
 
 
 def _parse_json_output(text: str) -> dict | None:

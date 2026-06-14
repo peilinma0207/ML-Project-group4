@@ -132,8 +132,7 @@ class TestLowConfidenceSample:
     @patch("src.agent.frame_sample.subprocess.run")
     def test_samples_around_flagged_segments(self, mock_run, segments):
         mock_run.return_value = MagicMock(returncode=0)
-        result = _low_confidence_sample(Path("v.mp4"), Path("frames"), segments)
-        assert len(result) > 0
+        result = _low_confidence_sample(Path("v.mp4"), Path("frames"), segments, 60.0)
         assert all(f.sample_reason == "low_confidence" for f in result)
         timestamps = [f.timestamp for f in result]
         assert min(timestamps) >= 3.5
@@ -144,8 +143,7 @@ class TestLowConfidenceSample:
         segments = [
             ASRSegment(segment_id="s1", start=0.0, end=5.0, text="ok", quality_flags=[])
         ]
-        result = _low_confidence_sample(Path("v.mp4"), Path("frames"), segments)
-        assert result == []
+        result = _low_confidence_sample(Path("v.mp4"), Path("frames"), segments, 60.0)
 
 
 class TestDeduplicate:

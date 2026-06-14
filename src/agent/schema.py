@@ -6,11 +6,14 @@ from pydantic import BaseModel, Field
 class JobConfig(BaseModel):
     job_id: str
     video_uri: str
+    audio_uri: str = ""
     topic_hint: str = ""
     output_dir: str = "./output"
     whisper_model: str = "base"
     vlm_model: str = "Qwen/Qwen3-VL-4B-Instruct"
+    vlm_api_base: str = ""
     text_model: str = "Qwen/Qwen3-8B"
+    text_api_base: str = ""
     glossary_path: str = "data/glossary.json"
     enable_diarization: bool = False
     frame_interval: float = 3.0

@@ -108,6 +108,8 @@ ASR 输出建议结构：
 
 视觉模型的任务定位是证据抽取，而非独立完成脚本修复。模型输出应采用 JSON，避免让小型视觉模型生成长段自然语言。
 
+视觉模型通过 OpenAI 兼容 API 调用，不在本地加载模型权重。推理服务由外部提供（如 vLLM、SGLang、LM Studio 或云端 API）。视觉请求以 base64 编码图片通过 chat/completions 接口的 `image_url` 字段发送。
+
 ### 5.1 主候选模型
 
 | 模型 | 规模 | 适合任务 | 计划定位 |
@@ -189,6 +191,8 @@ RAG 数据建议包含：
 ## 7. 文本综合模型
 
 最终修复模型可以使用 8B 以内纯文本模型。首选 `Qwen3-8B`，备选 `Llama-3.1-8B-Instruct` 或同规模指令模型。文本模型输入为结构化证据，而非原始视频帧。
+
+文本模型通过 OpenAI 兼容 API 调用，不在本地加载模型权重。推理服务由外部提供（如 vLLM、SGLang、LM Studio 或云端 API）。文本请求通过 chat/completions 接口发送。
 
 文本模型职责：
 
@@ -317,10 +321,10 @@ Gemma 4 12B 可作为原生多模态对比组，因为它是 12B 级统一多模
 | 音频抽取 | ffmpeg |
 | ASR | WhisperX 或 faster-whisper |
 | 说话人分离 | pyannote.audio，经 WhisperX 调用 |
-| 视觉推理 | Transformers、vLLM 或 SGLang |
+| 视觉推理 | OpenAI 兼容 API（vLLM、SGLang、LM Studio 或云端 API） |
 | OCR | PaddleOCR-VL-1.6 或常规 PaddleOCR |
 | 向量库 | Milvus、Qdrant、pgvector 或 Chroma |
-| 文本模型服务 | vLLM、SGLang、Ollama 或云端兼容接口 |
+| 文本模型服务 | OpenAI 兼容 API（vLLM、SGLang、LM Studio、Ollama 或云端 API） |
 | 追踪与调试 | LangSmith 或自建日志表 |
 
 ## 13. 资料来源记录

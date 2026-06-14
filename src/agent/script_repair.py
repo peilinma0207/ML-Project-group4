@@ -2,6 +2,7 @@ from __future__ import annotations
 
 import json
 import logging
+import urllib.request
 
 from .schema import (
     EvidenceSource,
@@ -49,41 +50,39 @@ def run(
     evidence: list[MergedEvidence],
     config: JobConfig,
 ) -> list[RepairedSegment]:
-    model, tokenizer = _load_model(config.text_model)
-
     results = []
     for merged in evidence:
-        repaired = _repair_segment(model, tokenizer, merged, config.topic_hint)
+        repaired = _repair_segment(merged, config)
         results.append(repaired)
-
     return results
 
 
-def _load_model(model_name: str):
-    from transformers import AutoTokenizer, AutoModelForCausalLM
-
-    tokenizer = AutoTokenizer.from_pretrained(model_name)
-    model = AutoModelForCausalLM.from_pretrained(
-        model_name,
-        device_map="auto",
-        torch_dtype="auto",
+def _call_api(api_base: str, model_name: str, prompt: str) -> str:
+    url = f"{api_base.rstrip('/')}/chat/completions"
+    payload = json.dumps({
+        "model": model_name,
+        "messages": [{"role": "user", "content": prompt}],
+        "max_tokens": 512,
+        "temperature": 0.1,
+    }).encode()
+    req = urllib.request.Request(
+        url,
+        data=payload,
+        headers={"Content-Type": "application/json"},
     )
-    return model, tokenizer
+    with urllib.request.urlopen(req, timeout=120) as resp:
+        data = json.loads(resp.read())
+    return data["choices"][0]["message"]["content"]
 
 
 def _repair_segment(
-    model,
-    tokenizer,
     merged: MergedEvidence,
-    topic_hint: str,
+    config: JobConfig,
 ) -> RepairedSegment:
-    prompt = _build_prompt(merged, topic_hint)
+    prompt = _build_prompt(merged, config.topic_hint)
 
     try:
-        inputs = tokenizer(prompt, return_tensors="pt")
-        inputs = {k: v.to(model.device) for k, v in inputs.items()}
-        outputs = model.generate(**inputs, max_new_tokens=256)
-        text = tokenizer.decode(outputs[0], skip_special_tokens=True)
+        text = _call_api(config.text_api_base, config.text_model, prompt)
         data = _parse_repair_output(text)
     except Exception:
         logger.warning("Repair failed for segment %s, using original", merged.segment_id)
@@ -151,7 +150,7 @@ def _build_prompt(merged: MergedEvidence, topic_hint: str) -> str:
 
 def _parse_repair_output(text: str) -> dict | None:
     text = text.strip()
-    start = text.rfind("{")
+    start = text.find("{")
     end = text.rfind("}")
     if start == -1 or end == -1:
         return None
