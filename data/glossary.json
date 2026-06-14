@@ -1,50 +1,230 @@
 [
   {
-    "term": "Hybrid Search",
-    "aliases": ["hybrid retrieval", "混合检索"],
-    "common_mishearings": ["high bread search", "hybrid source"],
-    "source": "glossary_v1"
+    "term": "Artificial Intelligence",
+    "aliases": ["AI", "A.I."],
+    "common_mishearings": ["ay eye", "a eye", "artificial intelligent"],
+    "source": "rag_ai_terms"
   },
   {
-    "term": "Vector Database",
-    "aliases": ["vector db", "vector store", "向量数据库"],
-    "common_mishearings": ["vector data base", "vector database"],
-    "source": "glossary_v1"
+    "term": "Machine Learning",
+    "aliases": ["ML"],
+    "common_mishearings": ["machine learn", "machine learnings"],
+    "source": "rag_ai_terms"
   },
   {
-    "term": "Retrieval-Augmented Generation",
-    "aliases": ["RAG", "检索增强生成"],
-    "common_mishearings": ["rag system", "rack generation"],
-    "source": "glossary_v1"
+    "term": "Deep Learning",
+    "aliases": ["DL", "deep-learning"],
+    "common_mishearings": ["deep learn", "deep learnings", "deep leaning"],
+    "source": "rag_ai_terms"
   },
   {
-    "term": "Embedding",
-    "aliases": ["embeddings", "嵌入", "向量嵌入"],
-    "common_mishearings": ["in bedding", "embedding"],
-    "source": "glossary_v1"
+    "term": "Neural Network",
+    "aliases": ["neural net", "neural networks"],
+    "common_mishearings": ["neuro network", "neural net work", "new roll network"],
+    "source": "rag_ai_terms"
   },
   {
-    "term": "Transformer",
-    "aliases": ["transformer model", "transformers"],
-    "common_mishearings": ["transfer model", "trans former"],
-    "source": "glossary_v1"
+    "term": "AI Agent",
+    "aliases": ["AI agents", "coding agent", "AI coding agent"],
+    "common_mishearings": ["a i agent", "ay agent"],
+    "source": "rag_ai_terms"
   },
   {
-    "term": "Fine-tuning",
-    "aliases": ["fine tuning", "微调"],
-    "common_mishearings": ["find tuning", "fine-tunning"],
-    "source": "glossary_v1"
+    "term": "Large Language Model",
+    "aliases": ["LLM", "large language models"],
+    "common_mishearings": ["large language module", "large language model"],
+    "source": "rag_ai_terms"
   },
   {
-    "term": "Tokenizer",
-    "aliases": ["tokenizer", "分词器"],
-    "common_mishearings": ["token izer", "tokenizer"],
-    "source": "glossary_v1"
+    "term": "Supervised Learning",
+    "aliases": ["supervised ML"],
+    "common_mishearings": ["supervise learning", "supervised learnings"],
+    "source": "rag_ai_terms"
   },
   {
-    "term": "Attention Mechanism",
-    "aliases": ["self-attention", "multi-head attention", "注意力机制"],
-    "common_mishearings": ["a tension mechanism", "attention mech"],
-    "source": "glossary_v1"
+    "term": "Reinforcement Learning",
+    "aliases": ["RL", "reinforcement-learning"],
+    "common_mishearings": ["re-enforcement learning", "reinforced learning", "reinforcing learning"],
+    "source": "rag_ai_terms"
+  },
+  {
+    "term": "Self-supervised Learning",
+    "aliases": ["self supervised learning", "SSL"],
+    "common_mishearings": ["self supervise learning", "self supervised learn"],
+    "source": "rag_ai_terms"
+  },
+  {
+    "term": "Misinformation",
+    "aliases": ["disinformation", "fake news"],
+    "common_mishearings": ["miss information", "mis information"],
+    "source": "rag_ai_terms"
+  },
+  {
+    "term": "Community Notes",
+    "aliases": ["community note"],
+    "common_mishearings": ["community note's", "community knows"],
+    "source": "rag_ai_terms"
+  },
+  {
+    "term": "Chinese Room",
+    "aliases": ["Chinese Room argument", "Chinese Room thought experiment"],
+    "common_mishearings": ["Chinese room", "Chinese rooms"],
+    "source": "rag_ai_terms"
+  },
+  {
+    "term": "Eric Schmidt",
+    "aliases": [],
+    "common_mishearings": ["Eric Schmitt", "Erik Schmidt", "Eric Shmidt"],
+    "source": "rag_speaker_background"
+  },
+  {
+    "term": "Andrew Ng",
+    "aliases": ["Andrew Y. Ng"],
+    "common_mishearings": ["Andrew Eng", "Andrew Ung", "Andrew Ang", "Andrew ing"],
+    "source": "rag_speaker_background"
+  },
+  {
+    "term": "Jeremy Howard",
+    "aliases": [],
+    "common_mishearings": ["Jeremy Howards", "Jeramy Howard"],
+    "source": "rag_speaker_background"
+  },
+  {
+    "term": "Briana Brownell",
+    "aliases": [],
+    "common_mishearings": ["Brianna Brownell", "Briana Brunel"],
+    "source": "rag_speaker_background"
+  },
+  {
+    "term": "D. Scott Phoenix",
+    "aliases": ["Scott Phoenix"],
+    "common_mishearings": ["D Scott Phoenix", "the Scott Phoenix"],
+    "source": "rag_speaker_background"
+  },
+  {
+    "term": "Peter Steinberger",
+    "aliases": [],
+    "common_mishearings": ["Peter Steinburger", "Peter Stineberger", "Peter Stein Berger"],
+    "source": "rag_speaker_background"
+  },
+  {
+    "term": "Keith Coleman",
+    "aliases": [],
+    "common_mishearings": ["Keith Colman", "Keith Coalman"],
+    "source": "rag_speaker_background"
+  },
+  {
+    "term": "Jay Baxter",
+    "aliases": [],
+    "common_mishearings": ["J Baxter", "Jay Baxster"],
+    "source": "rag_speaker_background"
+  },
+  {
+    "term": "John Searle",
+    "aliases": [],
+    "common_mishearings": ["John Serle", "John Searl", "John Serl"],
+    "source": "rag_speaker_background"
+  },
+  {
+    "term": "OpenClaw",
+    "aliases": ["Open Claw"],
+    "common_mishearings": ["open claw", "open clause", "open claws"],
+    "source": "rag_video_topics"
+  },
+  {
+    "term": "Kaggle",
+    "aliases": [],
+    "common_mishearings": ["kagol", "cagle", "kegel"],
+    "source": "rag_video_topics"
+  },
+  {
+    "term": "Arthur Samuel",
+    "aliases": [],
+    "common_mishearings": ["Arthur Samuels", "Arthur Samuel's"],
+    "source": "rag_video_topics"
+  },
+  {
+    "term": "Coursera",
+    "aliases": [],
+    "common_mishearings": ["corsera", "courseria", "corsa"],
+    "source": "rag_speaker_background"
+  },
+  {
+    "term": "Google",
+    "aliases": [],
+    "common_mishearings": ["google", "googol"],
+    "source": "rag_video_topics"
+  },
+  {
+    "term": "TED",
+    "aliases": ["TED Talk", "TED Talks", "TED-Ed", "TEDx"],
+    "common_mishearings": ["ted", "Ted"],
+    "source": "rag_dataset_source_notes"
+  },
+  {
+    "term": "Ubuntu",
+    "aliases": ["ubuntech"],
+    "common_mishearings": ["a boon to", "ubun2", "a bun to"],
+    "source": "rag_video_topics"
+  },
+  {
+    "term": "Data Governance",
+    "aliases": ["data governance"],
+    "common_mishearings": ["data government", "data governance"],
+    "source": "rag_video_topics"
+  },
+  {
+    "term": "For You Algorithm",
+    "aliases": ["For You feed", "recommendation algorithm"],
+    "common_mishearings": ["for you algorithm", "for your algorithm"],
+    "source": "rag_video_topics"
+  },
+  {
+    "term": "Cognitive States",
+    "aliases": ["cognitive state"],
+    "common_mishearings": ["cognitive states", "cognative states"],
+    "source": "rag_ai_terms"
+  },
+  {
+    "term": "Amazon",
+    "aliases": [],
+    "common_mishearings": ["amazon"],
+    "source": "rag_video_topics"
+  },
+  {
+    "term": "Netflix",
+    "aliases": [],
+    "common_mishearings": ["net flicks", "netflix"],
+    "source": "rag_video_topics"
+  },
+  {
+    "term": "LinkedIn",
+    "aliases": [],
+    "common_mishearings": ["linked in", "linkin"],
+    "source": "rag_video_topics"
+  },
+  {
+    "term": "Facebook",
+    "aliases": ["Meta"],
+    "common_mishearings": ["face book"],
+    "source": "rag_video_topics"
+  },
+  {
+    "term": "Bilawal Sidhu",
+    "aliases": [],
+    "common_mishearings": ["Bilawal Sidoo", "Bilawol Sidhu"],
+    "source": "rag_speaker_background"
+  },
+  {
+    "term": "Charles Wallace",
+    "aliases": [],
+    "common_mishearings": ["Charles Wallis", "Charles Wallas"],
+    "source": "rag_speaker_background"
+  },
+  {
+    "term": "Dan Kwartler",
+    "aliases": [],
+    "common_mishearings": ["Dan Quarter", "Dan Quartler", "Dan Kwarter"],
+    "source": "rag_speaker_background"
   }
 ]
