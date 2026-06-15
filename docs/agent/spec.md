@@ -44,6 +44,38 @@ uv run python -m src.agent.cli \
 - `uv run pytest tests/ -v` — 129 unit tests, all mocked (no GPU/ffmpeg required)
 - Tests live in `tests/test_*.py`, fixtures in `tests/conftest.py`
 
+## Repository Startup & Documentation
+
+The root `README.md` is the user-facing Chinese onboarding document for this
+project. It should describe the project goal, pipeline, environment
+requirements, quick-start commands, Makefile targets, CLI usage, output files,
+dataset structure, and current limitations.
+
+The root `Makefile` is the preferred convenience interface for local startup
+and development tasks:
+
+- `make help` lists available commands.
+- `make doctor` checks required local tools such as `uv`, `ffmpeg`, and
+  `ffprobe`.
+- `make sync` installs project and development dependencies through `uv`.
+- `make run` runs a lightweight pipeline on a sample video by skipping VLM and
+  text repair.
+- `make run-full` runs the full CLI pipeline and accepts OpenAI-compatible VLM
+  and text API bases through variables.
+- `make test` runs the pytest suite.
+
+Chinese project presentation material lives under `docs/` and should be linked
+from the README when intended for users. Presentation scripts should use a
+grounded research-report tone and clearly separate: what the group wants to
+study, what has been implemented so far, and what the group plans to improve
+next. When describing the implemented pipeline, presentation scripts should
+name the concrete default models where relevant: WhisperX with `base` as the
+default ASR model size, optional pyannote-based speaker diarization,
+`Qwen/Qwen3-VL-4B-Instruct` for visual understanding, and `Qwen/Qwen3-8B` for
+text repair. When the Markdown is intended for video recording, the "what has
+been implemented" section may include a simple Mermaid flowchart that explains
+the pipeline from video input to exported script.
+
 ## Phase 1 Non-Goals
 
 - No LangGraph (Phase 3)
