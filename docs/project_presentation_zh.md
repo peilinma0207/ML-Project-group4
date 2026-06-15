@@ -1,49 +1,67 @@
-# ML-Project-group4 项目介绍演讲稿
+# ML-Project-group4 Project Presentation Script
 
-建议时长：3 到 5 分钟
+Hello everyone. Today we would like to introduce our course project. This presentation has three parts: first, what we want to study; second, what we have done so far; and third, what we would like to improve in the future.
 
-各位老师、同学大家好，我们是第四组。今天我们介绍一下我们目前做的课程项目，项目名称是 ML-Project-group4。我们的汇报主要分三部分：第一，我们想研究什么；第二，我们已经做了什么；第三，我们未来还想继续做什么。
+## 1. What We Want to Study
 
-## 一、我们想研究什么
+The question we want to study is: when the audio quality of a video is not ideal, or when the content contains many technical terms, can we improve the automatic speech recognition transcript by using additional information?
 
-我们想研究的问题是：当一段视频的音频质量不够理想，或者里面有较多专业术语时，自动语音识别生成的转写稿能不能借助其他信息进行改进。
+This problem comes from a common scenario. In meetings, lectures, interviews, or TED-style videos, an ASR model can usually produce an initial transcript. However, it may still misrecognize technical terms, names, organizations, or key words that appear on slides. If we only look at the audio, the system may not know how to correct these mistakes. But the video frames may contain subtitles, slide text, or other visual clues. We can also prepare a small domain glossary as background knowledge.
 
-这个问题来自一个比较常见的场景：比如会议、讲座、访谈或者 TED 演讲中，ASR 模型可以给出初步文本，但它可能会把技术词、人名、机构名或者屏幕上出现的关键词识别错。如果只看音频，系统可能不知道应该如何纠正；但视频里可能有字幕、幻灯片、画面文字，另外我们也可以准备一些领域词表作为背景知识。
+So our goal is not to claim that a model can fully and automatically fix every transcript. Instead, we want to explore a more practical question: if we combine low-confidence ASR results, visual information from the video, and a simple glossary, can these sources provide better evidence for later transcript repair?
 
-所以我们不是想证明“模型已经可以完全自动修好稿件”，而是想探索一个更实际的问题：如果把 ASR 的低置信度结果、视频画面信息和一个简单的术语知识库放在一起，能不能为后续文本修复提供更可靠的依据。
+## 2. What We Have Done
 
-## 二、我们做了什么
+So far, we have mainly worked on three parts.
 
-目前我们主要做了三类工作。
+First, we prepared a small dataset. The dataset is stored under the `data/` directory. It contains 10 TED or TED-Ed video samples related to artificial intelligence and machine learning. For each sample, we organized the video file, extracted audio, manually collected reference transcript, metadata, and several background documents for RAG. The dataset is small, but it is enough for us to run the pipeline and conduct initial experiments.
 
-第一，我们整理了一个小规模数据集。数据集放在 `data/` 目录下，包含 10 个和人工智能、机器学习相关的 TED 或 TED-Ed 视频样本。每个样本包括视频文件、抽取后的音频、人工整理的参考转写文本、元数据，以及一些用于 RAG 的背景材料。这个数据规模不大，但足够支撑我们先把流程跑通，并做初步实验。
+Second, we implemented a command-line pipeline. The diagram below shows the main workflow.
 
-第二，我们实现了一条命令行流水线。它的大致过程是：先用 ffmpeg 从视频中抽音频并做简单预处理；然后用 WhisperX 做语音识别，得到文本、时间戳和词级置信度；接着根据固定时间间隔、场景变化和低置信度片段抽取视频帧；之后可以调用视觉模型分析画面，也可以用本地术语表做简单 RAG 匹配；最后把这些证据按时间合并，生成一份结构化结果。
+```mermaid
+flowchart LR
+    V["Input video"] --> AE["Audio extraction<br/>ffmpeg"]
+    AE --> AP["Audio preprocessing<br/>high-pass + loudness normalization"]
+    AP --> ASR["ASR transcription<br/>WhisperX, default: base"]
 
-具体到模型和工具，目前我们使用或默认配置的是这几类：
+    V --> FS["Frame sampling<br/>interval + scene change + low confidence"]
+    FS --> VLM["Visual understanding<br/>Qwen/Qwen3-VL-4B-Instruct"]
 
-- ASR 语音识别部分使用 WhisperX，默认模型大小是 `base`，也可以通过参数换成 `tiny`、`small`、`medium` 或 `large`。
-- 说话人分离是可选功能，使用 WhisperX 封装的 pyannote 相关模型，需要额外的 HuggingFace 权限或 token。
-- 视觉理解部分默认使用 `Qwen/Qwen3-VL-4B-Instruct`，用于分析抽帧画面中的场景、可见文字和可能出现的术语。
-- 文本修复部分默认使用 `Qwen/Qwen3-8B`，通过 OpenAI-compatible API 调用，根据 ASR、视觉证据和 RAG 命中结果生成修复后的文本。
-- RAG 这一部分目前还不是向量模型，而是用本地 `data/glossary.json` 术语表加模糊匹配来做一个轻量版的术语检索。
+    ASR --> RAG["Glossary retrieval<br/>data/glossary.json + fuzzy matching"]
+    VLM --> RAG
+    ASR --> MERGE["Evidence merge<br/>time-aligned segments"]
+    VLM --> MERGE
+    RAG --> MERGE
+    MERGE --> REPAIR["Text repair<br/>Qwen/Qwen3-8B"]
+    REPAIR --> EXPORT["Export<br/>script.json + script.md"]
+```
 
-也就是说，轻量运行时我们可以先跳过视觉模型和文本修复模型，只验证音频、ASR、抽帧、RAG 和导出；完整运行时才接入 Qwen3-VL 和 Qwen3-8B 这两个模型。
+To explain this diagram: the pipeline starts from an input video. We first extract and preprocess the audio, then use WhisperX for ASR transcription. At the same time, we sample frames from the video, especially around scene changes and low-confidence ASR segments. These frames can be sent to a vision-language model for visual evidence. We also use a local glossary for lightweight RAG-style term retrieval. Finally, we merge ASR, visual, and glossary evidence by timestamp, and then use a text model to generate a repaired transcript. The result is exported as both JSON and Markdown.
 
-第三，我们做了一些工程整理。项目里的核心模块都放在 `src/agent/` 下，每个模块负责一个相对独立的步骤，比如音频处理、ASR、抽帧、RAG、证据合并和导出。我们也提供了 CLI 和 Makefile。现在可以用 `make run` 跑一个轻量流程，也可以用 `make run-full` 接入视觉模型和文本模型 API。最终结果会导出为 JSON 和 Markdown，方便后续查看或者评估。
+More specifically, the models and tools we currently use, or set as defaults, are:
 
-需要说明的是，目前这还是一个原型系统。比如 RAG 现在主要是本地 JSON 词表，不是真正的向量数据库；完整的视觉理解和文本修复也依赖外部或本地模型 API；项目还没有 Web 界面，也没有做大规模实验。所以我们更愿意把它看作一个已经搭起来的实验框架，而不是一个已经成熟的应用。
+- ASR: WhisperX, with `base` as the default model size. It can also be changed to `tiny`, `small`, `medium`, or `large`.
+- Speaker diarization: optional pyannote-based models through WhisperX. This requires the corresponding HuggingFace access or token.
+- Visual understanding: `Qwen/Qwen3-VL-4B-Instruct`, used to analyze sampled frames, visible text, scenes, and possible technical terms.
+- Text repair: `Qwen/Qwen3-8B`, called through an OpenAI-compatible API. It uses ASR output, visual evidence, and RAG hits to produce the repaired text.
+- RAG: this part is not a real vector model yet. For now, it uses the local `data/glossary.json` file plus fuzzy matching as a lightweight term retrieval module.
 
-## 三、我们未来还想做什么
+In other words, the lightweight command `make run` can skip the visual model and text repair model, so we can first verify audio processing, ASR, frame sampling, glossary retrieval, and export. The full command `make run-full` is used when we want to connect Qwen3-VL and Qwen3-8B through model APIs.
 
-接下来我们想继续从三个方向改进。
+Third, we organized the engineering structure. The core modules are under `src/agent/`. Each module is responsible for one step, such as audio processing, ASR, frame sampling, RAG retrieval, evidence merging, text repair, and export. We also provide a CLI and a Makefile, so the project can be started more easily. The final results are exported as `script.json` and `script.md`, which makes them easier to inspect and evaluate.
 
-第一，做更清楚的评估。现在我们已经有 ground truth transcript，后面可以比较原始 ASR 和修复后文本之间的差异，例如看词错误率、术语识别准确率，以及人工复核片段是否真的集中在容易出错的位置。这样才能判断这个方案是否真的有帮助。
+It is important to be realistic about the current stage. This is still a prototype system. The RAG module is currently a local JSON glossary, not a real vector database. The full visual understanding and text repair steps depend on external or local model APIs. The project does not have a web interface, and we have not completed large-scale experiments yet. So we see it as an experimental framework that has been built, not as a mature application.
 
-第二，改进 RAG 和证据使用方式。现在的术语检索比较简单，后续可以接入真实向量数据库，把视频主题、讲者背景、专业词汇和幻灯片内容放进去，让检索结果更稳定。同时也需要设计规则，避免模型因为证据不足而过度修改原文。
+## 3. What We Want to Do Next
 
-第三，完善项目形态。比如加入批处理，支持更多导出格式，例如 SRT 或 VTT 字幕；进一步完善说话人分离；如果时间允许，也可以把顺序流程改造成更清晰的 Agent 或工作流结构，方便调试和扩展。
+Next, we want to improve the project in three directions.
 
-总结一下，我们这个项目目前主要是在研究：视频转写出错时，能不能利用画面和背景知识帮助修复文本。我们已经完成了数据整理、基础流水线、命令行运行方式和结果导出。后续重点会放在评估、检索增强和工程完善上。
+First, we want to build a clearer evaluation process. Since we already have ground truth transcripts, we can compare the original ASR output with the repaired output. For example, we can measure word error rate, technical term accuracy, and whether the segments marked for review are actually the ones that are more likely to contain errors. This will help us judge whether the pipeline is truly useful.
 
-以上就是我们的项目介绍，谢谢大家。
+Second, we want to improve RAG and evidence usage. The current glossary retrieval is simple. In the future, we can connect a real vector database and include more background information, such as video topics, speaker background, technical vocabulary, and slide content. At the same time, we need better rules to avoid over-correcting the original transcript when the evidence is not strong enough.
+
+Third, we want to improve the project form. For example, we can add batch processing, support more export formats such as SRT or VTT subtitles, and improve speaker diarization. If time allows, we can also turn the current sequential pipeline into a clearer Agent workflow, which would make debugging and extension easier.
+
+To summarize, our project studies whether visual information and background knowledge can help repair video transcripts when ASR makes mistakes. So far, we have prepared a small dataset, implemented the basic pipeline, added command-line startup support, and exported structured results. Our next focus will be evaluation, stronger retrieval, and better engineering.
+
+Thank you.

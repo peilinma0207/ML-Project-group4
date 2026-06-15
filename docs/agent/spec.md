@@ -72,7 +72,9 @@ next. When describing the implemented pipeline, presentation scripts should
 name the concrete default models where relevant: WhisperX with `base` as the
 default ASR model size, optional pyannote-based speaker diarization,
 `Qwen/Qwen3-VL-4B-Instruct` for visual understanding, and `Qwen/Qwen3-8B` for
-text repair.
+text repair. When the Markdown is intended for video recording, the "what has
+been implemented" section may include a simple Mermaid flowchart that explains
+the pipeline from video input to exported script.
 
 ## Phase 1 Non-Goals
 
