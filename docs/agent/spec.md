@@ -65,7 +65,14 @@ and development tasks:
 - `make test` runs the pytest suite.
 
 Chinese project presentation material lives under `docs/` and should be linked
-from the README when intended for users.
+from the README when intended for users. Presentation scripts should use a
+grounded research-report tone and clearly separate: what the group wants to
+study, what has been implemented so far, and what the group plans to improve
+next. When describing the implemented pipeline, presentation scripts should
+name the concrete default models where relevant: WhisperX with `base` as the
+default ASR model size, optional pyannote-based speaker diarization,
+`Qwen/Qwen3-VL-4B-Instruct` for visual understanding, and `Qwen/Qwen3-8B` for
+text repair.
 
 ## Phase 1 Non-Goals
 
