@@ -2,7 +2,7 @@ import json
 
 import pytest
 
-from src.agent.rag_retrieve import run, _load_glossary, _match_entry
+from src.agent.rag_retrieve import _load_glossary, _match_entry, run
 from src.agent.schema import ASRSegment, OCRHit, RAGHit, VisualEvent, WordTimestamp
 
 
@@ -74,6 +74,23 @@ class TestRAGRetrieve:
         result = run([], events, glossary_file)
         terms = [h.term for h in result]
         assert "Vector Database" in terms
+
+    def test_normalizes_queries_before_matching(self, glossary_file):
+        segments = [
+            ASRSegment(
+                segment_id="seg_0001",
+                start=0.0,
+                end=5.0,
+                text="  HYBRID    SEARCH  ",
+                words=[
+                    WordTimestamp(word="HYBRID", start=0.0, end=0.3, confidence=0.4),
+                    WordTimestamp(word="SEARCH", start=0.4, end=0.7, confidence=0.4),
+                ],
+                quality_flags=["low_confidence"],
+            ),
+        ]
+        result = run(segments, [], glossary_file)
+        assert any(hit.term == "Hybrid Search" for hit in result)
 
     def test_no_matches(self, glossary_file):
         segments = [
