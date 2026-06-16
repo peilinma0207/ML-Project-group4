@@ -188,6 +188,42 @@ output/<job_id>/
 
 `data/` 目录包含 10 个 TED/TED-Ed AI 相关视频样本、对应音频、人工整理的 ground truth transcript、元数据和 RAG 背景材料。数据说明见 `data/README.md`。
 
+## 数据合成（损坏数据生成）
+
+为测试 ASR 修复 Agent 的能力，我们实现了三种数据损坏方法，生成不同难度的测试数据：
+
+| 方法 | 输入 | 输出 | 说明 |
+| --- | --- | --- | --- |
+| 音频加噪 | `.wav` 音频 | 加噪音频 | 白噪声 + 混响，3 个 SNR 等级（20/10/3 dB） |
+| 同音词替换 | GT 文本 | 替换文本 | 基于 CMU 发音词典自动找同音词，3 个比例（10%/25%/50%） |
+| 对抗扰动 | `.wav` 音频 | 扰动音频 | FGSM 攻击 Whisper tiny，ε=0.01，人耳几乎不可感知 |
+
+损坏数据目录结构：
+
+```text
+data/corrupted/
+├── noise/audio/           # 60 个加噪音频
+├── homophone/text/        # 30 个同音词替换文本
+├── adversarial/audio/     # 10 个对抗扰动音频
+├── docs/                  # DATA_CORRUPTION.md 详细文档
+└── metadata/              # 统计报告
+```
+
+使用方法：
+
+```bash
+# 运行全部损坏方法
+python3 -m src.agent.corrupt.runner
+
+# 只运行部分方法
+python3 -m src.agent.corrupt.runner --skip-adversarial
+
+# 查看统计
+python3 -m src.agent.corrupt.stats
+```
+
+详细说明见 `data/corrupted/docs/DATA_CORRUPTION.md`。
+
 ## 开发与测试
 
 运行测试：
