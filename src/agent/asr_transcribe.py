@@ -3,11 +3,14 @@ from __future__ import annotations
 import logging
 from pathlib import Path
 
+import torch
 import torch.serialization
 
-def _register_pyannote_safe_globals():
-    _original_torch_load = torch.load
+# Save the original before patching so we can restore it after whisperx imports.
+_original_torch_load = torch.load
 
+
+def _register_pyannote_safe_globals():
     def _patched_torch_load(*args, **kwargs):
         kwargs["weights_only"] = False
         return _original_torch_load(*args, **kwargs)
@@ -36,6 +39,9 @@ def _register_pyannote_safe_globals():
 _register_pyannote_safe_globals()
 
 import whisperx
+
+# Restore torch.load to its original implementation now that whisperx is loaded.
+torch.load = _original_torch_load
 
 from .schema import ASRSegment, AudioMeta, JobConfig, WordTimestamp
 
@@ -139,3 +145,4 @@ def _build_asr_segments(
         ))
 
     return results
+
