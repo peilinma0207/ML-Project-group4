@@ -1,0 +1,762 @@
+{
+  "homophone": [
+    {
+      "video_id": "video_02",
+      "ratio": 0.1,
+      "n_words_original": 193,
+      "n_words_corrupted": 193,
+      "n_words_changed": 8,
+      "word_change_pct": 4.1,
+      "n_chars_original": 806,
+      "n_chars_corrupted": 806,
+      "n_chars_changed": 13,
+      "char_change_pct": 1.6
+    },
+    {
+      "video_id": "video_02",
+      "ratio": 0.25,
+      "n_words_original": 193,
+      "n_words_corrupted": 193,
+      "n_words_changed": 21,
+      "word_change_pct": 10.9,
+      "n_chars_original": 812,
+      "n_chars_corrupted": 812,
+      "n_chars_changed": 41,
+      "char_change_pct": 5.0
+    },
+    {
+      "video_id": "video_02",
+      "ratio": 0.5,
+      "n_words_original": 193,
+      "n_words_corrupted": 193,
+      "n_words_changed": 43,
+      "word_change_pct": 22.3,
+      "n_chars_original": 834,
+      "n_chars_corrupted": 834,
+      "n_chars_changed": 75,
+      "char_change_pct": 9.0
+    },
+    {
+      "video_id": "video_03",
+      "ratio": 0.1,
+      "n_words_original": 203,
+      "n_words_corrupted": 203,
+      "n_words_changed": 7,
+      "word_change_pct": 3.4,
+      "n_chars_original": 1170,
+      "n_chars_corrupted": 1170,
+      "n_chars_changed": 12,
+      "char_change_pct": 1.0
+    },
+    {
+      "video_id": "video_03",
+      "ratio": 0.25,
+      "n_words_original": 203,
+      "n_words_corrupted": 203,
+      "n_words_changed": 18,
+      "word_change_pct": 8.9,
+      "n_chars_original": 1172,
+      "n_chars_corrupted": 1172,
+      "n_chars_changed": 28,
+      "char_change_pct": 2.4
+    },
+    {
+      "video_id": "video_03",
+      "ratio": 0.5,
+      "n_words_original": 203,
+      "n_words_corrupted": 203,
+      "n_words_changed": 37,
+      "word_change_pct": 18.2,
+      "n_chars_original": 1178,
+      "n_chars_corrupted": 1178,
+      "n_chars_changed": 58,
+      "char_change_pct": 4.9
+    },
+    {
+      "video_id": "video_04",
+      "ratio": 0.1,
+      "n_words_original": 251,
+      "n_words_corrupted": 251,
+      "n_words_changed": 10,
+      "word_change_pct": 4.0,
+      "n_chars_original": 1200,
+      "n_chars_corrupted": 1200,
+      "n_chars_changed": 16,
+      "char_change_pct": 1.3
+    },
+    {
+      "video_id": "video_04",
+      "ratio": 0.25,
+      "n_words_original": 251,
+      "n_words_corrupted": 251,
+      "n_words_changed": 26,
+      "word_change_pct": 10.4,
+      "n_chars_original": 1213,
+      "n_chars_corrupted": 1213,
+      "n_chars_changed": 40,
+      "char_change_pct": 3.3
+    },
+    {
+      "video_id": "video_04",
+      "ratio": 0.5,
+      "n_words_original": 251,
+      "n_words_corrupted": 251,
+      "n_words_changed": 52,
+      "word_change_pct": 20.7,
+      "n_chars_original": 1224,
+      "n_chars_corrupted": 1224,
+      "n_chars_changed": 89,
+      "char_change_pct": 7.3
+    },
+    {
+      "video_id": "video_05",
+      "ratio": 0.1,
+      "n_words_original": 218,
+      "n_words_corrupted": 218,
+      "n_words_changed": 8,
+      "word_change_pct": 3.7,
+      "n_chars_original": 1049,
+      "n_chars_corrupted": 1049,
+      "n_chars_changed": 13,
+      "char_change_pct": 1.2
+    },
+    {
+      "video_id": "video_05",
+      "ratio": 0.25,
+      "n_words_original": 218,
+      "n_words_corrupted": 218,
+      "n_words_changed": 21,
+      "word_change_pct": 9.6,
+      "n_chars_original": 1056,
+      "n_chars_corrupted": 1056,
+      "n_chars_changed": 36,
+      "char_change_pct": 3.4
+    },
+    {
+      "video_id": "video_05",
+      "ratio": 0.5,
+      "n_words_original": 218,
+      "n_words_corrupted": 218,
+      "n_words_changed": 43,
+      "word_change_pct": 19.7,
+      "n_chars_original": 1066,
+      "n_chars_corrupted": 1066,
+      "n_chars_changed": 78,
+      "char_change_pct": 7.3
+    },
+    {
+      "video_id": "video_06",
+      "ratio": 0.1,
+      "n_words_original": 195,
+      "n_words_corrupted": 195,
+      "n_words_changed": 8,
+      "word_change_pct": 4.1,
+      "n_chars_original": 868,
+      "n_chars_corrupted": 868,
+      "n_chars_changed": 14,
+      "char_change_pct": 1.6
+    },
+    {
+      "video_id": "video_06",
+      "ratio": 0.25,
+      "n_words_original": 195,
+      "n_words_corrupted": 195,
+      "n_words_changed": 21,
+      "word_change_pct": 10.8,
+      "n_chars_original": 871,
+      "n_chars_corrupted": 871,
+      "n_chars_changed": 40,
+      "char_change_pct": 4.6
+    },
+    {
+      "video_id": "video_06",
+      "ratio": 0.5,
+      "n_words_original": 195,
+      "n_words_corrupted": 195,
+      "n_words_changed": 43,
+      "word_change_pct": 22.1,
+      "n_chars_original": 873,
+      "n_chars_corrupted": 873,
+      "n_chars_changed": 84,
+      "char_change_pct": 9.6
+    },
+    {
+      "video_id": "video_07",
+      "ratio": 0.1,
+      "n_words_original": 241,
+      "n_words_corrupted": 241,
+      "n_words_changed": 7,
+      "word_change_pct": 2.9,
+      "n_chars_original": 1042,
+      "n_chars_corrupted": 1042,
+      "n_chars_changed": 12,
+      "char_change_pct": 1.2
+    },
+    {
+      "video_id": "video_07",
+      "ratio": 0.25,
+      "n_words_original": 241,
+      "n_words_corrupted": 241,
+      "n_words_changed": 18,
+      "word_change_pct": 7.5,
+      "n_chars_original": 1049,
+      "n_chars_corrupted": 1049,
+      "n_chars_changed": 41,
+      "char_change_pct": 3.9
+    },
+    {
+      "video_id": "video_07",
+      "ratio": 0.5,
+      "n_words_original": 241,
+      "n_words_corrupted": 241,
+      "n_words_changed": 36,
+      "word_change_pct": 14.9,
+      "n_chars_original": 1049,
+      "n_chars_corrupted": 1049,
+      "n_chars_changed": 64,
+      "char_change_pct": 6.1
+    },
+    {
+      "video_id": "video_08",
+      "ratio": 0.1,
+      "n_words_original": 145,
+      "n_words_corrupted": 145,
+      "n_words_changed": 4,
+      "word_change_pct": 2.8,
+      "n_chars_original": 782,
+      "n_chars_corrupted": 781,
+      "n_chars_changed": 4,
+      "char_change_pct": 0.5
+    },
+    {
+      "video_id": "video_08",
+      "ratio": 0.25,
+      "n_words_original": 145,
+      "n_words_corrupted": 145,
+      "n_words_changed": 10,
+      "word_change_pct": 6.9,
+      "n_chars_original": 784,
+      "n_chars_corrupted": 784,
+      "n_chars_changed": 15,
+      "char_change_pct": 1.9
+    },
+    {
+      "video_id": "video_08",
+      "ratio": 0.5,
+      "n_words_original": 145,
+      "n_words_corrupted": 145,
+      "n_words_changed": 21,
+      "word_change_pct": 14.5,
+      "n_chars_original": 793,
+      "n_chars_corrupted": 793,
+      "n_chars_changed": 33,
+      "char_change_pct": 4.2
+    },
+    {
+      "video_id": "video_09",
+      "ratio": 0.1,
+      "n_words_original": 126,
+      "n_words_corrupted": 126,
+      "n_words_changed": 5,
+      "word_change_pct": 4.0,
+      "n_chars_original": 555,
+      "n_chars_corrupted": 555,
+      "n_chars_changed": 8,
+      "char_change_pct": 1.4
+    },
+    {
+      "video_id": "video_09",
+      "ratio": 0.25,
+      "n_words_original": 126,
+      "n_words_corrupted": 126,
+      "n_words_changed": 13,
+      "word_change_pct": 10.3,
+      "n_chars_original": 564,
+      "n_chars_corrupted": 564,
+      "n_chars_changed": 23,
+      "char_change_pct": 4.1
+    },
+    {
+      "video_id": "video_09",
+      "ratio": 0.5,
+      "n_words_original": 126,
+      "n_words_corrupted": 126,
+      "n_words_changed": 26,
+      "word_change_pct": 20.6,
+      "n_chars_original": 584,
+      "n_chars_corrupted": 584,
+      "n_chars_changed": 55,
+      "char_change_pct": 9.4
+    },
+    {
+      "video_id": "video_10",
+      "ratio": 0.1,
+      "n_words_original": 199,
+      "n_words_corrupted": 199,
+      "n_words_changed": 6,
+      "word_change_pct": 3.0,
+      "n_chars_original": 1056,
+      "n_chars_corrupted": 1056,
+      "n_chars_changed": 12,
+      "char_change_pct": 1.1
+    },
+    {
+      "video_id": "video_10",
+      "ratio": 0.25,
+      "n_words_original": 199,
+      "n_words_corrupted": 199,
+      "n_words_changed": 15,
+      "word_change_pct": 7.5,
+      "n_chars_original": 1061,
+      "n_chars_corrupted": 1061,
+      "n_chars_changed": 27,
+      "char_change_pct": 2.5
+    },
+    {
+      "video_id": "video_10",
+      "ratio": 0.5,
+      "n_words_original": 199,
+      "n_words_corrupted": 199,
+      "n_words_changed": 30,
+      "word_change_pct": 15.1,
+      "n_chars_original": 1071,
+      "n_chars_corrupted": 1071,
+      "n_chars_changed": 53,
+      "char_change_pct": 4.9
+    }
+  ],
+  "noise": [
+    {
+      "video_id": "video_01",
+      "noise_type": "reverb",
+      "snr_db": 10,
+      "output_path": "data/corrupted/noise/audio/video_01_reverb_snr10.wav"
+    },
+    {
+      "video_id": "video_01",
+      "noise_type": "reverb",
+      "snr_db": 20,
+      "output_path": "data/corrupted/noise/audio/video_01_reverb_snr20.wav"
+    },
+    {
+      "video_id": "video_01",
+      "noise_type": "reverb",
+      "snr_db": 3,
+      "output_path": "data/corrupted/noise/audio/video_01_reverb_snr3.wav"
+    },
+    {
+      "video_id": "video_01",
+      "noise_type": "white",
+      "snr_db": 10,
+      "output_path": "data/corrupted/noise/audio/video_01_white_snr10.wav"
+    },
+    {
+      "video_id": "video_01",
+      "noise_type": "white",
+      "snr_db": 20,
+      "output_path": "data/corrupted/noise/audio/video_01_white_snr20.wav"
+    },
+    {
+      "video_id": "video_01",
+      "noise_type": "white",
+      "snr_db": 3,
+      "output_path": "data/corrupted/noise/audio/video_01_white_snr3.wav"
+    },
+    {
+      "video_id": "video_02",
+      "noise_type": "reverb",
+      "snr_db": 10,
+      "output_path": "data/corrupted/noise/audio/video_02_reverb_snr10.wav"
+    },
+    {
+      "video_id": "video_02",
+      "noise_type": "reverb",
+      "snr_db": 20,
+      "output_path": "data/corrupted/noise/audio/video_02_reverb_snr20.wav"
+    },
+    {
+      "video_id": "video_02",
+      "noise_type": "reverb",
+      "snr_db": 3,
+      "output_path": "data/corrupted/noise/audio/video_02_reverb_snr3.wav"
+    },
+    {
+      "video_id": "video_02",
+      "noise_type": "white",
+      "snr_db": 10,
+      "output_path": "data/corrupted/noise/audio/video_02_white_snr10.wav"
+    },
+    {
+      "video_id": "video_02",
+      "noise_type": "white",
+      "snr_db": 20,
+      "output_path": "data/corrupted/noise/audio/video_02_white_snr20.wav"
+    },
+    {
+      "video_id": "video_02",
+      "noise_type": "white",
+      "snr_db": 3,
+      "output_path": "data/corrupted/noise/audio/video_02_white_snr3.wav"
+    },
+    {
+      "video_id": "video_03",
+      "noise_type": "reverb",
+      "snr_db": 10,
+      "output_path": "data/corrupted/noise/audio/video_03_reverb_snr10.wav"
+    },
+    {
+      "video_id": "video_03",
+      "noise_type": "reverb",
+      "snr_db": 20,
+      "output_path": "data/corrupted/noise/audio/video_03_reverb_snr20.wav"
+    },
+    {
+      "video_id": "video_03",
+      "noise_type": "reverb",
+      "snr_db": 3,
+      "output_path": "data/corrupted/noise/audio/video_03_reverb_snr3.wav"
+    },
+    {
+      "video_id": "video_03",
+      "noise_type": "white",
+      "snr_db": 10,
+      "output_path": "data/corrupted/noise/audio/video_03_white_snr10.wav"
+    },
+    {
+      "video_id": "video_03",
+      "noise_type": "white",
+      "snr_db": 20,
+      "output_path": "data/corrupted/noise/audio/video_03_white_snr20.wav"
+    },
+    {
+      "video_id": "video_03",
+      "noise_type": "white",
+      "snr_db": 3,
+      "output_path": "data/corrupted/noise/audio/video_03_white_snr3.wav"
+    },
+    {
+      "video_id": "video_04",
+      "noise_type": "reverb",
+      "snr_db": 10,
+      "output_path": "data/corrupted/noise/audio/video_04_reverb_snr10.wav"
+    },
+    {
+      "video_id": "video_04",
+      "noise_type": "reverb",
+      "snr_db": 20,
+      "output_path": "data/corrupted/noise/audio/video_04_reverb_snr20.wav"
+    },
+    {
+      "video_id": "video_04",
+      "noise_type": "reverb",
+      "snr_db": 3,
+      "output_path": "data/corrupted/noise/audio/video_04_reverb_snr3.wav"
+    },
+    {
+      "video_id": "video_04",
+      "noise_type": "white",
+      "snr_db": 10,
+      "output_path": "data/corrupted/noise/audio/video_04_white_snr10.wav"
+    },
+    {
+      "video_id": "video_04",
+      "noise_type": "white",
+      "snr_db": 20,
+      "output_path": "data/corrupted/noise/audio/video_04_white_snr20.wav"
+    },
+    {
+      "video_id": "video_04",
+      "noise_type": "white",
+      "snr_db": 3,
+      "output_path": "data/corrupted/noise/audio/video_04_white_snr3.wav"
+    },
+    {
+      "video_id": "video_05",
+      "noise_type": "reverb",
+      "snr_db": 10,
+      "output_path": "data/corrupted/noise/audio/video_05_reverb_snr10.wav"
+    },
+    {
+      "video_id": "video_05",
+      "noise_type": "reverb",
+      "snr_db": 20,
+      "output_path": "data/corrupted/noise/audio/video_05_reverb_snr20.wav"
+    },
+    {
+      "video_id": "video_05",
+      "noise_type": "reverb",
+      "snr_db": 3,
+      "output_path": "data/corrupted/noise/audio/video_05_reverb_snr3.wav"
+    },
+    {
+      "video_id": "video_05",
+      "noise_type": "white",
+      "snr_db": 10,
+      "output_path": "data/corrupted/noise/audio/video_05_white_snr10.wav"
+    },
+    {
+      "video_id": "video_05",
+      "noise_type": "white",
+      "snr_db": 20,
+      "output_path": "data/corrupted/noise/audio/video_05_white_snr20.wav"
+    },
+    {
+      "video_id": "video_05",
+      "noise_type": "white",
+      "snr_db": 3,
+      "output_path": "data/corrupted/noise/audio/video_05_white_snr3.wav"
+    },
+    {
+      "video_id": "video_06",
+      "noise_type": "reverb",
+      "snr_db": 10,
+      "output_path": "data/corrupted/noise/audio/video_06_reverb_snr10.wav"
+    },
+    {
+      "video_id": "video_06",
+      "noise_type": "reverb",
+      "snr_db": 20,
+      "output_path": "data/corrupted/noise/audio/video_06_reverb_snr20.wav"
+    },
+    {
+      "video_id": "video_06",
+      "noise_type": "reverb",
+      "snr_db": 3,
+      "output_path": "data/corrupted/noise/audio/video_06_reverb_snr3.wav"
+    },
+    {
+      "video_id": "video_06",
+      "noise_type": "white",
+      "snr_db": 10,
+      "output_path": "data/corrupted/noise/audio/video_06_white_snr10.wav"
+    },
+    {
+      "video_id": "video_06",
+      "noise_type": "white",
+      "snr_db": 20,
+      "output_path": "data/corrupted/noise/audio/video_06_white_snr20.wav"
+    },
+    {
+      "video_id": "video_06",
+      "noise_type": "white",
+      "snr_db": 3,
+      "output_path": "data/corrupted/noise/audio/video_06_white_snr3.wav"
+    },
+    {
+      "video_id": "video_07",
+      "noise_type": "reverb",
+      "snr_db": 10,
+      "output_path": "data/corrupted/noise/audio/video_07_reverb_snr10.wav"
+    },
+    {
+      "video_id": "video_07",
+      "noise_type": "reverb",
+      "snr_db": 20,
+      "output_path": "data/corrupted/noise/audio/video_07_reverb_snr20.wav"
+    },
+    {
+      "video_id": "video_07",
+      "noise_type": "reverb",
+      "snr_db": 3,
+      "output_path": "data/corrupted/noise/audio/video_07_reverb_snr3.wav"
+    },
+    {
+      "video_id": "video_07",
+      "noise_type": "white",
+      "snr_db": 10,
+      "output_path": "data/corrupted/noise/audio/video_07_white_snr10.wav"
+    },
+    {
+      "video_id": "video_07",
+      "noise_type": "white",
+      "snr_db": 20,
+      "output_path": "data/corrupted/noise/audio/video_07_white_snr20.wav"
+    },
+    {
+      "video_id": "video_07",
+      "noise_type": "white",
+      "snr_db": 3,
+      "output_path": "data/corrupted/noise/audio/video_07_white_snr3.wav"
+    },
+    {
+      "video_id": "video_08",
+      "noise_type": "reverb",
+      "snr_db": 10,
+      "output_path": "data/corrupted/noise/audio/video_08_reverb_snr10.wav"
+    },
+    {
+      "video_id": "video_08",
+      "noise_type": "reverb",
+      "snr_db": 20,
+      "output_path": "data/corrupted/noise/audio/video_08_reverb_snr20.wav"
+    },
+    {
+      "video_id": "video_08",
+      "noise_type": "reverb",
+      "snr_db": 3,
+      "output_path": "data/corrupted/noise/audio/video_08_reverb_snr3.wav"
+    },
+    {
+      "video_id": "video_08",
+      "noise_type": "white",
+      "snr_db": 10,
+      "output_path": "data/corrupted/noise/audio/video_08_white_snr10.wav"
+    },
+    {
+      "video_id": "video_08",
+      "noise_type": "white",
+      "snr_db": 20,
+      "output_path": "data/corrupted/noise/audio/video_08_white_snr20.wav"
+    },
+    {
+      "video_id": "video_08",
+      "noise_type": "white",
+      "snr_db": 3,
+      "output_path": "data/corrupted/noise/audio/video_08_white_snr3.wav"
+    },
+    {
+      "video_id": "video_09",
+      "noise_type": "reverb",
+      "snr_db": 10,
+      "output_path": "data/corrupted/noise/audio/video_09_reverb_snr10.wav"
+    },
+    {
+      "video_id": "video_09",
+      "noise_type": "reverb",
+      "snr_db": 20,
+      "output_path": "data/corrupted/noise/audio/video_09_reverb_snr20.wav"
+    },
+    {
+      "video_id": "video_09",
+      "noise_type": "reverb",
+      "snr_db": 3,
+      "output_path": "data/corrupted/noise/audio/video_09_reverb_snr3.wav"
+    },
+    {
+      "video_id": "video_09",
+      "noise_type": "white",
+      "snr_db": 10,
+      "output_path": "data/corrupted/noise/audio/video_09_white_snr10.wav"
+    },
+    {
+      "video_id": "video_09",
+      "noise_type": "white",
+      "snr_db": 20,
+      "output_path": "data/corrupted/noise/audio/video_09_white_snr20.wav"
+    },
+    {
+      "video_id": "video_09",
+      "noise_type": "white",
+      "snr_db": 3,
+      "output_path": "data/corrupted/noise/audio/video_09_white_snr3.wav"
+    },
+    {
+      "video_id": "video_10",
+      "noise_type": "reverb",
+      "snr_db": 10,
+      "output_path": "data/corrupted/noise/audio/video_10_reverb_snr10.wav"
+    },
+    {
+      "video_id": "video_10",
+      "noise_type": "reverb",
+      "snr_db": 20,
+      "output_path": "data/corrupted/noise/audio/video_10_reverb_snr20.wav"
+    },
+    {
+      "video_id": "video_10",
+      "noise_type": "reverb",
+      "snr_db": 3,
+      "output_path": "data/corrupted/noise/audio/video_10_reverb_snr3.wav"
+    },
+    {
+      "video_id": "video_10",
+      "noise_type": "white",
+      "snr_db": 10,
+      "output_path": "data/corrupted/noise/audio/video_10_white_snr10.wav"
+    },
+    {
+      "video_id": "video_10",
+      "noise_type": "white",
+      "snr_db": 20,
+      "output_path": "data/corrupted/noise/audio/video_10_white_snr20.wav"
+    },
+    {
+      "video_id": "video_10",
+      "noise_type": "white",
+      "snr_db": 3,
+      "output_path": "data/corrupted/noise/audio/video_10_white_snr3.wav"
+    }
+  ],
+  "adversarial": [
+    {
+      "video_id": "video_01",
+      "epsilon": 0.01,
+      "max_perturbation": 0.01,
+      "snr_db": 34.53,
+      "output_path": "data/corrupted/audio_adversarial/video_01_adv_eps0.0100.wav"
+    },
+    {
+      "video_id": "video_02",
+      "epsilon": 0.01,
+      "max_perturbation": 0.01,
+      "snr_db": 34.85,
+      "output_path": "data/corrupted/audio_adversarial/video_02_adv_eps0.0100.wav"
+    },
+    {
+      "video_id": "video_03",
+      "epsilon": 0.01,
+      "max_perturbation": 0.01,
+      "snr_db": 33.08,
+      "output_path": "data/corrupted/audio_adversarial/video_03_adv_eps0.0100.wav"
+    },
+    {
+      "video_id": "video_04",
+      "epsilon": 0.01,
+      "max_perturbation": 0.01,
+      "snr_db": 30.8,
+      "output_path": "data/corrupted/audio_adversarial/video_04_adv_eps0.0100.wav"
+    },
+    {
+      "video_id": "video_05",
+      "epsilon": 0.01,
+      "max_perturbation": 0.01,
+      "snr_db": 26.5,
+      "output_path": "data/corrupted/audio_adversarial/video_05_adv_eps0.0100.wav"
+    },
+    {
+      "video_id": "video_06",
+      "epsilon": 0.01,
+      "max_perturbation": 0.01,
+      "snr_db": 33.85,
+      "output_path": "data/corrupted/audio_adversarial/video_06_adv_eps0.0100.wav"
+    },
+    {
+      "video_id": "video_07",
+      "epsilon": 0.01,
+      "max_perturbation": 0.01,
+      "snr_db": 35.41,
+      "output_path": "data/corrupted/audio_adversarial/video_07_adv_eps0.0100.wav"
+    },
+    {
+      "video_id": "video_08",
+      "epsilon": 0.01,
+      "max_perturbation": 0.01,
+      "snr_db": 35.41,
+      "output_path": "data/corrupted/audio_adversarial/video_08_adv_eps0.0100.wav"
+    },
+    {
+      "video_id": "video_09",
+      "epsilon": 0.01,
+      "max_perturbation": 0.01,
+      "snr_db": 31.7,
+      "output_path": "data/corrupted/audio_adversarial/video_09_adv_eps0.0100.wav"
+    },
+    {
+      "video_id": "video_10",
+      "epsilon": 0.01,
+      "max_perturbation": 0.01,
+      "snr_db": 34.43,
+      "output_path": "data/corrupted/audio_adversarial/video_10_adv_eps0.0100.wav"
+    }
+  ]
+}

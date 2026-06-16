@@ -1,0 +1,112 @@
+[
+  {
+    "video_id": "video_01",
+    "original_path": "data/audio/video_01.wav",
+    "output_path": "data/corrupted/audio_adversarial/video_01_adv_eps0.0100.wav",
+    "epsilon": 0.01,
+    "original_transcription": "Eric Smith, thank you for joining us here. Let's go back. You said the arrival of non-human intelligence is a very big deal. And this photo taken in 2016 feels like one of those quiet moments where the earth-shifted beneath us, but not everyone noticed. What did you see back then that the rest of us might have missed? In 2016, we didn't understand what was now going to happen, but we understood that these algorithms were new and powerful. What happened in this particular set of games was in roughly the second game. There was a new move invented by AI in a game that had been around for twenty-five hundred years that no one had ever seen. Technically, the way this occurred was that the system of AlphaGo was essentially organized to always maintain a greater than 50% chance of winning. And so it calculated correctly this move, which was this great...",
+    "adversarial_transcription": "Eric Smith, thank you for joining us here. Let's go back. You said the arrival of non-human intelligence is a very big deal. And this photo taken in 2016 feels like one of those quiet moments where the earth shifted beneath us, but not everyone noticed. What did you see back then that the rest of us might have missed? 2016 we didn't understand what was now going to happen.",
+    "word_error_rate": 0.5779,
+    "max_perturbation": 0.01,
+    "snr_db": 34.53
+  },
+  {
+    "video_id": "video_02",
+    "original_path": "data/audio/video_02.wav",
+    "output_path": "data/corrupted/audio_adversarial/video_02_adv_eps0.0100.wav",
+    "epsilon": 0.01,
+    "original_transcription": "When I think about the rise of AI, I'm reminded by the rise of literacy. A few hundred years ago, many people in society thought that maybe not everyone needed to be able to read and write. Back then, many people were attending views or herding sheep, so maybe there was less need for written communication. And all those needed was for the high priest and priestesses and monks to be able to read the Holy Book. And the rest of us could just go to the temple or church or the Holy Building and sit and listen to the high priest and priestesses' retours. Fortunately, with sense figured out that we can build a much racial society if lots of people can read and write. Today, AI is in the hands of the high priest and priestesses. These are the High-Disco AI engineers, many of whom work in the big tech companies. And most people have access only to the AI that they build for them. I think that we can build a much racial society if we can enable everyone.",
+    "adversarial_transcription": "When I think about the rise of AI, I'm reminded by the rise of literacy. A few hundred years ago, many people in society thought that maybe not everyone needed to be able to read and write. Back then, many people were attending views or herding sheep, so maybe there was less need for written communication. And all those needed was for the high priest and priestesses and monks to be able to read the holy book and the rest of us could just go.",
+    "word_error_rate": 0.5907,
+    "max_perturbation": 0.01,
+    "snr_db": 34.85
+  },
+  {
+    "video_id": "video_03",
+    "original_path": "data/audio/video_03.wav",
+    "output_path": "data/corrupted/audio_adversarial/video_03_adv_eps0.0100.wav",
+    "epsilon": 0.01,
+    "original_transcription": "Now let's say these doctors want to design another algorithm to recommend treatment plans. Since these plans will be implemented in stages and they may change depending on each individual's response to treatment. The doctors decide to use reinforcement learning. This program uses an iterative approach to gather feedback about which medications, dosages, and treatments are most effective. Then it compares that data against each patient's profile to create their unique optimal treatment plan. As the treatment progresses and the program receives more feedback, it can constantly update the plan for each patient. None of these three techniques are inherently smarter than any other. While some require more or less human intervention, they all have their own strengths and weaknesses, which make them best suited for certain tasks. However, by using them together, researchers can build complex AI systems where individual programs can supervise and teach each other. For example, when our unsupervised learning program finds groups of patients that are similar, it could send that data to a connected supervised learning program. That program could then incorporate this information into its predictions. Or perhaps dozens of reinforcement learning programs might simulate potential patient outcomes to collect feedback about different treatment.",
+    "adversarial_transcription": "Now let's say these doctors want to design another algorithm to recommend treatment plans. Since these plans will be implemented in stages and they may change depending on each individual's response to treatment. The doctors decide to use reinforcement learning. This program uses an iterative approach to gather feedback about which medications, dosages, and treatments are most effective. Then it compares that data against each patient's profile to create their unique optimal treatment plan. As the treatment...",
+    "word_error_rate": 0.665,
+    "max_perturbation": 0.01,
+    "snr_db": 33.08
+  },
+  {
+    "video_id": "video_04",
+    "original_path": "data/audio/video_04.wav",
+    "output_path": "data/corrupted/audio_adversarial/video_04_adv_eps0.0100.wav",
+    "epsilon": 0.01,
+    "original_transcription": "We're living in a time of great anxiety. Anxiety over the environments, over the competence and legitimacy of authority of where the society can treat people fairly and of what sort of future awaits us all. AI has inherited a large share of this anxiety. In a short time, AI has gone from recognizing photos of cats to generating high policy essays and paintings and music. Along with these amazing capabilities have come many worries. I like to be a cheerleader for AI, not a critic. I think that, like electricity, AI will advance nearly every human endeavor. But I'm sympathetic to the people that find this technology unsettling. If you remember me from a minute, I like to step into the shoes of the critics because I think they make some thoughtful points and I want everyone to understand these points. Today's largest AI's models have learned to mimic human capabilities by analyzing huge amounts of text and images on the internet. But the internet reflects not just humanity's best qualities, but also some of this works, including our prejudices, our hatreds, our misconceptions. AI learns to mimic these negative qualities too, so we'll AI amplify humanity's worst impulses.",
+    "adversarial_transcription": "We're living in a time of great anxiety. Anxiety over the environments, over the competence and legitimacy of authority of where the society can treat people fairly and of what sort of future awaits us all. AI has inherited a large share of this anxiety. In a short time, AI has gone from recognising photos of cats to general.",
+    "word_error_rate": 0.7928,
+    "max_perturbation": 0.01,
+    "snr_db": 30.8
+  },
+  {
+    "video_id": "video_05",
+    "original_path": "data/audio/video_05.wav",
+    "output_path": "data/corrupted/audio_adversarial/video_05_adv_eps0.0100.wav",
+    "epsilon": 0.01,
+    "original_transcription": "So Arthur Samuil was the father of machine learning, and I have a debt to him because I am a machine learning practitioner. I was a president of Kaggle, a community of over 200,000 machine learning practitioners. Kaggle puts up competitions to try and get them to solve previously unsolved problems, and has been successful hundreds of times. So from this vantage point, I was able to find out a lot about what machine learning can do in the past, and do today, and what it could do in the future. Perhaps the first big success of machine learning commercially was Google. Google showed that it is possible to find information by using a computer algorithm. And this algorithm is based on machine learning. Since that time there has been many commercial successes of machine learning, companies like Amazon and Netflix use machine learning to suggest products that you might like to buy movies that you might like to watch. Sometimes it's almost creepy. Companies like LinkedIn and Facebook sometimes will tell you about who your friends might be, and you have no idea how it did it. And it's just because it's using the power of machine learning. These are algorithms that have learned how to do this from data rather than being programmed by hand.",
+    "adversarial_transcription": "So, Arthur Samuil was the father of machine learning. And I have a debt to him because I am a machine learning practitioner. I was a president of Kaggle, a community of over 200,000 machine learning practitioners. Kaggle puts up competitions to try and get them to solve previously unsolved problems. And has been successful hundreds of times. So from this vantage point, I was able to find out a lot about what machine learning can do in the past, can do today, and what it could do in the future.",
+    "word_error_rate": 0.6193,
+    "max_perturbation": 0.01,
+    "snr_db": 26.5
+  },
+  {
+    "video_id": "video_06",
+    "original_path": "data/audio/video_06.wav",
+    "output_path": "data/corrupted/audio_adversarial/video_06_adv_eps0.0100.wav",
+    "epsilon": 0.01,
+    "original_transcription": "Biologists call these moments major transitions when separate entities stop competing and start building a new hole. Like how molecules became cells, cells became bodies, and individuals became societies. Every wrong on that ladder was climbed through mergers. Now we're on the cusp of the next major transition. The merger of humans and AI. That's right. We're gonna eat the AI. Now I know what you're thinking. Maybe you're rolling your eyes, maybe you're laughing, maybe you feel nervous. It's okay. I felt all of those things. The first time I heard myself say it. So let me explain. For 15 years I worked on building AI. I started one of the early AI companies. I raised a quarter of a billion dollars to do it, and I sold my business to Google. And not long ago I was at a private event with many of the leaders building the AI as we all use every day. People you'd recognize. And I asked them how many believe there's more than a 10% chance that AI kills most of humanity in the next 20 years. Almost every hand went up.",
+    "adversarial_transcription": "Biologists call these moments major transitions when separate entities stop competing and start building a new hole. Like how molecules became cells, cells became bodies, and individuals became societies. Every wrong on that ladder was climbed through mergers. Now we're on the cusp of the next major transition. The merger of humans and AI. That's right. We're going to eat the AI.",
+    "word_error_rate": 0.7026,
+    "max_perturbation": 0.01,
+    "snr_db": 33.85
+  },
+  {
+    "video_id": "video_07",
+    "original_path": "data/audio/video_07.wav",
+    "output_path": "data/corrupted/audio_adversarial/video_07_adv_eps0.0100.wav",
+    "epsilon": 0.01,
+    "original_transcription": "and you know they're like what? You serious? What is there's a bad end? But I think the point was if it's the tech companies opinion, why are anyone going to trust you? It needs to be the people's opinion. And so we stuck to that principle ever and got behind it. And yeah, we have no way of changing the status of it. OK. Wonderful. OK. It is wonderful. Yeah. And so what happens to the post after it gets noted? Yeah. OK. So what we're looking at here is on the left. This is a typical representative post. This is actually a real post. And we're looking at how many people have seen it over time. So the Y-axis there is views and the X-axis is the time since post creation. And you can just see this thing going super viral at the start. All the way up until it gets noted. So that's the green dot with the yellow dotted line there. It's going after that point. You know, totally flines out. It gets almost no more views. And the crazy thing about this is it's actually not getting downranked by R4U algorithm the post. This is actually just because of what we call organic user behavior, where people are realizing that the post is incorrect because the notes on it. So they're just liking it less than reposting less. So I think this is really cool.",
+    "adversarial_transcription": "and you know they're like what? You serious? What is there's a bad end? But I think the point was if it's the tech companies opinion, why are anyone going to trust you? It needs to be the people's opinion. And so we stuck to that principle ever and got behind it. And yeah, we have no way of changing the status of it. Okay. Wonderful. Okay, it is wonderful. Yeah. And so what happens to the post after it gets noted? Okay, so what we're looking at here.",
+    "word_error_rate": 0.7344,
+    "max_perturbation": 0.01,
+    "snr_db": 35.41
+  },
+  {
+    "video_id": "video_08",
+    "original_path": "data/audio/video_08.wav",
+    "output_path": "data/corrupted/audio_adversarial/video_08_adv_eps0.0100.wav",
+    "epsilon": 0.01,
+    "original_transcription": "and you know they're like what? You serious? What is there's a bad end? But I think the point was if it's the tech companies opinion, why are anyone going to trust you? It needs to be the people's opinion. And so we stuck to that principle ever and got behind it. And yeah, we have no way of changing the status of it. OK. Wonderful. OK. It is wonderful. Yeah. And so what happens to the post after it gets noted? Yeah. OK. So what we're looking at here is on the left. This is a typical representative post. This is actually a real post. And we're looking at how many people have seen it over time. So the Y-axis there is views and the X-axis is the time since post creation. And you can just see this thing going super viral at the start. All the way up until it gets noted. So that's the green dot with the yellow dotted line there. It's going after that point. You know, totally flines out. It gets almost no more views. And the crazy thing about this is it's actually not getting downranked by R4U algorithm the post. This is actually just because of what we call organic user behavior, where people are realizing that the post is incorrect because the notes on it. So they're just liking it less than reposting less. So I think this is really cool.",
+    "adversarial_transcription": "and you know they're like what? You serious? What is there's a bad end? But I think the point was if it's the tech companies opinion, why are anyone going to trust you? It needs to be the people's opinion. And so we stuck to that principle ever and got behind it. And yeah, we have no way of changing the status of it. Okay. Wonderful. Okay, it is wonderful. Yeah. And so what happens to the post after it gets noted? Okay, so what we're looking at here.",
+    "word_error_rate": 0.931,
+    "max_perturbation": 0.01,
+    "snr_db": 35.41
+  },
+  {
+    "video_id": "video_09",
+    "original_path": "data/audio/video_09.wav",
+    "output_path": "data/corrupted/audio_adversarial/video_09_adv_eps0.0100.wav",
+    "epsilon": 0.01,
+    "original_transcription": "What's open-clar? I've been programming since I was 14. Building software felt like playing a video game. I couldn't stop until I did. I created a company I poured a decade of my life into it. No venture capital every weekend. And then I sold the dream and I felt absolutely nothing. For three years I was wondering, did therapy traveled at changed countries twice, nothing nothing clicked. No wake up every morning with everything I was supposed to want and no reason to be out of bed. And then in early 2025 I tried an experiment I wanted to see what this new AI coding agents are all about. And I had what I can only describe as a holy shit moment.",
+    "adversarial_transcription": "What's open-clar? I've been programming since I was 14. Building software felt like playing a video game. I couldn't stop until I did. I created a company I poured a decade of my life into it. No, no.",
+    "word_error_rate": 0.7381,
+    "max_perturbation": 0.01,
+    "snr_db": 31.7
+  },
+  {
+    "video_id": "video_10",
+    "original_path": "data/audio/video_10.wav",
+    "output_path": "data/corrupted/audio_adversarial/video_10_adv_eps0.0100.wav",
+    "epsilon": 0.01,
+    "original_transcription": "After waking up alone in a locked room, two documents are slipped under your door, a note in an alien language and a detailed instruction manual in your language. The manual explains that for each alien character in the note, you should write an indicated corresponding symbol following this chart you write a response that you slip out the door. And for the next several days, this exchange continues. Outside the room, alien scientists are thrilled because they believe you're conversing with them. But you still have no idea what these characters is. This scenario isn't just a bizarre misunderstanding. It's a valuable thought experiment for understanding artificial intelligence. Philosopher John Sirles developed the original version of this premise in 1980 as a response to some of the AI work being done at the time. But while modern AI models don't work like those outdated machines or the prisoner in Sirles hypothetical, the question motivating his thought experiment is still relevant. To quote Sirles, he wanted to interrogate whether and appropriately programmed computer literally has cognitive states. In other words, if a computer looks like it understands something, does that mean it actually understands the way a human does?",
+    "adversarial_transcription": "After waking up alone in a locked room, two documents are slipped under your door, a note in an alien language and a detailed instruction manual in your language. The manual explains that for each alien character in the note, you should write an indicated corresponding symbol following this chart.",
+    "word_error_rate": 0.7638,
+    "max_perturbation": 0.01,
+    "snr_db": 34.43
+  }
+]

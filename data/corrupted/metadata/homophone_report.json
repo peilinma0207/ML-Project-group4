@@ -1,0 +1,4138 @@
+[
+  {
+    "video_id": "video_01",
+    "ratio": 0.1,
+    "n_substitutions": 0,
+    "substitutions": [],
+    "output_path": "data/corrupted/text_homophone/video_01_homophone_r10.txt"
+  },
+  {
+    "video_id": "video_01",
+    "ratio": 0.25,
+    "n_substitutions": 0,
+    "substitutions": [],
+    "output_path": "data/corrupted/text_homophone/video_01_homophone_r25.txt"
+  },
+  {
+    "video_id": "video_01",
+    "ratio": 0.5,
+    "n_substitutions": 0,
+    "substitutions": [],
+    "output_path": "data/corrupted/text_homophone/video_01_homophone_r50.txt"
+  },
+  {
+    "video_id": "video_02",
+    "ratio": 0.1,
+    "n_substitutions": 8,
+    "substitutions": [
+      {
+        "original": "much",
+        "replacement": "mutch",
+        "position": 179,
+        "phonetic_similarity": 1.0,
+        "edit_similarity": 0.889
+      },
+      {
+        "original": "read",
+        "replacement": "redd",
+        "position": 34,
+        "phonetic_similarity": 1.0,
+        "edit_similarity": 0.75
+      },
+      {
+        "original": "AI,",
+        "replacement": "AYE",
+        "position": 7,
+        "phonetic_similarity": 0.0,
+        "edit_similarity": 0.333
+      },
+      {
+        "original": "monks",
+        "replacement": "monk's",
+        "position": 69,
+        "phonetic_similarity": 1.0,
+        "edit_similarity": 0.909
+      },
+      {
+        "original": "was",
+        "replacement": "waas",
+        "position": 61,
+        "phonetic_similarity": 1.0,
+        "edit_similarity": 0.857
+      },
+      {
+        "original": "written",
+        "replacement": "ryton",
+        "position": 54,
+        "phonetic_similarity": 1.0,
+        "edit_similarity": 0.5
+      },
+      {
+        "original": "then,",
+        "replacement": "than",
+        "position": 38,
+        "phonetic_similarity": 0.0,
+        "edit_similarity": 0.667
+      },
+      {
+        "original": "to",
+        "replacement": "two",
+        "position": 33,
+        "phonetic_similarity": 1.0,
+        "edit_similarity": 0.8
+      }
+    ],
+    "output_path": "data/corrupted/text_homophone/video_02_homophone_r10.txt"
+  },
+  {
+    "video_id": "video_02",
+    "ratio": 0.25,
+    "n_substitutions": 21,
+    "substitutions": [
+      {
+        "original": "much",
+        "replacement": "mutsch",
+        "position": 179,
+        "phonetic_similarity": 1.0,
+        "edit_similarity": 0.8
+      },
+      {
+        "original": "read",
+        "replacement": "reade",
+        "position": 34,
+        "phonetic_similarity": 1.0,
+        "edit_similarity": 0.889
+      },
+      {
+        "original": "AI,",
+        "replacement": "AYE",
+        "position": 7,
+        "phonetic_similarity": 0.0,
+        "edit_similarity": 0.333
+      },
+      {
+        "original": "monks",
+        "replacement": "monk's",
+        "position": 69,
+        "phonetic_similarity": 1.0,
+        "edit_similarity": 0.909
+      },
+      {
+        "original": "was",
+        "replacement": "waas",
+        "position": 61,
+        "phonetic_similarity": 1.0,
+        "edit_similarity": 0.857
+      },
+      {
+        "original": "written",
+        "replacement": "ryton",
+        "position": 54,
+        "phonetic_similarity": 1.0,
+        "edit_similarity": 0.5
+      },
+      {
+        "original": "then,",
+        "replacement": "than",
+        "position": 38,
+        "phonetic_similarity": 0.0,
+        "edit_similarity": 0.667
+      },
+      {
+        "original": "to",
+        "replacement": "tew",
+        "position": 33,
+        "phonetic_similarity": 0.333,
+        "edit_similarity": 0.4
+      },
+      {
+        "original": "write",
+        "replacement": "reit",
+        "position": 190,
+        "phonetic_similarity": 1.0,
+        "edit_similarity": 0.667
+      },
+      {
+        "original": "AI",
+        "replacement": "AY",
+        "position": 147,
+        "phonetic_similarity": 0.0,
+        "edit_similarity": 0.5
+      },
+      {
+        "original": "be",
+        "replacement": "bea",
+        "position": 31,
+        "phonetic_similarity": 1.0,
+        "edit_similarity": 0.8
+      },
+      {
+        "original": "build",
+        "replacement": "billed",
+        "position": 169,
+        "phonetic_similarity": 1.0,
+        "edit_similarity": 0.727
+      },
+      {
+        "original": "we",
+        "replacement": "oui",
+        "position": 115,
+        "phonetic_similarity": 1.0,
+        "edit_similarity": 0.0
+      },
+      {
+        "original": "by",
+        "replacement": "buy",
+        "position": 10,
+        "phonetic_similarity": 1.0,
+        "edit_similarity": 0.8
+      },
+      {
+        "original": "for",
+        "replacement": "four",
+        "position": 53,
+        "phonetic_similarity": 1.0,
+        "edit_similarity": 0.857
+      },
+      {
+        "original": "all",
+        "replacement": "aul",
+        "position": 57,
+        "phonetic_similarity": 1.0,
+        "edit_similarity": 0.667
+      },
+      {
+        "original": "high",
+        "replacement": "hy",
+        "position": 138,
+        "phonetic_similarity": 1.0,
+        "edit_similarity": 0.333
+      },
+      {
+        "original": "I",
+        "replacement": "AYE",
+        "position": 172,
+        "phonetic_similarity": 1.0,
+        "edit_similarity": 0.0
+      },
+      {
+        "original": "tech",
+        "replacement": "tek",
+        "position": 156,
+        "phonetic_similarity": 1.0,
+        "edit_similarity": 0.571
+      },
+      {
+        "original": "less",
+        "replacement": "les",
+        "position": 51,
+        "phonetic_similarity": 1.0,
+        "edit_similarity": 0.857
+      },
+      {
+        "original": "can",
+        "replacement": "kanne",
+        "position": 184,
+        "phonetic_similarity": 1.0,
+        "edit_similarity": 0.5
+      }
+    ],
+    "output_path": "data/corrupted/text_homophone/video_02_homophone_r25.txt"
+  },
+  {
+    "video_id": "video_02",
+    "ratio": 0.5,
+    "n_substitutions": 43,
+    "substitutions": [
+      {
+        "original": "much",
+        "replacement": "mutsch",
+        "position": 179,
+        "phonetic_similarity": 1.0,
+        "edit_similarity": 0.8
+      },
+      {
+        "original": "read",
+        "replacement": "redd",
+        "position": 34,
+        "phonetic_similarity": 1.0,
+        "edit_similarity": 0.75
+      },
+      {
+        "original": "AI,",
+        "replacement": "AYE",
+        "position": 7,
+        "phonetic_similarity": 0.0,
+        "edit_similarity": 0.333
+      },
+      {
+        "original": "monks",
+        "replacement": "monk's",
+        "position": 69,
+        "phonetic_similarity": 1.0,
+        "edit_similarity": 0.909
+      },
+      {
+        "original": "was",
+        "replacement": "wah's",
+        "position": 61,
+        "phonetic_similarity": 1.0,
+        "edit_similarity": 0.75
+      },
+      {
+        "original": "written",
+        "replacement": "ryton",
+        "position": 54,
+        "phonetic_similarity": 1.0,
+        "edit_similarity": 0.5
+      },
+      {
+        "original": "then,",
+        "replacement": "than",
+        "position": 38,
+        "phonetic_similarity": 0.0,
+        "edit_similarity": 0.667
+      },
+      {
+        "original": "to",
+        "replacement": "too",
+        "position": 33,
+        "phonetic_similarity": 1.0,
+        "edit_similarity": 0.8
+      },
+      {
+        "original": "AI",
+        "replacement": "EYE",
+        "position": 147,
+        "phonetic_similarity": 1.0,
+        "edit_similarity": 0.0
+      },
+      {
+        "original": "be",
+        "replacement": "bee",
+        "position": 31,
+        "phonetic_similarity": 1.0,
+        "edit_similarity": 0.8
+      },
+      {
+        "original": "build",
+        "replacement": "billed",
+        "position": 169,
+        "phonetic_similarity": 1.0,
+        "edit_similarity": 0.727
+      },
+      {
+        "original": "we",
+        "replacement": "wee",
+        "position": 115,
+        "phonetic_similarity": 1.0,
+        "edit_similarity": 0.8
+      },
+      {
+        "original": "by",
+        "replacement": "buy",
+        "position": 10,
+        "phonetic_similarity": 1.0,
+        "edit_similarity": 0.8
+      },
+      {
+        "original": "to",
+        "replacement": "too",
+        "position": 187,
+        "phonetic_similarity": 1.0,
+        "edit_similarity": 0.8
+      },
+      {
+        "original": "I",
+        "replacement": "AY",
+        "position": 172,
+        "phonetic_similarity": 0.0,
+        "edit_similarity": 0.0
+      },
+      {
+        "original": "for",
+        "replacement": "forr",
+        "position": 53,
+        "phonetic_similarity": 1.0,
+        "edit_similarity": 0.857
+      },
+      {
+        "original": "all",
+        "replacement": "aul",
+        "position": 57,
+        "phonetic_similarity": 1.0,
+        "edit_similarity": 0.667
+      },
+      {
+        "original": "high",
+        "replacement": "hi",
+        "position": 138,
+        "phonetic_similarity": 1.0,
+        "edit_similarity": 0.667
+      },
+      {
+        "original": "to",
+        "replacement": "too",
+        "position": 164,
+        "phonetic_similarity": 1.0,
+        "edit_similarity": 0.8
+      },
+      {
+        "original": "less",
+        "replacement": "les",
+        "position": 51,
+        "phonetic_similarity": 1.0,
+        "edit_similarity": 0.857
+      },
+      {
+        "original": "was",
+        "replacement": "wah's",
+        "position": 110,
+        "phonetic_similarity": 1.0,
+        "edit_similarity": 0.75
+      },
+      {
+        "original": "write",
+        "replacement": "wright",
+        "position": 190,
+        "phonetic_similarity": 1.0,
+        "edit_similarity": 0.727
+      },
+      {
+        "original": "much",
+        "replacement": "mutsch",
+        "position": 119,
+        "phonetic_similarity": 1.0,
+        "edit_similarity": 0.8
+      },
+      {
+        "original": "can",
+        "replacement": "cahn",
+        "position": 184,
+        "phonetic_similarity": 1.0,
+        "edit_similarity": 0.857
+      },
+      {
+        "original": "read",
+        "replacement": "red",
+        "position": 105,
+        "phonetic_similarity": 1.0,
+        "edit_similarity": 0.857
+      },
+      {
+        "original": "can",
+        "replacement": "cann",
+        "position": 116,
+        "phonetic_similarity": 1.0,
+        "edit_similarity": 0.857
+      },
+      {
+        "original": "When",
+        "replacement": "Wen",
+        "position": 0,
+        "phonetic_similarity": 1.0,
+        "edit_similarity": 0.857
+      },
+      {
+        "original": "holy",
+        "replacement": "wholly",
+        "position": 93,
+        "phonetic_similarity": 1.0,
+        "edit_similarity": 0.8
+      },
+      {
+        "original": "AI",
+        "replacement": "EYE",
+        "position": 131,
+        "phonetic_similarity": 1.0,
+        "edit_similarity": 0.0
+      },
+      {
+        "original": "to",
+        "replacement": "tue",
+        "position": 30,
+        "phonetic_similarity": 1.0,
+        "edit_similarity": 0.4
+      },
+      {
+        "original": "to",
+        "replacement": "tue",
+        "position": 86,
+        "phonetic_similarity": 1.0,
+        "edit_similarity": 0.4
+      },
+      {
+        "original": "tech",
+        "replacement": "tec",
+        "position": 156,
+        "phonetic_similarity": 1.0,
+        "edit_similarity": 0.857
+      },
+      {
+        "original": "so",
+        "replacement": "sough",
+        "position": 47,
+        "phonetic_similarity": 0.25,
+        "edit_similarity": 0.571
+      },
+      {
+        "original": "build",
+        "replacement": "bild",
+        "position": 177,
+        "phonetic_similarity": 1.0,
+        "edit_similarity": 0.889
+      },
+      {
+        "original": "not",
+        "replacement": "knott",
+        "position": 27,
+        "phonetic_similarity": 1.0,
+        "edit_similarity": 0.75
+      },
+      {
+        "original": "can",
+        "replacement": "cannes",
+        "position": 176,
+        "phonetic_similarity": 0.75,
+        "edit_similarity": 0.667
+      },
+      {
+        "original": "can",
+        "replacement": "cannes",
+        "position": 126,
+        "phonetic_similarity": 0.75,
+        "edit_similarity": 0.667
+      },
+      {
+        "original": "for",
+        "replacement": "forr",
+        "position": 170,
+        "phonetic_similarity": 1.0,
+        "edit_similarity": 0.857
+      },
+      {
+        "original": "few",
+        "replacement": "phew",
+        "position": 16,
+        "phonetic_similarity": 1.0,
+        "edit_similarity": 0.571
+      },
+      {
+        "original": "rise",
+        "replacement": "ries",
+        "position": 12,
+        "phonetic_similarity": 1.0,
+        "edit_similarity": 0.75
+      },
+      {
+        "original": "was",
+        "replacement": "waas",
+        "position": 50,
+        "phonetic_similarity": 1.0,
+        "edit_similarity": 0.857
+      },
+      {
+        "original": "high",
+        "replacement": "hi",
+        "position": 101,
+        "phonetic_similarity": 1.0,
+        "edit_similarity": 0.667
+      },
+      {
+        "original": "maybe",
+        "replacement": "mabey",
+        "position": 48,
+        "phonetic_similarity": 1.0,
+        "edit_similarity": 0.8
+      }
+    ],
+    "output_path": "data/corrupted/text_homophone/video_02_homophone_r50.txt"
+  },
+  {
+    "video_id": "video_03",
+    "ratio": 0.1,
+    "n_substitutions": 7,
+    "substitutions": [
+      {
+        "original": "doctors",
+        "replacement": "doctor's",
+        "position": 35,
+        "phonetic_similarity": 1.0,
+        "edit_similarity": 0.933
+      },
+      {
+        "original": "doctors",
+        "replacement": "doctor's",
+        "position": 5,
+        "phonetic_similarity": 1.0,
+        "edit_similarity": 0.933
+      },
+      {
+        "original": "some",
+        "replacement": "sum",
+        "position": 106,
+        "phonetic_similarity": 1.0,
+        "edit_similarity": 0.571
+      },
+      {
+        "original": "are",
+        "replacement": "ahr",
+        "position": 99,
+        "phonetic_similarity": 1.0,
+        "edit_similarity": 0.667
+      },
+      {
+        "original": "for",
+        "replacement": "faure",
+        "position": 91,
+        "phonetic_similarity": 1.0,
+        "edit_similarity": 0.5
+      },
+      {
+        "original": "program",
+        "replacement": "programme",
+        "position": 42,
+        "phonetic_similarity": 1.0,
+        "edit_similarity": 0.875
+      },
+      {
+        "original": "to",
+        "replacement": "two",
+        "position": 32,
+        "phonetic_similarity": 1.0,
+        "edit_similarity": 0.8
+      }
+    ],
+    "output_path": "data/corrupted/text_homophone/video_03_homophone_r10.txt"
+  },
+  {
+    "video_id": "video_03",
+    "ratio": 0.25,
+    "n_substitutions": 18,
+    "substitutions": [
+      {
+        "original": "doctors",
+        "replacement": "doctor's",
+        "position": 35,
+        "phonetic_similarity": 1.0,
+        "edit_similarity": 0.933
+      },
+      {
+        "original": "doctors",
+        "replacement": "doctor's",
+        "position": 5,
+        "phonetic_similarity": 1.0,
+        "edit_similarity": 0.933
+      },
+      {
+        "original": "some",
+        "replacement": "sum",
+        "position": 106,
+        "phonetic_similarity": 1.0,
+        "edit_similarity": 0.571
+      },
+      {
+        "original": "are",
+        "replacement": "ar",
+        "position": 99,
+        "phonetic_similarity": 1.0,
+        "edit_similarity": 0.8
+      },
+      {
+        "original": "for",
+        "replacement": "forr",
+        "position": 91,
+        "phonetic_similarity": 1.0,
+        "edit_similarity": 0.857
+      },
+      {
+        "original": "program",
+        "replacement": "programme",
+        "position": 42,
+        "phonetic_similarity": 1.0,
+        "edit_similarity": 0.875
+      },
+      {
+        "original": "to",
+        "replacement": "two",
+        "position": 32,
+        "phonetic_similarity": 1.0,
+        "edit_similarity": 0.8
+      },
+      {
+        "original": "may",
+        "replacement": "mey",
+        "position": 25,
+        "phonetic_similarity": 1.0,
+        "edit_similarity": 0.667
+      },
+      {
+        "original": "can",
+        "replacement": "cann",
+        "position": 143,
+        "phonetic_similarity": 1.0,
+        "edit_similarity": 0.857
+      },
+      {
+        "original": "to",
+        "replacement": "tew",
+        "position": 7,
+        "phonetic_similarity": 0.333,
+        "edit_similarity": 0.4
+      },
+      {
+        "original": "to",
+        "replacement": "two",
+        "position": 196,
+        "phonetic_similarity": 1.0,
+        "edit_similarity": 0.8
+      },
+      {
+        "original": "to",
+        "replacement": "two",
+        "position": 11,
+        "phonetic_similarity": 1.0,
+        "edit_similarity": 0.8
+      },
+      {
+        "original": "then",
+        "replacement": "than",
+        "position": 177,
+        "phonetic_similarity": 0.5,
+        "edit_similarity": 0.75
+      },
+      {
+        "original": "plans.",
+        "replacement": "plan's",
+        "position": 202,
+        "phonetic_similarity": 0.0,
+        "edit_similarity": 0.833
+      },
+      {
+        "original": "than",
+        "replacement": "then",
+        "position": 102,
+        "phonetic_similarity": 0.5,
+        "edit_similarity": 0.75
+      },
+      {
+        "original": "less",
+        "replacement": "les",
+        "position": 110,
+        "phonetic_similarity": 1.0,
+        "edit_similarity": 0.857
+      },
+      {
+        "original": "say",
+        "replacement": "c'est",
+        "position": 3,
+        "phonetic_similarity": 0.25,
+        "edit_similarity": 0.25
+      },
+      {
+        "original": "might",
+        "replacement": "mite",
+        "position": 191,
+        "phonetic_similarity": 1.0,
+        "edit_similarity": 0.667
+      }
+    ],
+    "output_path": "data/corrupted/text_homophone/video_03_homophone_r25.txt"
+  },
+  {
+    "video_id": "video_03",
+    "ratio": 0.5,
+    "n_substitutions": 37,
+    "substitutions": [
+      {
+        "original": "doctors",
+        "replacement": "doctor's",
+        "position": 35,
+        "phonetic_similarity": 1.0,
+        "edit_similarity": 0.933
+      },
+      {
+        "original": "doctors",
+        "replacement": "doctor's",
+        "position": 5,
+        "phonetic_similarity": 1.0,
+        "edit_similarity": 0.933
+      },
+      {
+        "original": "some",
+        "replacement": "sum",
+        "position": 106,
+        "phonetic_similarity": 1.0,
+        "edit_similarity": 0.571
+      },
+      {
+        "original": "are",
+        "replacement": "ar",
+        "position": 99,
+        "phonetic_similarity": 1.0,
+        "edit_similarity": 0.8
+      },
+      {
+        "original": "for",
+        "replacement": "forr",
+        "position": 91,
+        "phonetic_similarity": 1.0,
+        "edit_similarity": 0.857
+      },
+      {
+        "original": "program",
+        "replacement": "programme",
+        "position": 42,
+        "phonetic_similarity": 1.0,
+        "edit_similarity": 0.875
+      },
+      {
+        "original": "to",
+        "replacement": "too",
+        "position": 32,
+        "phonetic_similarity": 1.0,
+        "edit_similarity": 0.8
+      },
+      {
+        "original": "may",
+        "replacement": "mey",
+        "position": 25,
+        "phonetic_similarity": 1.0,
+        "edit_similarity": 0.667
+      },
+      {
+        "original": "can",
+        "replacement": "kan",
+        "position": 143,
+        "phonetic_similarity": 1.0,
+        "edit_similarity": 0.667
+      },
+      {
+        "original": "to",
+        "replacement": "too",
+        "position": 7,
+        "phonetic_similarity": 1.0,
+        "edit_similarity": 0.8
+      },
+      {
+        "original": "to",
+        "replacement": "thuy",
+        "position": 196,
+        "phonetic_similarity": 1.0,
+        "edit_similarity": 0.333
+      },
+      {
+        "original": "to",
+        "replacement": "too",
+        "position": 11,
+        "phonetic_similarity": 1.0,
+        "edit_similarity": 0.8
+      },
+      {
+        "original": "then",
+        "replacement": "than",
+        "position": 177,
+        "phonetic_similarity": 0.5,
+        "edit_similarity": 0.75
+      },
+      {
+        "original": "plans.",
+        "replacement": "plan's",
+        "position": 202,
+        "phonetic_similarity": 0.0,
+        "edit_similarity": 0.833
+      },
+      {
+        "original": "than",
+        "replacement": "then",
+        "position": 102,
+        "phonetic_similarity": 0.5,
+        "edit_similarity": 0.75
+      },
+      {
+        "original": "less",
+        "replacement": "les",
+        "position": 110,
+        "phonetic_similarity": 1.0,
+        "edit_similarity": 0.857
+      },
+      {
+        "original": "say",
+        "replacement": "c'est",
+        "position": 3,
+        "phonetic_similarity": 0.25,
+        "edit_similarity": 0.25
+      },
+      {
+        "original": "might",
+        "replacement": "mite",
+        "position": 191,
+        "phonetic_similarity": 1.0,
+        "edit_similarity": 0.667
+      },
+      {
+        "original": "individual's",
+        "replacement": "individuals",
+        "position": 30,
+        "phonetic_similarity": 1.0,
+        "edit_similarity": 0.957
+      },
+      {
+        "original": "best",
+        "replacement": "beste",
+        "position": 124,
+        "phonetic_similarity": 1.0,
+        "edit_similarity": 0.889
+      },
+      {
+        "original": "have",
+        "replacement": "halve",
+        "position": 115,
+        "phonetic_similarity": 1.0,
+        "edit_similarity": 0.889
+      },
+      {
+        "original": "which",
+        "replacement": "wich",
+        "position": 121,
+        "phonetic_similarity": 1.0,
+        "edit_similarity": 0.889
+      },
+      {
+        "original": "While",
+        "replacement": "Wyle",
+        "position": 105,
+        "phonetic_similarity": 1.0,
+        "edit_similarity": 0.667
+      },
+      {
+        "original": "more",
+        "replacement": "mor",
+        "position": 83,
+        "phonetic_similarity": 1.0,
+        "edit_similarity": 0.857
+      },
+      {
+        "original": "groups",
+        "replacement": "group's",
+        "position": 157,
+        "phonetic_similarity": 1.0,
+        "edit_similarity": 0.923
+      },
+      {
+        "original": "Or",
+        "replacement": "Ore",
+        "position": 184,
+        "phonetic_similarity": 1.0,
+        "edit_similarity": 0.8
+      },
+      {
+        "original": "or",
+        "replacement": "ohr",
+        "position": 109,
+        "phonetic_similarity": 1.0,
+        "edit_similarity": 0.8
+      },
+      {
+        "original": "its",
+        "replacement": "it's",
+        "position": 182,
+        "phonetic_similarity": 1.0,
+        "edit_similarity": 0.857
+      },
+      {
+        "original": "Now,",
+        "replacement": "Gnau",
+        "position": 1,
+        "phonetic_similarity": 0.0,
+        "edit_similarity": 0.25
+      },
+      {
+        "original": "be",
+        "replacement": "bea",
+        "position": 19,
+        "phonetic_similarity": 1.0,
+        "edit_similarity": 0.8
+      },
+      {
+        "original": "can",
+        "replacement": "kann",
+        "position": 86,
+        "phonetic_similarity": 1.0,
+        "edit_similarity": 0.571
+      },
+      {
+        "original": "are",
+        "replacement": "ar",
+        "position": 56,
+        "phonetic_similarity": 1.0,
+        "edit_similarity": 0.8
+      },
+      {
+        "original": "for",
+        "replacement": "faure",
+        "position": 126,
+        "phonetic_similarity": 1.0,
+        "edit_similarity": 0.5
+      },
+      {
+        "original": "will",
+        "replacement": "wille",
+        "position": 18,
+        "phonetic_similarity": 1.0,
+        "edit_similarity": 0.889
+      },
+      {
+        "original": "patients",
+        "replacement": "patience",
+        "position": 159,
+        "phonetic_similarity": 0.857,
+        "edit_similarity": 0.75
+      },
+      {
+        "original": "their",
+        "replacement": "there",
+        "position": 116,
+        "phonetic_similarity": 1.0,
+        "edit_similarity": 0.8
+      },
+      {
+        "original": "plans.",
+        "replacement": "plan's",
+        "position": 14,
+        "phonetic_similarity": 0.0,
+        "edit_similarity": 0.833
+      }
+    ],
+    "output_path": "data/corrupted/text_homophone/video_03_homophone_r50.txt"
+  },
+  {
+    "video_id": "video_04",
+    "ratio": 0.1,
+    "n_substitutions": 10,
+    "substitutions": [
+      {
+        "original": "end",
+        "replacement": "ende",
+        "position": 200,
+        "phonetic_similarity": 1.0,
+        "edit_similarity": 0.857
+      },
+      {
+        "original": "cats",
+        "replacement": "katz",
+        "position": 55,
+        "phonetic_similarity": 1.0,
+        "edit_similarity": 0.5
+      },
+      {
+        "original": "can",
+        "replacement": "cannes",
+        "position": 22,
+        "phonetic_similarity": 0.75,
+        "edit_similarity": 0.667
+      },
+      {
+        "original": "than",
+        "replacement": "then",
+        "position": 219,
+        "phonetic_similarity": 0.5,
+        "edit_similarity": 0.75
+      },
+      {
+        "original": "find",
+        "replacement": "fined",
+        "position": 103,
+        "phonetic_similarity": 1.0,
+        "edit_similarity": 0.889
+      },
+      {
+        "original": "human",
+        "replacement": "heuman",
+        "position": 94,
+        "phonetic_similarity": 1.0,
+        "edit_similarity": 0.909
+      },
+      {
+        "original": "like",
+        "replacement": "lyke",
+        "position": 87,
+        "phonetic_similarity": 1.0,
+        "edit_similarity": 0.75
+      },
+      {
+        "original": "these",
+        "replacement": "thee's",
+        "position": 66,
+        "phonetic_similarity": 1.0,
+        "edit_similarity": 0.727
+      },
+      {
+        "original": "photos",
+        "replacement": "photo's",
+        "position": 53,
+        "phonetic_similarity": 1.0,
+        "edit_similarity": 0.923
+      },
+      {
+        "original": "able",
+        "replacement": "abel",
+        "position": 205,
+        "phonetic_similarity": 1.0,
+        "edit_similarity": 0.75
+      }
+    ],
+    "output_path": "data/corrupted/text_homophone/video_04_homophone_r10.txt"
+  },
+  {
+    "video_id": "video_04",
+    "ratio": 0.25,
+    "n_substitutions": 26,
+    "substitutions": [
+      {
+        "original": "end",
+        "replacement": "ende",
+        "position": 200,
+        "phonetic_similarity": 1.0,
+        "edit_similarity": 0.857
+      },
+      {
+        "original": "cats",
+        "replacement": "cat's",
+        "position": 55,
+        "phonetic_similarity": 1.0,
+        "edit_similarity": 0.889
+      },
+      {
+        "original": "can",
+        "replacement": "cannes",
+        "position": 22,
+        "phonetic_similarity": 0.75,
+        "edit_similarity": 0.667
+      },
+      {
+        "original": "than",
+        "replacement": "then",
+        "position": 219,
+        "phonetic_similarity": 0.5,
+        "edit_similarity": 0.75
+      },
+      {
+        "original": "find",
+        "replacement": "fined",
+        "position": 103,
+        "phonetic_similarity": 1.0,
+        "edit_similarity": 0.889
+      },
+      {
+        "original": "human",
+        "replacement": "heuman",
+        "position": 94,
+        "phonetic_similarity": 1.0,
+        "edit_similarity": 0.909
+      },
+      {
+        "original": "like",
+        "replacement": "lyke",
+        "position": 87,
+        "phonetic_similarity": 1.0,
+        "edit_similarity": 0.75
+      },
+      {
+        "original": "these",
+        "replacement": "thee's",
+        "position": 66,
+        "phonetic_similarity": 1.0,
+        "edit_similarity": 0.727
+      },
+      {
+        "original": "gets",
+        "replacement": "getz",
+        "position": 234,
+        "phonetic_similarity": 1.0,
+        "edit_similarity": 0.75
+      },
+      {
+        "original": "photos",
+        "replacement": "photo's",
+        "position": 53,
+        "phonetic_similarity": 1.0,
+        "edit_similarity": 0.923
+      },
+      {
+        "original": "able",
+        "replacement": "abel",
+        "position": 205,
+        "phonetic_similarity": 1.0,
+        "edit_similarity": 0.75
+      },
+      {
+        "original": "our",
+        "replacement": "hour",
+        "position": 177,
+        "phonetic_similarity": 1.0,
+        "edit_similarity": 0.857
+      },
+      {
+        "original": "from",
+        "replacement": "frum",
+        "position": 51,
+        "phonetic_similarity": 1.0,
+        "edit_similarity": 0.75
+      },
+      {
+        "original": "So",
+        "replacement": "Sew",
+        "position": 189,
+        "phonetic_similarity": 1.0,
+        "edit_similarity": 0.4
+      },
+      {
+        "original": "AI",
+        "replacement": "AYE",
+        "position": 140,
+        "phonetic_similarity": 1.0,
+        "edit_similarity": 0.4
+      },
+      {
+        "original": "fairly",
+        "replacement": "fairley",
+        "position": 25,
+        "phonetic_similarity": 1.0,
+        "edit_similarity": 0.923
+      },
+      {
+        "original": "AI",
+        "replacement": "AYE",
+        "position": 239,
+        "phonetic_similarity": 1.0,
+        "edit_similarity": 0.4
+      },
+      {
+        "original": "do",
+        "replacement": "doo",
+        "position": 213,
+        "phonetic_similarity": 1.0,
+        "edit_similarity": 0.8
+      },
+      {
+        "original": "I",
+        "replacement": "AYE",
+        "position": 84,
+        "phonetic_similarity": 1.0,
+        "edit_similarity": 0.0
+      },
+      {
+        "original": "AI",
+        "replacement": "AY",
+        "position": 89,
+        "phonetic_similarity": 0.0,
+        "edit_similarity": 0.5
+      },
+      {
+        "original": "but",
+        "replacement": "butt",
+        "position": 168,
+        "phonetic_similarity": 1.0,
+        "edit_similarity": 0.857
+      },
+      {
+        "original": "AI",
+        "replacement": "EYE",
+        "position": 191,
+        "phonetic_similarity": 1.0,
+        "edit_similarity": 0.0
+      },
+      {
+        "original": "to",
+        "replacement": "too",
+        "position": 206,
+        "phonetic_similarity": 1.0,
+        "edit_similarity": 0.8
+      },
+      {
+        "original": "AI",
+        "replacement": "AYE",
+        "position": 181,
+        "phonetic_similarity": 1.0,
+        "edit_similarity": 0.4
+      },
+      {
+        "original": "AI,",
+        "replacement": "AY",
+        "position": 80,
+        "phonetic_similarity": 0.0,
+        "edit_similarity": 0.4
+      },
+      {
+        "original": "our",
+        "replacement": "hour",
+        "position": 214,
+        "phonetic_similarity": 1.0,
+        "edit_similarity": 0.857
+      }
+    ],
+    "output_path": "data/corrupted/text_homophone/video_04_homophone_r25.txt"
+  },
+  {
+    "video_id": "video_04",
+    "ratio": 0.5,
+    "n_substitutions": 52,
+    "substitutions": [
+      {
+        "original": "end",
+        "replacement": "ende",
+        "position": 200,
+        "phonetic_similarity": 1.0,
+        "edit_similarity": 0.857
+      },
+      {
+        "original": "cats",
+        "replacement": "kats",
+        "position": 55,
+        "phonetic_similarity": 1.0,
+        "edit_similarity": 0.75
+      },
+      {
+        "original": "can",
+        "replacement": "caen",
+        "position": 22,
+        "phonetic_similarity": 1.0,
+        "edit_similarity": 0.857
+      },
+      {
+        "original": "than",
+        "replacement": "then",
+        "position": 219,
+        "phonetic_similarity": 0.5,
+        "edit_similarity": 0.75
+      },
+      {
+        "original": "find",
+        "replacement": "fined",
+        "position": 103,
+        "phonetic_similarity": 1.0,
+        "edit_similarity": 0.889
+      },
+      {
+        "original": "human",
+        "replacement": "humann",
+        "position": 94,
+        "phonetic_similarity": 1.0,
+        "edit_similarity": 0.909
+      },
+      {
+        "original": "like",
+        "replacement": "lyke",
+        "position": 87,
+        "phonetic_similarity": 1.0,
+        "edit_similarity": 0.75
+      },
+      {
+        "original": "these",
+        "replacement": "thee's",
+        "position": 66,
+        "phonetic_similarity": 1.0,
+        "edit_similarity": 0.727
+      },
+      {
+        "original": "gets",
+        "replacement": "getts",
+        "position": 234,
+        "phonetic_similarity": 1.0,
+        "edit_similarity": 0.889
+      },
+      {
+        "original": "photos",
+        "replacement": "photo's",
+        "position": 53,
+        "phonetic_similarity": 1.0,
+        "edit_similarity": 0.923
+      },
+      {
+        "original": "able",
+        "replacement": "abell",
+        "position": 205,
+        "phonetic_similarity": 1.0,
+        "edit_similarity": 0.667
+      },
+      {
+        "original": "our",
+        "replacement": "auer",
+        "position": 177,
+        "phonetic_similarity": 1.0,
+        "edit_similarity": 0.571
+      },
+      {
+        "original": "from",
+        "replacement": "frum",
+        "position": 51,
+        "phonetic_similarity": 1.0,
+        "edit_similarity": 0.75
+      },
+      {
+        "original": "So",
+        "replacement": "Sew",
+        "position": 189,
+        "phonetic_similarity": 1.0,
+        "edit_similarity": 0.4
+      },
+      {
+        "original": "AI",
+        "replacement": "AYE",
+        "position": 140,
+        "phonetic_similarity": 1.0,
+        "edit_similarity": 0.4
+      },
+      {
+        "original": "fairly",
+        "replacement": "fairlie",
+        "position": 25,
+        "phonetic_similarity": 1.0,
+        "edit_similarity": 0.769
+      },
+      {
+        "original": "AI",
+        "replacement": "AYE",
+        "position": 239,
+        "phonetic_similarity": 1.0,
+        "edit_similarity": 0.4
+      },
+      {
+        "original": "do",
+        "replacement": "due",
+        "position": 213,
+        "phonetic_similarity": 1.0,
+        "edit_similarity": 0.4
+      },
+      {
+        "original": "I",
+        "replacement": "AYE",
+        "position": 84,
+        "phonetic_similarity": 1.0,
+        "edit_similarity": 0.0
+      },
+      {
+        "original": "AI",
+        "replacement": "AY",
+        "position": 89,
+        "phonetic_similarity": 0.0,
+        "edit_similarity": 0.5
+      },
+      {
+        "original": "but",
+        "replacement": "butt",
+        "position": 168,
+        "phonetic_similarity": 1.0,
+        "edit_similarity": 0.857
+      },
+      {
+        "original": "AI",
+        "replacement": "AYE",
+        "position": 191,
+        "phonetic_similarity": 1.0,
+        "edit_similarity": 0.4
+      },
+      {
+        "original": "to",
+        "replacement": "two",
+        "position": 206,
+        "phonetic_similarity": 1.0,
+        "edit_similarity": 0.8
+      },
+      {
+        "original": "AI",
+        "replacement": "EYE",
+        "position": 181,
+        "phonetic_similarity": 1.0,
+        "edit_similarity": 0.0
+      },
+      {
+        "original": "AI,",
+        "replacement": "AYE",
+        "position": 80,
+        "phonetic_similarity": 0.0,
+        "edit_similarity": 0.333
+      },
+      {
+        "original": "our",
+        "replacement": "auer",
+        "position": 214,
+        "phonetic_similarity": 1.0,
+        "edit_similarity": 0.571
+      },
+      {
+        "original": "Today's",
+        "replacement": "Todays",
+        "position": 138,
+        "phonetic_similarity": 1.0,
+        "edit_similarity": 0.923
+      },
+      {
+        "original": "work?",
+        "replacement": "werk",
+        "position": 230,
+        "phonetic_similarity": 0.0,
+        "edit_similarity": 0.667
+      },
+      {
+        "original": "to",
+        "replacement": "two",
+        "position": 144,
+        "phonetic_similarity": 1.0,
+        "edit_similarity": 0.8
+      },
+      {
+        "original": "maybe",
+        "replacement": "mabey",
+        "position": 232,
+        "phonetic_similarity": 1.0,
+        "edit_similarity": 0.8
+      },
+      {
+        "original": "We're",
+        "replacement": "Weir",
+        "position": 0,
+        "phonetic_similarity": 1.0,
+        "edit_similarity": 0.667
+      },
+      {
+        "original": "I",
+        "replacement": "AYE",
+        "position": 73,
+        "phonetic_similarity": 1.0,
+        "edit_similarity": 0.0
+      },
+      {
+        "original": "AI",
+        "replacement": "EYE",
+        "position": 211,
+        "phonetic_similarity": 1.0,
+        "edit_similarity": 0.0
+      },
+      {
+        "original": "step",
+        "replacement": "stepp",
+        "position": 115,
+        "phonetic_similarity": 1.0,
+        "edit_similarity": 0.889
+      },
+      {
+        "original": "too.",
+        "replacement": "tue",
+        "position": 188,
+        "phonetic_similarity": 0.0,
+        "edit_similarity": 0.286
+      },
+      {
+        "original": "come",
+        "replacement": "kumm",
+        "position": 70,
+        "phonetic_similarity": 1.0,
+        "edit_similarity": 0.25
+      },
+      {
+        "original": "be",
+        "replacement": "bea",
+        "position": 204,
+        "phonetic_similarity": 1.0,
+        "edit_similarity": 0.8
+      },
+      {
+        "original": "our",
+        "replacement": "auer",
+        "position": 179,
+        "phonetic_similarity": 1.0,
+        "edit_similarity": 0.571
+      },
+      {
+        "original": "Will",
+        "replacement": "We'll",
+        "position": 223,
+        "phonetic_similarity": 0.5,
+        "edit_similarity": 0.667
+      },
+      {
+        "original": "jobs",
+        "replacement": "job's",
+        "position": 215,
+        "phonetic_similarity": 1.0,
+        "edit_similarity": 0.889
+      },
+      {
+        "original": "points,",
+        "replacement": "point's",
+        "position": 129,
+        "phonetic_similarity": 0.0,
+        "edit_similarity": 0.857
+      },
+      {
+        "original": "AI",
+        "replacement": "AYE",
+        "position": 35,
+        "phonetic_similarity": 1.0,
+        "edit_similarity": 0.4
+      },
+      {
+        "original": "to",
+        "replacement": "too",
+        "position": 75,
+        "phonetic_similarity": 1.0,
+        "edit_similarity": 0.8
+      },
+      {
+        "original": "But",
+        "replacement": "Butt",
+        "position": 196,
+        "phonetic_similarity": 1.0,
+        "edit_similarity": 0.857
+      },
+      {
+        "original": "not",
+        "replacement": "nott",
+        "position": 163,
+        "phonetic_similarity": 1.0,
+        "edit_similarity": 0.857
+      },
+      {
+        "original": "for",
+        "replacement": "fore",
+        "position": 109,
+        "phonetic_similarity": 1.0,
+        "edit_similarity": 0.857
+      },
+      {
+        "original": "music.",
+        "replacement": "muzik",
+        "position": 63,
+        "phonetic_similarity": 0.0,
+        "edit_similarity": 0.545
+      },
+      {
+        "original": "these",
+        "replacement": "thee's",
+        "position": 136,
+        "phonetic_similarity": 1.0,
+        "edit_similarity": 0.727
+      },
+      {
+        "original": "whether",
+        "replacement": "weather",
+        "position": 20,
+        "phonetic_similarity": 1.0,
+        "edit_similarity": 0.857
+      },
+      {
+        "original": "I",
+        "replacement": "AY",
+        "position": 123,
+        "phonetic_similarity": 0.0,
+        "edit_similarity": 0.0
+      },
+      {
+        "original": "will",
+        "replacement": "wil",
+        "position": 203,
+        "phonetic_similarity": 1.0,
+        "edit_similarity": 0.857
+      },
+      {
+        "original": "to",
+        "replacement": "two",
+        "position": 99,
+        "phonetic_similarity": 1.0,
+        "edit_similarity": 0.8
+      }
+    ],
+    "output_path": "data/corrupted/text_homophone/video_04_homophone_r50.txt"
+  },
+  {
+    "video_id": "video_05",
+    "ratio": 0.1,
+    "n_substitutions": 8,
+    "substitutions": [
+      {
+        "original": "do",
+        "replacement": "due",
+        "position": 208,
+        "phonetic_similarity": 1.0,
+        "edit_similarity": 0.4
+      },
+      {
+        "original": "get",
+        "replacement": "goette",
+        "position": 45,
+        "phonetic_similarity": 1.0,
+        "edit_similarity": 0.667
+      },
+      {
+        "original": "have",
+        "replacement": "halve",
+        "position": 11,
+        "phonetic_similarity": 1.0,
+        "edit_similarity": 0.889
+      },
+      {
+        "original": "first",
+        "replacement": "furst",
+        "position": 94,
+        "phonetic_similarity": 1.0,
+        "edit_similarity": 0.8
+      },
+      {
+        "original": "past,",
+        "replacement": "passed",
+        "position": 80,
+        "phonetic_similarity": 0.0,
+        "edit_similarity": 0.545
+      },
+      {
+        "original": "lot",
+        "replacement": "lat",
+        "position": 71,
+        "phonetic_similarity": 1.0,
+        "edit_similarity": 0.667
+      },
+      {
+        "original": "it's",
+        "replacement": "its",
+        "position": 53,
+        "phonetic_similarity": 1.0,
+        "edit_similarity": 0.857
+      },
+      {
+        "original": "try",
+        "replacement": "tri",
+        "position": 43,
+        "phonetic_similarity": 1.0,
+        "edit_similarity": 0.667
+      }
+    ],
+    "output_path": "data/corrupted/text_homophone/video_05_homophone_r10.txt"
+  },
+  {
+    "video_id": "video_05",
+    "ratio": 0.25,
+    "n_substitutions": 21,
+    "substitutions": [
+      {
+        "original": "do",
+        "replacement": "dew",
+        "position": 208,
+        "phonetic_similarity": 1.0,
+        "edit_similarity": 0.4
+      },
+      {
+        "original": "get",
+        "replacement": "goette",
+        "position": 45,
+        "phonetic_similarity": 1.0,
+        "edit_similarity": 0.667
+      },
+      {
+        "original": "have",
+        "replacement": "halve",
+        "position": 11,
+        "phonetic_similarity": 1.0,
+        "edit_similarity": 0.889
+      },
+      {
+        "original": "first",
+        "replacement": "furst",
+        "position": 94,
+        "phonetic_similarity": 1.0,
+        "edit_similarity": 0.8
+      },
+      {
+        "original": "past,",
+        "replacement": "passed",
+        "position": 80,
+        "phonetic_similarity": 0.0,
+        "edit_similarity": 0.545
+      },
+      {
+        "original": "lot",
+        "replacement": "lotte",
+        "position": 71,
+        "phonetic_similarity": 1.0,
+        "edit_similarity": 0.75
+      },
+      {
+        "original": "it's",
+        "replacement": "its",
+        "position": 53,
+        "phonetic_similarity": 1.0,
+        "edit_similarity": 0.857
+      },
+      {
+        "original": "try",
+        "replacement": "trie",
+        "position": 43,
+        "phonetic_similarity": 1.0,
+        "edit_similarity": 0.571
+      },
+      {
+        "original": "might",
+        "replacement": "mite",
+        "position": 178,
+        "phonetic_similarity": 1.0,
+        "edit_similarity": 0.667
+      },
+      {
+        "original": "competitions",
+        "replacement": "competition's",
+        "position": 41,
+        "phonetic_similarity": 1.0,
+        "edit_similarity": 0.96
+      },
+      {
+        "original": "it's",
+        "replacement": "its",
+        "position": 193,
+        "phonetic_similarity": 1.0,
+        "edit_similarity": 0.857
+      },
+      {
+        "original": "to",
+        "replacement": "tew",
+        "position": 152,
+        "phonetic_similarity": 0.333,
+        "edit_similarity": 0.4
+      },
+      {
+        "original": "great",
+        "replacement": "grate",
+        "position": 13,
+        "phonetic_similarity": 1.0,
+        "edit_similarity": 0.8
+      },
+      {
+        "original": "find",
+        "replacement": "fined",
+        "position": 68,
+        "phonetic_similarity": 1.0,
+        "edit_similarity": 0.889
+      },
+      {
+        "original": "can",
+        "replacement": "cannes",
+        "position": 76,
+        "phonetic_similarity": 0.75,
+        "edit_similarity": 0.667
+      },
+      {
+        "original": "tell",
+        "replacement": "tel",
+        "position": 172,
+        "phonetic_similarity": 1.0,
+        "edit_similarity": 0.857
+      },
+      {
+        "original": "are",
+        "replacement": "ar",
+        "position": 201,
+        "phonetic_similarity": 1.0,
+        "edit_similarity": 0.8
+      },
+      {
+        "original": "you",
+        "replacement": "yue",
+        "position": 181,
+        "phonetic_similarity": 1.0,
+        "edit_similarity": 0.667
+      },
+      {
+        "original": "able",
+        "replacement": "abell",
+        "position": 66,
+        "phonetic_similarity": 1.0,
+        "edit_similarity": 0.667
+      },
+      {
+        "original": "rather",
+        "replacement": "wrather",
+        "position": 212,
+        "phonetic_similarity": 1.0,
+        "edit_similarity": 0.923
+      },
+      {
+        "original": "like",
+        "replacement": "lyke",
+        "position": 151,
+        "phonetic_similarity": 1.0,
+        "edit_similarity": 0.75
+      }
+    ],
+    "output_path": "data/corrupted/text_homophone/video_05_homophone_r25.txt"
+  },
+  {
+    "video_id": "video_05",
+    "ratio": 0.5,
+    "n_substitutions": 43,
+    "substitutions": [
+      {
+        "original": "do",
+        "replacement": "doo",
+        "position": 208,
+        "phonetic_similarity": 1.0,
+        "edit_similarity": 0.8
+      },
+      {
+        "original": "get",
+        "replacement": "goette",
+        "position": 45,
+        "phonetic_similarity": 1.0,
+        "edit_similarity": 0.667
+      },
+      {
+        "original": "have",
+        "replacement": "halve",
+        "position": 11,
+        "phonetic_similarity": 1.0,
+        "edit_similarity": 0.889
+      },
+      {
+        "original": "first",
+        "replacement": "furst",
+        "position": 94,
+        "phonetic_similarity": 1.0,
+        "edit_similarity": 0.8
+      },
+      {
+        "original": "past,",
+        "replacement": "passed",
+        "position": 80,
+        "phonetic_similarity": 0.0,
+        "edit_similarity": 0.545
+      },
+      {
+        "original": "lot",
+        "replacement": "lotte",
+        "position": 71,
+        "phonetic_similarity": 1.0,
+        "edit_similarity": 0.75
+      },
+      {
+        "original": "it's",
+        "replacement": "its",
+        "position": 53,
+        "phonetic_similarity": 1.0,
+        "edit_similarity": 0.857
+      },
+      {
+        "original": "try",
+        "replacement": "trie",
+        "position": 43,
+        "phonetic_similarity": 1.0,
+        "edit_similarity": 0.571
+      },
+      {
+        "original": "might",
+        "replacement": "mite",
+        "position": 178,
+        "phonetic_similarity": 1.0,
+        "edit_similarity": 0.667
+      },
+      {
+        "original": "competitions",
+        "replacement": "competition's",
+        "position": 41,
+        "phonetic_similarity": 1.0,
+        "edit_similarity": 0.96
+      },
+      {
+        "original": "it's",
+        "replacement": "its",
+        "position": 193,
+        "phonetic_similarity": 1.0,
+        "edit_similarity": 0.857
+      },
+      {
+        "original": "to",
+        "replacement": "tu",
+        "position": 152,
+        "phonetic_similarity": 1.0,
+        "edit_similarity": 0.5
+      },
+      {
+        "original": "great",
+        "replacement": "grate",
+        "position": 13,
+        "phonetic_similarity": 1.0,
+        "edit_similarity": 0.8
+      },
+      {
+        "original": "rather",
+        "replacement": "wrather",
+        "position": 212,
+        "phonetic_similarity": 1.0,
+        "edit_similarity": 0.923
+      },
+      {
+        "original": "These",
+        "replacement": "Thee's",
+        "position": 200,
+        "phonetic_similarity": 1.0,
+        "edit_similarity": 0.727
+      },
+      {
+        "original": "find",
+        "replacement": "fined",
+        "position": 68,
+        "phonetic_similarity": 1.0,
+        "edit_similarity": 0.889
+      },
+      {
+        "original": "can",
+        "replacement": "kanne",
+        "position": 76,
+        "phonetic_similarity": 1.0,
+        "edit_similarity": 0.5
+      },
+      {
+        "original": "tell",
+        "replacement": "tel",
+        "position": 172,
+        "phonetic_similarity": 1.0,
+        "edit_similarity": 0.857
+      },
+      {
+        "original": "have",
+        "replacement": "halve",
+        "position": 182,
+        "phonetic_similarity": 1.0,
+        "edit_similarity": 0.889
+      },
+      {
+        "original": "able",
+        "replacement": "abel",
+        "position": 66,
+        "phonetic_similarity": 1.0,
+        "edit_similarity": 0.75
+      },
+      {
+        "original": "like",
+        "replacement": "lyke",
+        "position": 151,
+        "phonetic_similarity": 1.0,
+        "edit_similarity": 0.75
+      },
+      {
+        "original": "to",
+        "replacement": "thuy",
+        "position": 207,
+        "phonetic_similarity": 1.0,
+        "edit_similarity": 0.333
+      },
+      {
+        "original": "you",
+        "replacement": "uwe",
+        "position": 156,
+        "phonetic_similarity": 1.0,
+        "edit_similarity": 0.333
+      },
+      {
+        "original": "Google.",
+        "replacement": "Gugel",
+        "position": 102,
+        "phonetic_similarity": 0.0,
+        "edit_similarity": 0.5
+      },
+      {
+        "original": "how",
+        "replacement": "howe",
+        "position": 206,
+        "phonetic_similarity": 1.0,
+        "edit_similarity": 0.857
+      },
+      {
+        "original": "you",
+        "replacement": "yue",
+        "position": 149,
+        "phonetic_similarity": 1.0,
+        "edit_similarity": 0.667
+      },
+      {
+        "original": "buy,",
+        "replacement": "bae",
+        "position": 153,
+        "phonetic_similarity": 0.0,
+        "edit_similarity": 0.286
+      },
+      {
+        "original": "So",
+        "replacement": "Sough",
+        "position": 0,
+        "phonetic_similarity": 0.25,
+        "edit_similarity": 0.571
+      },
+      {
+        "original": "use",
+        "replacement": "yous",
+        "position": 142,
+        "phonetic_similarity": 1.0,
+        "edit_similarity": 0.571
+      },
+      {
+        "original": "to",
+        "replacement": "tew",
+        "position": 159,
+        "phonetic_similarity": 0.333,
+        "edit_similarity": 0.4
+      },
+      {
+        "original": "up",
+        "replacement": "upp",
+        "position": 40,
+        "phonetic_similarity": 1.0,
+        "edit_similarity": 0.8
+      },
+      {
+        "original": "have",
+        "replacement": "halve",
+        "position": 129,
+        "phonetic_similarity": 1.0,
+        "edit_similarity": 0.889
+      },
+      {
+        "original": "be",
+        "replacement": "bea",
+        "position": 179,
+        "phonetic_similarity": 1.0,
+        "edit_similarity": 0.8
+      },
+      {
+        "original": "from",
+        "replacement": "frum",
+        "position": 60,
+        "phonetic_similarity": 1.0,
+        "edit_similarity": 0.75
+      },
+      {
+        "original": "it's",
+        "replacement": "its",
+        "position": 162,
+        "phonetic_similarity": 1.0,
+        "edit_similarity": 0.857
+      },
+      {
+        "original": "was",
+        "replacement": "waas",
+        "position": 25,
+        "phonetic_similarity": 1.0,
+        "edit_similarity": 0.857
+      },
+      {
+        "original": "have",
+        "replacement": "halve",
+        "position": 204,
+        "phonetic_similarity": 1.0,
+        "edit_similarity": 0.889
+      },
+      {
+        "original": "will",
+        "replacement": "wil",
+        "position": 171,
+        "phonetic_similarity": 1.0,
+        "edit_similarity": 0.857
+      },
+      {
+        "original": "might",
+        "replacement": "mite",
+        "position": 150,
+        "phonetic_similarity": 1.0,
+        "edit_similarity": 0.667
+      },
+      {
+        "original": "him,",
+        "replacement": "hymn",
+        "position": 16,
+        "phonetic_similarity": 0.0,
+        "edit_similarity": 0.5
+      },
+      {
+        "original": "to",
+        "replacement": "tue",
+        "position": 15,
+        "phonetic_similarity": 1.0,
+        "edit_similarity": 0.4
+      },
+      {
+        "original": "was",
+        "replacement": "wah's",
+        "position": 65,
+        "phonetic_similarity": 1.0,
+        "edit_similarity": 0.75
+      },
+      {
+        "original": "commercial",
+        "replacement": "commerical",
+        "position": 132,
+        "phonetic_similarity": 1.0,
+        "edit_similarity": 0.9
+      }
+    ],
+    "output_path": "data/corrupted/text_homophone/video_05_homophone_r50.txt"
+  },
+  {
+    "video_id": "video_06",
+    "ratio": 0.1,
+    "n_substitutions": 8,
+    "substitutions": [
+      {
+        "original": "than",
+        "replacement": "then",
+        "position": 174,
+        "phonetic_similarity": 0.5,
+        "edit_similarity": 0.75
+      },
+      {
+        "original": "rung",
+        "replacement": "wrung",
+        "position": 31,
+        "phonetic_similarity": 1.0,
+        "edit_similarity": 0.889
+      },
+      {
+        "original": "major",
+        "replacement": "majer",
+        "position": 5,
+        "phonetic_similarity": 1.0,
+        "edit_similarity": 0.8
+      },
+      {
+        "original": "you're",
+        "replacement": "your",
+        "position": 78,
+        "phonetic_similarity": 0.5,
+        "edit_similarity": 0.8
+      },
+      {
+        "original": "rolling",
+        "replacement": "roehling",
+        "position": 74,
+        "phonetic_similarity": 1.0,
+        "edit_similarity": 0.8
+      },
+      {
+        "original": "I",
+        "replacement": "AY",
+        "position": 66,
+        "phonetic_similarity": 0.0,
+        "edit_similarity": 0.0
+      },
+      {
+        "original": "mergers.",
+        "replacement": "merger's",
+        "position": 38,
+        "phonetic_similarity": 0.0,
+        "edit_similarity": 0.875
+      },
+      {
+        "original": "societies.",
+        "replacement": "society's",
+        "position": 29,
+        "phonetic_similarity": 0.0,
+        "edit_similarity": 0.737
+      }
+    ],
+    "output_path": "data/corrupted/text_homophone/video_06_homophone_r10.txt"
+  },
+  {
+    "video_id": "video_06",
+    "ratio": 0.25,
+    "n_substitutions": 21,
+    "substitutions": [
+      {
+        "original": "than",
+        "replacement": "then",
+        "position": 174,
+        "phonetic_similarity": 0.5,
+        "edit_similarity": 0.75
+      },
+      {
+        "original": "rung",
+        "replacement": "wrung",
+        "position": 31,
+        "phonetic_similarity": 1.0,
+        "edit_similarity": 0.889
+      },
+      {
+        "original": "major",
+        "replacement": "majer",
+        "position": 5,
+        "phonetic_similarity": 1.0,
+        "edit_similarity": 0.8
+      },
+      {
+        "original": "you're",
+        "replacement": "your",
+        "position": 78,
+        "phonetic_similarity": 0.5,
+        "edit_similarity": 0.8
+      },
+      {
+        "original": "rolling",
+        "replacement": "roehling",
+        "position": 74,
+        "phonetic_similarity": 1.0,
+        "edit_similarity": 0.8
+      },
+      {
+        "original": "I",
+        "replacement": "EYE",
+        "position": 66,
+        "phonetic_similarity": 1.0,
+        "edit_similarity": 0.0
+      },
+      {
+        "original": "mergers.",
+        "replacement": "merger's",
+        "position": 38,
+        "phonetic_similarity": 0.0,
+        "edit_similarity": 0.875
+      },
+      {
+        "original": "societies.",
+        "replacement": "society's",
+        "position": 29,
+        "phonetic_similarity": 0.0,
+        "edit_similarity": 0.737
+      },
+      {
+        "original": "was",
+        "replacement": "waas",
+        "position": 144,
+        "phonetic_similarity": 1.0,
+        "edit_similarity": 0.857
+      },
+      {
+        "original": "bodies",
+        "replacement": "body's",
+        "position": 25,
+        "phonetic_similarity": 1.0,
+        "edit_similarity": 0.667
+      },
+      {
+        "original": "day.",
+        "replacement": "de",
+        "position": 161,
+        "phonetic_similarity": 0.0,
+        "edit_similarity": 0.333
+      },
+      {
+        "original": "I",
+        "replacement": "AI",
+        "position": 113,
+        "phonetic_similarity": 1.0,
+        "edit_similarity": 0.667
+      },
+      {
+        "original": "when",
+        "replacement": "wen",
+        "position": 7,
+        "phonetic_similarity": 1.0,
+        "edit_similarity": 0.857
+      },
+      {
+        "original": "Now",
+        "replacement": "Gnau",
+        "position": 65,
+        "phonetic_similarity": 1.0,
+        "edit_similarity": 0.286
+      },
+      {
+        "original": "know",
+        "replacement": "no",
+        "position": 67,
+        "phonetic_similarity": 1.0,
+        "edit_similarity": 0.667
+      },
+      {
+        "original": "my",
+        "replacement": "mai",
+        "position": 135,
+        "phonetic_similarity": 1.0,
+        "edit_similarity": 0.4
+      },
+      {
+        "original": "I",
+        "replacement": "AYE",
+        "position": 166,
+        "phonetic_similarity": 1.0,
+        "edit_similarity": 0.0
+      },
+      {
+        "original": "AIs",
+        "replacement": "I's",
+        "position": 156,
+        "phonetic_similarity": 1.0,
+        "edit_similarity": 0.667
+      },
+      {
+        "original": "to",
+        "replacement": "too",
+        "position": 59,
+        "phonetic_similarity": 1.0,
+        "edit_similarity": 0.8
+      },
+      {
+        "original": "years.",
+        "replacement": "year's",
+        "position": 189,
+        "phonetic_similarity": 0.0,
+        "edit_similarity": 0.833
+      },
+      {
+        "original": "AI.",
+        "replacement": "EYE",
+        "position": 112,
+        "phonetic_similarity": 0.0,
+        "edit_similarity": 0.0
+      }
+    ],
+    "output_path": "data/corrupted/text_homophone/video_06_homophone_r25.txt"
+  },
+  {
+    "video_id": "video_06",
+    "ratio": 0.5,
+    "n_substitutions": 43,
+    "substitutions": [
+      {
+        "original": "than",
+        "replacement": "then",
+        "position": 174,
+        "phonetic_similarity": 0.5,
+        "edit_similarity": 0.75
+      },
+      {
+        "original": "rung",
+        "replacement": "wrung",
+        "position": 31,
+        "phonetic_similarity": 1.0,
+        "edit_similarity": 0.889
+      },
+      {
+        "original": "major",
+        "replacement": "majer",
+        "position": 5,
+        "phonetic_similarity": 1.0,
+        "edit_similarity": 0.8
+      },
+      {
+        "original": "you're",
+        "replacement": "your",
+        "position": 78,
+        "phonetic_similarity": 0.5,
+        "edit_similarity": 0.8
+      },
+      {
+        "original": "rolling",
+        "replacement": "roling",
+        "position": 74,
+        "phonetic_similarity": 1.0,
+        "edit_similarity": 0.923
+      },
+      {
+        "original": "I",
+        "replacement": "EYE",
+        "position": 66,
+        "phonetic_similarity": 1.0,
+        "edit_similarity": 0.0
+      },
+      {
+        "original": "mergers.",
+        "replacement": "merger's",
+        "position": 38,
+        "phonetic_similarity": 0.0,
+        "edit_similarity": 0.875
+      },
+      {
+        "original": "societies.",
+        "replacement": "society's",
+        "position": 29,
+        "phonetic_similarity": 0.0,
+        "edit_similarity": 0.737
+      },
+      {
+        "original": "was",
+        "replacement": "waas",
+        "position": 144,
+        "phonetic_similarity": 1.0,
+        "edit_similarity": 0.857
+      },
+      {
+        "original": "bodies",
+        "replacement": "body's",
+        "position": 25,
+        "phonetic_similarity": 1.0,
+        "edit_similarity": 0.667
+      },
+      {
+        "original": "day.",
+        "replacement": "de",
+        "position": 161,
+        "phonetic_similarity": 0.0,
+        "edit_similarity": 0.333
+      },
+      {
+        "original": "I",
+        "replacement": "AY",
+        "position": 113,
+        "phonetic_similarity": 0.0,
+        "edit_similarity": 0.0
+      },
+      {
+        "original": "when",
+        "replacement": "wen",
+        "position": 7,
+        "phonetic_similarity": 1.0,
+        "edit_similarity": 0.857
+      },
+      {
+        "original": "years.",
+        "replacement": "year's",
+        "position": 189,
+        "phonetic_similarity": 0.0,
+        "edit_similarity": 0.833
+      },
+      {
+        "original": "recognize.",
+        "replacement": "recognise",
+        "position": 164,
+        "phonetic_similarity": 0.0,
+        "edit_similarity": 0.842
+      },
+      {
+        "original": "Now",
+        "replacement": "Gnau",
+        "position": 65,
+        "phonetic_similarity": 1.0,
+        "edit_similarity": 0.286
+      },
+      {
+        "original": "know",
+        "replacement": "no",
+        "position": 67,
+        "phonetic_similarity": 1.0,
+        "edit_similarity": 0.667
+      },
+      {
+        "original": "my",
+        "replacement": "mai",
+        "position": 135,
+        "phonetic_similarity": 1.0,
+        "edit_similarity": 0.4
+      },
+      {
+        "original": "we",
+        "replacement": "oui",
+        "position": 157,
+        "phonetic_similarity": 1.0,
+        "edit_similarity": 0.0
+      },
+      {
+        "original": "to",
+        "replacement": "thuy",
+        "position": 59,
+        "phonetic_similarity": 1.0,
+        "edit_similarity": 0.333
+      },
+      {
+        "original": "AI.",
+        "replacement": "AYE",
+        "position": 112,
+        "phonetic_similarity": 0.0,
+        "edit_similarity": 0.333
+      },
+      {
+        "original": "more",
+        "replacement": "morr",
+        "position": 173,
+        "phonetic_similarity": 1.0,
+        "edit_similarity": 0.75
+      },
+      {
+        "original": "AI",
+        "replacement": "EYE",
+        "position": 119,
+        "phonetic_similarity": 1.0,
+        "edit_similarity": 0.0
+      },
+      {
+        "original": "you",
+        "replacement": "yue",
+        "position": 81,
+        "phonetic_similarity": 1.0,
+        "edit_similarity": 0.667
+      },
+      {
+        "original": "there's",
+        "replacement": "theirs",
+        "position": 172,
+        "phonetic_similarity": 1.0,
+        "edit_similarity": 0.769
+      },
+      {
+        "original": "years,",
+        "replacement": "year's",
+        "position": 107,
+        "phonetic_similarity": 0.0,
+        "edit_similarity": 0.833
+      },
+      {
+        "original": "one",
+        "replacement": "won",
+        "position": 115,
+        "phonetic_similarity": 1.0,
+        "edit_similarity": 0.667
+      },
+      {
+        "original": "call",
+        "replacement": "kall",
+        "position": 2,
+        "phonetic_similarity": 1.0,
+        "edit_similarity": 0.75
+      },
+      {
+        "original": "let",
+        "replacement": "lett",
+        "position": 102,
+        "phonetic_similarity": 1.0,
+        "edit_similarity": 0.857
+      },
+      {
+        "original": "dollars",
+        "replacement": "dollar's",
+        "position": 128,
+        "phonetic_similarity": 1.0,
+        "edit_similarity": 0.933
+      },
+      {
+        "original": "cells",
+        "replacement": "cell's",
+        "position": 23,
+        "phonetic_similarity": 1.0,
+        "edit_similarity": 0.909
+      },
+      {
+        "original": "I",
+        "replacement": "AY",
+        "position": 96,
+        "phonetic_similarity": 0.0,
+        "edit_similarity": 0.0
+      },
+      {
+        "original": "leaders",
+        "replacement": "leader's",
+        "position": 153,
+        "phonetic_similarity": 1.0,
+        "edit_similarity": 0.933
+      },
+      {
+        "original": "humans",
+        "replacement": "human's",
+        "position": 52,
+        "phonetic_similarity": 1.0,
+        "edit_similarity": 0.923
+      },
+      {
+        "original": "to",
+        "replacement": "thuy",
+        "position": 129,
+        "phonetic_similarity": 1.0,
+        "edit_similarity": 0.333
+      },
+      {
+        "original": "cells,",
+        "replacement": "selz",
+        "position": 22,
+        "phonetic_similarity": 0.0,
+        "edit_similarity": 0.4
+      },
+      {
+        "original": "how",
+        "replacement": "hau",
+        "position": 169,
+        "phonetic_similarity": 1.0,
+        "edit_similarity": 0.333
+      },
+      {
+        "original": "I",
+        "replacement": "AY",
+        "position": 133,
+        "phonetic_similarity": 0.0,
+        "edit_similarity": 0.0
+      },
+      {
+        "original": "I",
+        "replacement": "AYE",
+        "position": 108,
+        "phonetic_similarity": 1.0,
+        "edit_similarity": 0.0
+      },
+      {
+        "original": "whole.",
+        "replacement": "hole",
+        "position": 17,
+        "phonetic_similarity": 0.0,
+        "edit_similarity": 0.8
+      },
+      {
+        "original": "new",
+        "replacement": "gnu",
+        "position": 16,
+        "phonetic_similarity": 1.0,
+        "edit_similarity": 0.333
+      },
+      {
+        "original": "We're",
+        "replacement": "Weir",
+        "position": 57,
+        "phonetic_similarity": 1.0,
+        "edit_similarity": 0.667
+      },
+      {
+        "original": "say",
+        "replacement": "se",
+        "position": 99,
+        "phonetic_similarity": 1.0,
+        "edit_similarity": 0.4
+      }
+    ],
+    "output_path": "data/corrupted/text_homophone/video_06_homophone_r50.txt"
+  },
+  {
+    "video_id": "video_07",
+    "ratio": 0.1,
+    "n_substitutions": 7,
+    "substitutions": [
+      {
+        "original": "be",
+        "replacement": "bea",
+        "position": 39,
+        "phonetic_similarity": 1.0,
+        "edit_similarity": 0.8
+      },
+      {
+        "original": "Are",
+        "replacement": "Our",
+        "position": 8,
+        "phonetic_similarity": 0.0,
+        "edit_similarity": 0.333
+      },
+      {
+        "original": "seen",
+        "replacement": "scene",
+        "position": 113,
+        "phonetic_similarity": 1.0,
+        "edit_similarity": 0.667
+      },
+      {
+        "original": "real",
+        "replacement": "reel",
+        "position": 103,
+        "phonetic_similarity": 1.0,
+        "edit_similarity": 0.75
+      },
+      {
+        "original": "to",
+        "replacement": "too",
+        "position": 78,
+        "phonetic_similarity": 1.0,
+        "edit_similarity": 0.8
+      },
+      {
+        "original": "we",
+        "replacement": "oui",
+        "position": 45,
+        "phonetic_similarity": 1.0,
+        "edit_similarity": 0.0
+      },
+      {
+        "original": "to",
+        "replacement": "two",
+        "position": 38,
+        "phonetic_similarity": 1.0,
+        "edit_similarity": 0.8
+      }
+    ],
+    "output_path": "data/corrupted/text_homophone/video_07_homophone_r10.txt"
+  },
+  {
+    "video_id": "video_07",
+    "ratio": 0.25,
+    "n_substitutions": 18,
+    "substitutions": [
+      {
+        "original": "be",
+        "replacement": "bea",
+        "position": 39,
+        "phonetic_similarity": 1.0,
+        "edit_similarity": 0.8
+      },
+      {
+        "original": "Are",
+        "replacement": "Our",
+        "position": 8,
+        "phonetic_similarity": 0.0,
+        "edit_similarity": 0.333
+      },
+      {
+        "original": "seen",
+        "replacement": "scene",
+        "position": 113,
+        "phonetic_similarity": 1.0,
+        "edit_similarity": 0.667
+      },
+      {
+        "original": "real",
+        "replacement": "reel",
+        "position": 103,
+        "phonetic_similarity": 1.0,
+        "edit_similarity": 0.75
+      },
+      {
+        "original": "to",
+        "replacement": "thuy",
+        "position": 78,
+        "phonetic_similarity": 1.0,
+        "edit_similarity": 0.333
+      },
+      {
+        "original": "we",
+        "replacement": "wiehe",
+        "position": 45,
+        "phonetic_similarity": 1.0,
+        "edit_similarity": 0.571
+      },
+      {
+        "original": "to",
+        "replacement": "too",
+        "position": 38,
+        "phonetic_similarity": 1.0,
+        "edit_similarity": 0.8
+      },
+      {
+        "original": "why",
+        "replacement": "wai",
+        "position": 29,
+        "phonetic_similarity": 1.0,
+        "edit_similarity": 0.333
+      },
+      {
+        "original": "it's",
+        "replacement": "its",
+        "position": 187,
+        "phonetic_similarity": 1.0,
+        "edit_similarity": 0.857
+      },
+      {
+        "original": "you",
+        "replacement": "uwe",
+        "position": 9,
+        "phonetic_similarity": 1.0,
+        "edit_similarity": 0.333
+      },
+      {
+        "original": "no",
+        "replacement": "neault",
+        "position": 2,
+        "phonetic_similarity": 1.0,
+        "edit_similarity": 0.25
+      },
+      {
+        "original": "there's",
+        "replacement": "theirs",
+        "position": 13,
+        "phonetic_similarity": 1.0,
+        "edit_similarity": 0.769
+      },
+      {
+        "original": "So",
+        "replacement": "Sough",
+        "position": 225,
+        "phonetic_similarity": 0.25,
+        "edit_similarity": 0.571
+      },
+      {
+        "original": "cool.",
+        "replacement": "kool",
+        "position": 240,
+        "phonetic_similarity": 0.0,
+        "edit_similarity": 0.667
+      },
+      {
+        "original": "we're",
+        "replacement": "weir",
+        "position": 106,
+        "phonetic_similarity": 1.0,
+        "edit_similarity": 0.667
+      },
+      {
+        "original": "you",
+        "replacement": "ewe",
+        "position": 133,
+        "phonetic_similarity": 1.0,
+        "edit_similarity": 0.0
+      },
+      {
+        "original": "where",
+        "replacement": "werre",
+        "position": 209,
+        "phonetic_similarity": 1.0,
+        "edit_similarity": 0.8
+      },
+      {
+        "original": "I",
+        "replacement": "AI",
+        "position": 235,
+        "phonetic_similarity": 1.0,
+        "edit_similarity": 0.667
+      }
+    ],
+    "output_path": "data/corrupted/text_homophone/video_07_homophone_r25.txt"
+  },
+  {
+    "video_id": "video_07",
+    "ratio": 0.5,
+    "n_substitutions": 36,
+    "substitutions": [
+      {
+        "original": "be",
+        "replacement": "bea",
+        "position": 39,
+        "phonetic_similarity": 1.0,
+        "edit_similarity": 0.8
+      },
+      {
+        "original": "Are",
+        "replacement": "Ahr",
+        "position": 8,
+        "phonetic_similarity": 1.0,
+        "edit_similarity": 0.667
+      },
+      {
+        "original": "seen",
+        "replacement": "scene",
+        "position": 113,
+        "phonetic_similarity": 1.0,
+        "edit_similarity": 0.667
+      },
+      {
+        "original": "real",
+        "replacement": "reel",
+        "position": 103,
+        "phonetic_similarity": 1.0,
+        "edit_similarity": 0.75
+      },
+      {
+        "original": "to",
+        "replacement": "tew",
+        "position": 78,
+        "phonetic_similarity": 0.333,
+        "edit_similarity": 0.4
+      },
+      {
+        "original": "we",
+        "replacement": "wiehe",
+        "position": 45,
+        "phonetic_similarity": 1.0,
+        "edit_similarity": 0.571
+      },
+      {
+        "original": "to",
+        "replacement": "tu",
+        "position": 38,
+        "phonetic_similarity": 1.0,
+        "edit_similarity": 0.5
+      },
+      {
+        "original": "why",
+        "replacement": "wye",
+        "position": 29,
+        "phonetic_similarity": 1.0,
+        "edit_similarity": 0.667
+      },
+      {
+        "original": "it's",
+        "replacement": "its",
+        "position": 187,
+        "phonetic_similarity": 1.0,
+        "edit_similarity": 0.857
+      },
+      {
+        "original": "you",
+        "replacement": "yu",
+        "position": 9,
+        "phonetic_similarity": 1.0,
+        "edit_similarity": 0.8
+      },
+      {
+        "original": "no",
+        "replacement": "noe",
+        "position": 2,
+        "phonetic_similarity": 1.0,
+        "edit_similarity": 0.8
+      },
+      {
+        "original": "there's",
+        "replacement": "theirs",
+        "position": 13,
+        "phonetic_similarity": 1.0,
+        "edit_similarity": 0.769
+      },
+      {
+        "original": "So",
+        "replacement": "Tso",
+        "position": 225,
+        "phonetic_similarity": 0.667,
+        "edit_similarity": 0.8
+      },
+      {
+        "original": "cool.",
+        "replacement": "coole",
+        "position": 240,
+        "phonetic_similarity": 0.0,
+        "edit_similarity": 0.8
+      },
+      {
+        "original": "we're",
+        "replacement": "weir",
+        "position": 106,
+        "phonetic_similarity": 1.0,
+        "edit_similarity": 0.667
+      },
+      {
+        "original": "you",
+        "replacement": "yue",
+        "position": 133,
+        "phonetic_similarity": 1.0,
+        "edit_similarity": 0.667
+      },
+      {
+        "original": "where",
+        "replacement": "wehr",
+        "position": 209,
+        "phonetic_similarity": 1.0,
+        "edit_similarity": 0.667
+      },
+      {
+        "original": "I",
+        "replacement": "AY",
+        "position": 235,
+        "phonetic_similarity": 0.0,
+        "edit_similarity": 0.0
+      },
+      {
+        "original": "to",
+        "replacement": "tue",
+        "position": 33,
+        "phonetic_similarity": 1.0,
+        "edit_similarity": 0.4
+      },
+      {
+        "original": "So",
+        "replacement": "Sew",
+        "position": 153,
+        "phonetic_similarity": 1.0,
+        "edit_similarity": 0.4
+      },
+      {
+        "original": "all",
+        "replacement": "aul",
+        "position": 145,
+        "phonetic_similarity": 1.0,
+        "edit_similarity": 0.667
+      },
+      {
+        "original": "gets",
+        "replacement": "goetz",
+        "position": 151,
+        "phonetic_similarity": 1.0,
+        "edit_similarity": 0.667
+      },
+      {
+        "original": "have",
+        "replacement": "halve",
+        "position": 112,
+        "phonetic_similarity": 1.0,
+        "edit_similarity": 0.889
+      },
+      {
+        "original": "Which",
+        "replacement": "Witch",
+        "position": 66,
+        "phonetic_similarity": 1.0,
+        "edit_similarity": 0.8
+      },
+      {
+        "original": "You",
+        "replacement": "Ewe",
+        "position": 195,
+        "phonetic_similarity": 1.0,
+        "edit_similarity": 0.0
+      },
+      {
+        "original": "less",
+        "replacement": "les",
+        "position": 230,
+        "phonetic_similarity": 1.0,
+        "edit_similarity": 0.857
+      },
+      {
+        "original": "there",
+        "replacement": "their",
+        "position": 120,
+        "phonetic_similarity": 1.0,
+        "edit_similarity": 0.8
+      },
+      {
+        "original": "they're",
+        "replacement": "there",
+        "position": 226,
+        "phonetic_similarity": 1.0,
+        "edit_similarity": 0.833
+      },
+      {
+        "original": "There's",
+        "replacement": "Theirs",
+        "position": 1,
+        "phonetic_similarity": 1.0,
+        "edit_similarity": 0.769
+      },
+      {
+        "original": "tech",
+        "replacement": "teck",
+        "position": 26,
+        "phonetic_similarity": 1.0,
+        "edit_similarity": 0.75
+      },
+      {
+        "original": "so",
+        "replacement": "sow",
+        "position": 75,
+        "phonetic_similarity": 0.333,
+        "edit_similarity": 0.8
+      },
+      {
+        "original": "got",
+        "replacement": "gott",
+        "position": 51,
+        "phonetic_similarity": 1.0,
+        "edit_similarity": 0.857
+      },
+      {
+        "original": "more",
+        "replacement": "mor",
+        "position": 176,
+        "phonetic_similarity": 1.0,
+        "edit_similarity": 0.857
+      },
+      {
+        "original": "was",
+        "replacement": "wah's",
+        "position": 22,
+        "phonetic_similarity": 1.0,
+        "edit_similarity": 0.75
+      },
+      {
+        "original": "we",
+        "replacement": "wee",
+        "position": 204,
+        "phonetic_similarity": 1.0,
+        "edit_similarity": 0.8
+      },
+      {
+        "original": "no",
+        "replacement": "neault",
+        "position": 175,
+        "phonetic_similarity": 1.0,
+        "edit_similarity": 0.25
+      }
+    ],
+    "output_path": "data/corrupted/text_homophone/video_07_homophone_r50.txt"
+  },
+  {
+    "video_id": "video_08",
+    "ratio": 0.1,
+    "n_substitutions": 4,
+    "substitutions": [
+      {
+        "original": "which",
+        "replacement": "wich",
+        "position": 136,
+        "phonetic_similarity": 1.0,
+        "edit_similarity": 0.889
+      },
+      {
+        "original": "for",
+        "replacement": "fore",
+        "position": 11,
+        "phonetic_similarity": 1.0,
+        "edit_similarity": 0.857
+      },
+      {
+        "original": "ought",
+        "replacement": "aught",
+        "position": 4,
+        "phonetic_similarity": 1.0,
+        "edit_similarity": 0.8
+      },
+      {
+        "original": "it's",
+        "replacement": "its",
+        "position": 55,
+        "phonetic_similarity": 1.0,
+        "edit_similarity": 0.857
+      }
+    ],
+    "output_path": "data/corrupted/text_homophone/video_08_homophone_r10.txt"
+  },
+  {
+    "video_id": "video_08",
+    "ratio": 0.25,
+    "n_substitutions": 10,
+    "substitutions": [
+      {
+        "original": "which",
+        "replacement": "wich",
+        "position": 136,
+        "phonetic_similarity": 1.0,
+        "edit_similarity": 0.889
+      },
+      {
+        "original": "for",
+        "replacement": "faure",
+        "position": 11,
+        "phonetic_similarity": 1.0,
+        "edit_similarity": 0.5
+      },
+      {
+        "original": "ought",
+        "replacement": "aught",
+        "position": 4,
+        "phonetic_similarity": 1.0,
+        "edit_similarity": 0.8
+      },
+      {
+        "original": "it's",
+        "replacement": "its",
+        "position": 55,
+        "phonetic_similarity": 1.0,
+        "edit_similarity": 0.857
+      },
+      {
+        "original": "call",
+        "replacement": "caul",
+        "position": 44,
+        "phonetic_similarity": 0.5,
+        "edit_similarity": 0.75
+      },
+      {
+        "original": "I",
+        "replacement": "AI",
+        "position": 43,
+        "phonetic_similarity": 1.0,
+        "edit_similarity": 0.667
+      },
+      {
+        "original": "all",
+        "replacement": "aul",
+        "position": 15,
+        "phonetic_similarity": 1.0,
+        "edit_similarity": 0.667
+      },
+      {
+        "original": "AI",
+        "replacement": "EYE",
+        "position": 10,
+        "phonetic_similarity": 1.0,
+        "edit_similarity": 0.0
+      },
+      {
+        "original": "like",
+        "replacement": "lyke",
+        "position": 9,
+        "phonetic_similarity": 1.0,
+        "edit_similarity": 0.75
+      },
+      {
+        "original": "been",
+        "replacement": "bihn",
+        "position": 85,
+        "phonetic_similarity": 1.0,
+        "edit_similarity": 0.5
+      }
+    ],
+    "output_path": "data/corrupted/text_homophone/video_08_homophone_r25.txt"
+  },
+  {
+    "video_id": "video_08",
+    "ratio": 0.5,
+    "n_substitutions": 21,
+    "substitutions": [
+      {
+        "original": "which",
+        "replacement": "witch",
+        "position": 136,
+        "phonetic_similarity": 1.0,
+        "edit_similarity": 0.8
+      },
+      {
+        "original": "for",
+        "replacement": "fore",
+        "position": 11,
+        "phonetic_similarity": 1.0,
+        "edit_similarity": 0.857
+      },
+      {
+        "original": "ought",
+        "replacement": "ot",
+        "position": 4,
+        "phonetic_similarity": 1.0,
+        "edit_similarity": 0.571
+      },
+      {
+        "original": "it's",
+        "replacement": "its",
+        "position": 55,
+        "phonetic_similarity": 1.0,
+        "edit_similarity": 0.857
+      },
+      {
+        "original": "call",
+        "replacement": "caul",
+        "position": 44,
+        "phonetic_similarity": 0.5,
+        "edit_similarity": 0.75
+      },
+      {
+        "original": "I",
+        "replacement": "AY",
+        "position": 43,
+        "phonetic_similarity": 0.0,
+        "edit_similarity": 0.0
+      },
+      {
+        "original": "all",
+        "replacement": "aull",
+        "position": 15,
+        "phonetic_similarity": 1.0,
+        "edit_similarity": 0.857
+      },
+      {
+        "original": "AI",
+        "replacement": "AYE",
+        "position": 10,
+        "phonetic_similarity": 1.0,
+        "edit_similarity": 0.4
+      },
+      {
+        "original": "like",
+        "replacement": "lyke",
+        "position": 9,
+        "phonetic_similarity": 1.0,
+        "edit_similarity": 0.75
+      },
+      {
+        "original": "been",
+        "replacement": "bihn",
+        "position": 85,
+        "phonetic_similarity": 1.0,
+        "edit_similarity": 0.5
+      },
+      {
+        "original": "to",
+        "replacement": "two",
+        "position": 5,
+        "phonetic_similarity": 1.0,
+        "edit_similarity": 0.8
+      },
+      {
+        "original": "we",
+        "replacement": "wiehe",
+        "position": 3,
+        "phonetic_similarity": 1.0,
+        "edit_similarity": 0.571
+      },
+      {
+        "original": "models",
+        "replacement": "model's",
+        "position": 95,
+        "phonetic_similarity": 1.0,
+        "edit_similarity": 0.923
+      },
+      {
+        "original": "we",
+        "replacement": "oui",
+        "position": 101,
+        "phonetic_similarity": 1.0,
+        "edit_similarity": 0.0
+      },
+      {
+        "original": "are",
+        "replacement": "ar",
+        "position": 143,
+        "phonetic_similarity": 1.0,
+        "edit_similarity": 0.8
+      },
+      {
+        "original": "AI",
+        "replacement": "AY",
+        "position": 48,
+        "phonetic_similarity": 0.0,
+        "edit_similarity": 0.5
+      },
+      {
+        "original": "we",
+        "replacement": "wiehe",
+        "position": 61,
+        "phonetic_similarity": 1.0,
+        "edit_similarity": 0.571
+      },
+      {
+        "original": "AI",
+        "replacement": "AYE",
+        "position": 94,
+        "phonetic_similarity": 1.0,
+        "edit_similarity": 0.4
+      },
+      {
+        "original": "for",
+        "replacement": "forr",
+        "position": 119,
+        "phonetic_similarity": 1.0,
+        "edit_similarity": 0.857
+      },
+      {
+        "original": "to",
+        "replacement": "too",
+        "position": 92,
+        "phonetic_similarity": 1.0,
+        "edit_similarity": 0.8
+      },
+      {
+        "original": "hear",
+        "replacement": "here",
+        "position": 62,
+        "phonetic_similarity": 1.0,
+        "edit_similarity": 0.75
+      }
+    ],
+    "output_path": "data/corrupted/text_homophone/video_08_homophone_r50.txt"
+  },
+  {
+    "video_id": "video_09",
+    "ratio": 0.1,
+    "n_substitutions": 5,
+    "substitutions": [
+      {
+        "original": "to",
+        "replacement": "two",
+        "position": 102,
+        "phonetic_similarity": 1.0,
+        "edit_similarity": 0.8
+      },
+      {
+        "original": "I",
+        "replacement": "AY",
+        "position": 21,
+        "phonetic_similarity": 0.0,
+        "edit_similarity": 0.0
+      },
+      {
+        "original": "programming",
+        "replacement": "programing",
+        "position": 4,
+        "phonetic_similarity": 1.0,
+        "edit_similarity": 0.952
+      },
+      {
+        "original": "all",
+        "replacement": "aul",
+        "position": 111,
+        "phonetic_similarity": 1.0,
+        "edit_similarity": 0.667
+      },
+      {
+        "original": "For",
+        "replacement": "Faure",
+        "position": 52,
+        "phonetic_similarity": 1.0,
+        "edit_similarity": 0.5
+      }
+    ],
+    "output_path": "data/corrupted/text_homophone/video_09_homophone_r10.txt"
+  },
+  {
+    "video_id": "video_09",
+    "ratio": 0.25,
+    "n_substitutions": 13,
+    "substitutions": [
+      {
+        "original": "to",
+        "replacement": "thuy",
+        "position": 102,
+        "phonetic_similarity": 1.0,
+        "edit_similarity": 0.333
+      },
+      {
+        "original": "I",
+        "replacement": "AI",
+        "position": 21,
+        "phonetic_similarity": 1.0,
+        "edit_similarity": 0.667
+      },
+      {
+        "original": "programming",
+        "replacement": "programing",
+        "position": 4,
+        "phonetic_similarity": 1.0,
+        "edit_similarity": 0.952
+      },
+      {
+        "original": "all",
+        "replacement": "aul",
+        "position": 111,
+        "phonetic_similarity": 1.0,
+        "edit_similarity": 0.667
+      },
+      {
+        "original": "For",
+        "replacement": "Fore",
+        "position": 52,
+        "phonetic_similarity": 1.0,
+        "edit_similarity": 0.857
+      },
+      {
+        "original": "I",
+        "replacement": "AY",
+        "position": 48,
+        "phonetic_similarity": 0.0,
+        "edit_similarity": 0.0
+      },
+      {
+        "original": "I",
+        "replacement": "AI",
+        "position": 43,
+        "phonetic_similarity": 1.0,
+        "edit_similarity": 0.667
+      },
+      {
+        "original": "I",
+        "replacement": "AY",
+        "position": 23,
+        "phonetic_similarity": 0.0,
+        "edit_similarity": 0.0
+      },
+      {
+        "original": "I",
+        "replacement": "EYE",
+        "position": 17,
+        "phonetic_similarity": 1.0,
+        "edit_similarity": 0.0
+      },
+      {
+        "original": "new",
+        "replacement": "gnu",
+        "position": 106,
+        "phonetic_similarity": 1.0,
+        "edit_similarity": 0.333
+      },
+      {
+        "original": "get",
+        "replacement": "goette",
+        "position": 87,
+        "phonetic_similarity": 1.0,
+        "edit_similarity": 0.667
+      },
+      {
+        "original": "like",
+        "replacement": "lyke",
+        "position": 12,
+        "phonetic_similarity": 1.0,
+        "edit_similarity": 0.75
+      },
+      {
+        "original": "I",
+        "replacement": "AI",
+        "position": 96,
+        "phonetic_similarity": 1.0,
+        "edit_similarity": 0.667
+      }
+    ],
+    "output_path": "data/corrupted/text_homophone/video_09_homophone_r25.txt"
+  },
+  {
+    "video_id": "video_09",
+    "ratio": 0.5,
+    "n_substitutions": 26,
+    "substitutions": [
+      {
+        "original": "to",
+        "replacement": "thuy",
+        "position": 102,
+        "phonetic_similarity": 1.0,
+        "edit_similarity": 0.333
+      },
+      {
+        "original": "I",
+        "replacement": "AY",
+        "position": 21,
+        "phonetic_similarity": 0.0,
+        "edit_similarity": 0.0
+      },
+      {
+        "original": "programming",
+        "replacement": "programing",
+        "position": 4,
+        "phonetic_similarity": 1.0,
+        "edit_similarity": 0.952
+      },
+      {
+        "original": "all",
+        "replacement": "aull",
+        "position": 111,
+        "phonetic_similarity": 1.0,
+        "edit_similarity": 0.857
+      },
+      {
+        "original": "For",
+        "replacement": "Faure",
+        "position": 52,
+        "phonetic_similarity": 1.0,
+        "edit_similarity": 0.5
+      },
+      {
+        "original": "I",
+        "replacement": "AY",
+        "position": 48,
+        "phonetic_similarity": 0.0,
+        "edit_similarity": 0.0
+      },
+      {
+        "original": "I",
+        "replacement": "EYE",
+        "position": 43,
+        "phonetic_similarity": 1.0,
+        "edit_similarity": 0.0
+      },
+      {
+        "original": "I",
+        "replacement": "AYE",
+        "position": 23,
+        "phonetic_similarity": 1.0,
+        "edit_similarity": 0.0
+      },
+      {
+        "original": "I",
+        "replacement": "AYE",
+        "position": 17,
+        "phonetic_similarity": 1.0,
+        "edit_similarity": 0.0
+      },
+      {
+        "original": "new",
+        "replacement": "gnu",
+        "position": 106,
+        "phonetic_similarity": 1.0,
+        "edit_similarity": 0.333
+      },
+      {
+        "original": "get",
+        "replacement": "goette",
+        "position": 87,
+        "phonetic_similarity": 1.0,
+        "edit_similarity": 0.667
+      },
+      {
+        "original": "like",
+        "replacement": "lyke",
+        "position": 12,
+        "phonetic_similarity": 1.0,
+        "edit_similarity": 0.75
+      },
+      {
+        "original": "I",
+        "replacement": "AI",
+        "position": 96,
+        "phonetic_similarity": 1.0,
+        "edit_similarity": 0.667
+      },
+      {
+        "original": "morning",
+        "replacement": "mourning",
+        "position": 73,
+        "phonetic_similarity": 1.0,
+        "edit_similarity": 0.933
+      },
+      {
+        "original": "I",
+        "replacement": "EYE",
+        "position": 6,
+        "phonetic_similarity": 1.0,
+        "edit_similarity": 0.0
+      },
+      {
+        "original": "I",
+        "replacement": "AI",
+        "position": 117,
+        "phonetic_similarity": 1.0,
+        "edit_similarity": 0.667
+      },
+      {
+        "original": "see",
+        "replacement": "sci",
+        "position": 103,
+        "phonetic_similarity": 1.0,
+        "edit_similarity": 0.333
+      },
+      {
+        "original": "then",
+        "replacement": "than",
+        "position": 42,
+        "phonetic_similarity": 0.5,
+        "edit_similarity": 0.75
+      },
+      {
+        "original": "are",
+        "replacement": "our",
+        "position": 110,
+        "phonetic_similarity": 0.0,
+        "edit_similarity": 0.333
+      },
+      {
+        "original": "No",
+        "replacement": "Neault",
+        "position": 84,
+        "phonetic_similarity": 1.0,
+        "edit_similarity": 0.25
+      },
+      {
+        "original": "\"holy",
+        "replacement": "wholly",
+        "position": 123,
+        "phonetic_similarity": 0.0,
+        "edit_similarity": 0.727
+      },
+      {
+        "original": "No",
+        "replacement": "Noe",
+        "position": 36,
+        "phonetic_similarity": 1.0,
+        "edit_similarity": 0.8
+      },
+      {
+        "original": "I",
+        "replacement": "AI",
+        "position": 61,
+        "phonetic_similarity": 1.0,
+        "edit_similarity": 0.667
+      },
+      {
+        "original": "was",
+        "replacement": "wah's",
+        "position": 56,
+        "phonetic_similarity": 1.0,
+        "edit_similarity": 0.75
+      },
+      {
+        "original": "to",
+        "replacement": "too",
+        "position": 79,
+        "phonetic_similarity": 1.0,
+        "edit_similarity": 0.8
+      },
+      {
+        "original": "I",
+        "replacement": "AYE",
+        "position": 114,
+        "phonetic_similarity": 1.0,
+        "edit_similarity": 0.0
+      }
+    ],
+    "output_path": "data/corrupted/text_homophone/video_09_homophone_r50.txt"
+  },
+  {
+    "video_id": "video_10",
+    "ratio": 0.1,
+    "n_substitutions": 6,
+    "substitutions": [
+      {
+        "original": "while",
+        "replacement": "weill",
+        "position": 136,
+        "phonetic_similarity": 1.0,
+        "edit_similarity": 0.6
+      },
+      {
+        "original": "your",
+        "replacement": "you're",
+        "position": 27,
+        "phonetic_similarity": 0.5,
+        "edit_similarity": 0.8
+      },
+      {
+        "original": "room,",
+        "replacement": "roome",
+        "position": 7,
+        "phonetic_similarity": 0.0,
+        "edit_similarity": 0.8
+      },
+      {
+        "original": "still",
+        "replacement": "stihl",
+        "position": 159,
+        "phonetic_similarity": 1.0,
+        "edit_similarity": 0.8
+      },
+      {
+        "original": "door.",
+        "replacement": "dorr",
+        "position": 59,
+        "phonetic_similarity": 0.0,
+        "edit_similarity": 0.667
+      },
+      {
+        "original": "write",
+        "replacement": "right",
+        "position": 51,
+        "phonetic_similarity": 1.0,
+        "edit_similarity": 0.6
+      }
+    ],
+    "output_path": "data/corrupted/text_homophone/video_10_homophone_r10.txt"
+  },
+  {
+    "video_id": "video_10",
+    "ratio": 0.25,
+    "n_substitutions": 15,
+    "substitutions": [
+      {
+        "original": "while",
+        "replacement": "wyle",
+        "position": 136,
+        "phonetic_similarity": 1.0,
+        "edit_similarity": 0.667
+      },
+      {
+        "original": "your",
+        "replacement": "you're",
+        "position": 27,
+        "phonetic_similarity": 0.5,
+        "edit_similarity": 0.8
+      },
+      {
+        "original": "room,",
+        "replacement": "reaume",
+        "position": 7,
+        "phonetic_similarity": 0.0,
+        "edit_similarity": 0.364
+      },
+      {
+        "original": "still",
+        "replacement": "stihl",
+        "position": 159,
+        "phonetic_similarity": 1.0,
+        "edit_similarity": 0.8
+      },
+      {
+        "original": "door.",
+        "replacement": "doar",
+        "position": 59,
+        "phonetic_similarity": 0.0,
+        "edit_similarity": 0.667
+      },
+      {
+        "original": "write",
+        "replacement": "rite",
+        "position": 51,
+        "phonetic_similarity": 1.0,
+        "edit_similarity": 0.889
+      },
+      {
+        "original": "you",
+        "replacement": "yoo",
+        "position": 50,
+        "phonetic_similarity": 1.0,
+        "edit_similarity": 0.667
+      },
+      {
+        "original": "for",
+        "replacement": "faure",
+        "position": 33,
+        "phonetic_similarity": 1.0,
+        "edit_similarity": 0.5
+      },
+      {
+        "original": "like",
+        "replacement": "lyke",
+        "position": 184,
+        "phonetic_similarity": 1.0,
+        "edit_similarity": 0.75
+      },
+      {
+        "original": "an",
+        "replacement": "anne",
+        "position": 18,
+        "phonetic_similarity": 1.0,
+        "edit_similarity": 0.667
+      },
+      {
+        "original": "work",
+        "replacement": "werk",
+        "position": 141,
+        "phonetic_similarity": 1.0,
+        "edit_similarity": 0.75
+      },
+      {
+        "original": "to",
+        "replacement": "thuy",
+        "position": 166,
+        "phonetic_similarity": 1.0,
+        "edit_similarity": 0.333
+      },
+      {
+        "original": "to",
+        "replacement": "tu",
+        "position": 124,
+        "phonetic_similarity": 1.0,
+        "edit_similarity": 0.5
+      },
+      {
+        "original": "door:",
+        "replacement": "doerr",
+        "position": 14,
+        "phonetic_similarity": 0.0,
+        "edit_similarity": 0.6
+      },
+      {
+        "original": "work",
+        "replacement": "werk",
+        "position": 129,
+        "phonetic_similarity": 1.0,
+        "edit_similarity": 0.75
+      }
+    ],
+    "output_path": "data/corrupted/text_homophone/video_10_homophone_r25.txt"
+  },
+  {
+    "video_id": "video_10",
+    "ratio": 0.5,
+    "n_substitutions": 30,
+    "substitutions": [
+      {
+        "original": "while",
+        "replacement": "wile",
+        "position": 136,
+        "phonetic_similarity": 1.0,
+        "edit_similarity": 0.889
+      },
+      {
+        "original": "your",
+        "replacement": "you're",
+        "position": 27,
+        "phonetic_similarity": 0.5,
+        "edit_similarity": 0.8
+      },
+      {
+        "original": "room,",
+        "replacement": "reaume",
+        "position": 7,
+        "phonetic_similarity": 0.0,
+        "edit_similarity": 0.364
+      },
+      {
+        "original": "still",
+        "replacement": "stille",
+        "position": 159,
+        "phonetic_similarity": 1.0,
+        "edit_similarity": 0.909
+      },
+      {
+        "original": "door.",
+        "replacement": "dohr",
+        "position": 59,
+        "phonetic_similarity": 0.0,
+        "edit_similarity": 0.667
+      },
+      {
+        "original": "write",
+        "replacement": "reit",
+        "position": 51,
+        "phonetic_similarity": 1.0,
+        "edit_similarity": 0.667
+      },
+      {
+        "original": "you",
+        "replacement": "uwe",
+        "position": 50,
+        "phonetic_similarity": 1.0,
+        "edit_similarity": 0.333
+      },
+      {
+        "original": "for",
+        "replacement": "fore",
+        "position": 33,
+        "phonetic_similarity": 1.0,
+        "edit_similarity": 0.857
+      },
+      {
+        "original": "like",
+        "replacement": "lyke",
+        "position": 184,
+        "phonetic_similarity": 1.0,
+        "edit_similarity": 0.75
+      },
+      {
+        "original": "an",
+        "replacement": "ann",
+        "position": 18,
+        "phonetic_similarity": 1.0,
+        "edit_similarity": 0.8
+      },
+      {
+        "original": "work",
+        "replacement": "werk",
+        "position": 141,
+        "phonetic_similarity": 1.0,
+        "edit_similarity": 0.75
+      },
+      {
+        "original": "to",
+        "replacement": "too",
+        "position": 166,
+        "phonetic_similarity": 1.0,
+        "edit_similarity": 0.8
+      },
+      {
+        "original": "to",
+        "replacement": "thuy",
+        "position": 124,
+        "phonetic_similarity": 1.0,
+        "edit_similarity": 0.333
+      },
+      {
+        "original": "door:",
+        "replacement": "d'or",
+        "position": 14,
+        "phonetic_similarity": 0.0,
+        "edit_similarity": 0.667
+      },
+      {
+        "original": "work",
+        "replacement": "werke",
+        "position": 129,
+        "phonetic_similarity": 1.0,
+        "edit_similarity": 0.667
+      },
+      {
+        "original": "no",
+        "replacement": "neault",
+        "position": 87,
+        "phonetic_similarity": 1.0,
+        "edit_similarity": 0.25
+      },
+      {
+        "original": "two",
+        "replacement": "tu",
+        "position": 8,
+        "phonetic_similarity": 1.0,
+        "edit_similarity": 0.4
+      },
+      {
+        "original": "mean",
+        "replacement": "meine",
+        "position": 190,
+        "phonetic_similarity": 1.0,
+        "edit_similarity": 0.667
+      },
+      {
+        "original": "or",
+        "replacement": "oar",
+        "position": 146,
+        "phonetic_similarity": 1.0,
+        "edit_similarity": 0.8
+      },
+      {
+        "original": "symbol.",
+        "replacement": "cymbal",
+        "position": 46,
+        "phonetic_similarity": 0.0,
+        "edit_similarity": 0.615
+      },
+      {
+        "original": "an",
+        "replacement": "ahn",
+        "position": 169,
+        "phonetic_similarity": 1.0,
+        "edit_similarity": 0.8
+      },
+      {
+        "original": "John",
+        "replacement": "Jonn",
+        "position": 110,
+        "phonetic_similarity": 1.0,
+        "edit_similarity": 0.75
+      },
+      {
+        "original": "models",
+        "replacement": "model's",
+        "position": 139,
+        "phonetic_similarity": 1.0,
+        "edit_similarity": 0.923
+      },
+      {
+        "original": "some",
+        "replacement": "sum",
+        "position": 125,
+        "phonetic_similarity": 1.0,
+        "edit_similarity": 0.571
+      },
+      {
+        "original": "an",
+        "replacement": "ann",
+        "position": 43,
+        "phonetic_similarity": 1.0,
+        "edit_similarity": 0.8
+      },
+      {
+        "original": "To",
+        "replacement": "Tu",
+        "position": 161,
+        "phonetic_similarity": 1.0,
+        "edit_similarity": 0.5
+      },
+      {
+        "original": "have",
+        "replacement": "halve",
+        "position": 86,
+        "phonetic_similarity": 1.0,
+        "edit_similarity": 0.889
+      },
+      {
+        "original": "But",
+        "replacement": "Butt",
+        "position": 135,
+        "phonetic_similarity": 1.0,
+        "edit_similarity": 0.857
+      },
+      {
+        "original": "these",
+        "replacement": "thee's",
+        "position": 90,
+        "phonetic_similarity": 1.0,
+        "edit_similarity": 0.727
+      },
+      {
+        "original": "for",
+        "replacement": "fore",
+        "position": 61,
+        "phonetic_similarity": 1.0,
+        "edit_similarity": 0.857
+      }
+    ],
+    "output_path": "data/corrupted/text_homophone/video_10_homophone_r50.txt"
+  }
+]
