@@ -12,8 +12,10 @@ class JobConfig(BaseModel):
     whisper_model: str = "base"
     vlm_model: str = "Qwen/Qwen3-VL-4B-Instruct"
     vlm_api_base: str = ""
+    vlm_api_key: str = ""
     text_model: str = "Qwen/Qwen3-8B"
     text_api_base: str = ""
+    text_api_key: str = ""
     glossary_path: str = "data/glossary.json"
     enable_diarization: bool = False
     frame_interval: float = 3.0

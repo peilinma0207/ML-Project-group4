@@ -219,3 +219,8 @@ __marimo__/
 
 # Pipeline output
 output/
+
+# Analysis generated data (large, reproducible)
+analysis/results/pipeline_runs/
+analysis/results/ablation_runs/
+analysis/results/*.log

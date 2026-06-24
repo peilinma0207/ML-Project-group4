@@ -53,9 +53,9 @@ def _interval_sample(
 ) -> list[SampledFrame]:
     frames = []
     t = 0.0
-    while t < duration:
+    while t < duration - 0.5:
         frame_path = frames_dir / f"interval_{t:.3f}.jpg"
-        subprocess.run(
+        result = subprocess.run(
             [
                 "ffmpeg", "-y",
                 "-ss", str(t),
@@ -64,14 +64,14 @@ def _interval_sample(
                 "-q:v", "2",
                 str(frame_path),
             ],
-            check=True,
             capture_output=True,
         )
-        frames.append(SampledFrame(
-            frame_path=str(frame_path),
-            timestamp=t,
-            sample_reason="interval",
-        ))
+        if result.returncode == 0 and frame_path.exists():
+            frames.append(SampledFrame(
+                frame_path=str(frame_path),
+                timestamp=t,
+                sample_reason="interval",
+            ))
         t += interval
     return frames
 
@@ -102,7 +102,7 @@ def _scene_change_sample(video: Path, frames_dir: Path) -> list[SampledFrame]:
     for frame_info in data.get("frames", []):
         t = float(frame_info.get("pts_time", frame_info.get("best_effort_timestamp_time", 0)))
         frame_path = frames_dir / f"scene_{t:.3f}.jpg"
-        subprocess.run(
+        result = subprocess.run(
             [
                 "ffmpeg", "-y",
                 "-ss", str(t),
@@ -111,9 +111,10 @@ def _scene_change_sample(video: Path, frames_dir: Path) -> list[SampledFrame]:
                 "-q:v", "2",
                 str(frame_path),
             ],
-            check=True,
             capture_output=True,
         )
+        if result.returncode != 0 or not frame_path.exists():
+            continue
         frames.append(SampledFrame(
             frame_path=str(frame_path),
             timestamp=t,
@@ -140,7 +141,7 @@ def _low_confidence_sample(
         t = start
         while t <= end:
             frame_path = frames_dir / f"lowconf_{t:.3f}.jpg"
-            subprocess.run(
+            result = subprocess.run(
                 [
                     "ffmpeg", "-y",
                     "-ss", str(t),
@@ -149,14 +150,14 @@ def _low_confidence_sample(
                     "-q:v", "2",
                     str(frame_path),
                 ],
-                check=True,
                 capture_output=True,
             )
-            frames.append(SampledFrame(
-                frame_path=str(frame_path),
-                timestamp=t,
-                sample_reason="low_confidence",
-            ))
+            if result.returncode == 0 and frame_path.exists():
+                frames.append(SampledFrame(
+                    frame_path=str(frame_path),
+                    timestamp=t,
+                    sample_reason="low_confidence",
+                ))
             t += step
 
     return frames

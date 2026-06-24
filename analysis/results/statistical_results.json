@@ -1,0 +1,44 @@
+{
+  "rq1": {},
+  "rq2": {
+    "n_samples": 83,
+    "wer_test": {
+      "statistic": 1374.0,
+      "p_value": 2.9700890119139895e-05
+    },
+    "term_test": {
+      "statistic": 146.0,
+      "p_value": 0.06082815289437242
+    },
+    "by_type": {
+      "noise": {
+        "baseline_wer": 0.3411306432600125,
+        "retrieval_wer": 0.3389246057971967,
+        "improvement": 0.0022060374628158352
+      },
+      "homophone": {
+        "baseline_wer": 0.11095173090015875,
+        "retrieval_wer": 0.01583626199173668,
+        "improvement": 0.09511546890842207
+      },
+      "adversarial": {
+        "baseline_wer": 0.40633727988669416,
+        "retrieval_wer": 0.4072733512134537,
+        "improvement": -0.0009360713267595466
+      }
+    }
+  },
+  "rq3": {
+    "n_samples": 83,
+    "wer_test": {
+      "statistic": 840.0,
+      "p_value": 0.999979322214888
+    },
+    "fisher_test": {
+      "odds_ratio": 1.0,
+      "p_value": 1.0
+    },
+    "constrained_hallucination_rate": 0,
+    "freeform_hallucination_rate": 0
+  }
+}

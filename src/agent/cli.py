@@ -3,6 +3,7 @@ from __future__ import annotations
 import argparse
 import json
 import logging
+import os
 import subprocess
 import uuid
 from pathlib import Path
@@ -22,9 +23,12 @@ def parse_args(argv: list[str] | None = None) -> argparse.Namespace:
     parser.add_argument("--output-dir", default="./output", help="Output directory")
     parser.add_argument("--whisper-model", default="base", help="WhisperX model size")
     parser.add_argument("--vlm-model", default="Qwen/Qwen3-VL-4B-Instruct")
-    parser.add_argument("--vlm-api-base", default="", help="OpenAI-compatible API base URL for VLM (e.g. http://localhost:1234/v1)")
+    parser.add_argument("--vlm-api-base", default="", help="OpenAI-compatible API base URL for VLM (e.g. https://api.siliconflow.cn/v1/)")
     parser.add_argument("--text-model", default="Qwen/Qwen3-8B")
-    parser.add_argument("--text-api-base", default="", help="OpenAI-compatible API base URL for text model (e.g. http://localhost:1234/v1)")
+    parser.add_argument("--text-api-base", default="", help="OpenAI-compatible API base URL for text model (e.g. https://api.siliconflow.cn/v1/)")
+    parser.add_argument("--api-key", default="", help="API key for both VLM and text model (overridden by --vlm-api-key / --text-api-key). Also reads from LLM_API_KEY env var.")
+    parser.add_argument("--vlm-api-key", default="", help="API key for VLM (overrides --api-key for VLM)")
+    parser.add_argument("--text-api-key", default="", help="API key for text model (overrides --api-key for text)")
     parser.add_argument("--glossary", default="data/glossary.json", help="Path to glossary JSON")
     parser.add_argument("--diarize", action="store_true", help="Enable speaker diarization")
     parser.add_argument("--job-id", default=None, help="Job ID (auto-generated if not set)")
@@ -61,7 +65,24 @@ def _probe_audio(audio_path: Path) -> AudioMeta:
 
 def main(argv: list[str] | None = None) -> None:
     logging.basicConfig(level=logging.INFO, format="%(levelname)s %(name)s: %(message)s")
+
+    # Load .env file if present
+    env_path = Path(__file__).resolve().parent.parent.parent / ".env"
+    if env_path.exists():
+        for line in env_path.read_text(encoding="utf-8").splitlines():
+            line = line.strip()
+            if line and not line.startswith("#") and "=" in line:
+                key, _, value = line.partition("=")
+                os.environ.setdefault(key.strip(), value.strip())
+
     args = parse_args(argv)
+
+    # Resolve API keys: CLI arg > specific key arg > env var
+    env_key = os.environ.get("LLM_API_KEY", "")
+    env_base = os.environ.get("LLM_API_BASE", "")
+    shared_key = args.api_key or env_key
+    vlm_key = args.vlm_api_key or shared_key
+    text_key = args.text_api_key or shared_key
 
     config = JobConfig(
         job_id=args.job_id or uuid.uuid4().hex[:8],
@@ -71,9 +92,11 @@ def main(argv: list[str] | None = None) -> None:
         output_dir=args.output_dir,
         whisper_model=args.whisper_model,
         vlm_model=args.vlm_model,
-        vlm_api_base=args.vlm_api_base,
+        vlm_api_base=args.vlm_api_base or env_base,
+        vlm_api_key=vlm_key,
         text_model=args.text_model,
-        text_api_base=args.text_api_base,
+        text_api_base=args.text_api_base or env_base,
+        text_api_key=text_key,
         glossary_path=args.glossary,
         enable_diarization=args.diarize,
     )
